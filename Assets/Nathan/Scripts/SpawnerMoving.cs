@@ -38,14 +38,14 @@ namespace Pediluve
             {
                 if (ChangeDirection == false)
                 {
-                    ChangeDirection = true;
+                    speed *= (-1);
                 }
                 if (ChangeDirection == true)
                 {
-                    ChangeDirection = false;
+                    speed *= (-1);
                 }
 
-                coutnerChangeDirectionMax = Random.Range(500, 2000);
+                coutnerChangeDirectionMax = Random.Range(250, 850);
                 coutnerChangeDirection = 0;
             }
 

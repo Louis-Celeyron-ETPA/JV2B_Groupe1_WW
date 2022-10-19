@@ -10,13 +10,21 @@ namespace Pediluve
     {
 
         public float speed;
+        private float speedMax;
         public Rigidbody rb;
 
         public int score;
         public Text scoreText;
 
+        public bool stopActive = false;
+
+        public int counterStop;
+        private int counterStopMax = 10;
+
+
         void Start()
         {
+            speedMax = speed;
         }
 
         void Update()
@@ -33,14 +41,45 @@ namespace Pediluve
                 rb.AddForce(Vector3.right * (speed));
             }
 
+            if (stopActive == false)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    stopActive = true;
+                    speed /= 3;
+                }
+            }
+
+            if (stopActive == true)
+            {
+                counterStop++;
+                if (counterStop >= counterStopMax)
+                {
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        stopActive = false;
+                        counterStop = 0;
+                    }
+                }             
+            }
+
+            if (stopActive == true)
+            {
+            }
+            if (stopActive == false)
+            {
+                speed = speedMax;
+            }
+
             scoreText.text = score.ToString();
 
         }
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.tag == "otherBall")
+            if (collision.gameObject.tag == "otherBall" && stopActive == true)
             {
                 score++;
+                Destroy(collision.gameObject);
             }
 
         }

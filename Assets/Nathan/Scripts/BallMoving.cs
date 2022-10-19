@@ -17,7 +17,7 @@ namespace Pediluve
 
         void Update()
         {
-            Physics.gravity = new Vector3(0, -700, 0);
+            Physics.gravity = new Vector3(0, -100, 0);
 
             rb.velocity = rb.velocity.normalized;
 
@@ -37,10 +37,7 @@ namespace Pediluve
                 rb.AddForce(Vector3.forward * 0);
                 stopRotateAndMove = true;
             }
-            if (collision.gameObject.tag == "Player")
-            {
-                Destroy(gameObject);
-            }
+            
 
         }
     }
