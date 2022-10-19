@@ -174,7 +174,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -200,7 +200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163879707}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000029504295}
-  m_LocalPosition: {x: 0, y: 73.9, z: 157.5}
+  m_LocalPosition: {x: 0, y: 59, z: 350}
   m_LocalScale: {x: 7.8043103, y: 11.304916, z: 7.80431}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -397,14 +397,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985000618}
-  m_LocalRotation: {x: -0.38266248, y: -0, z: -0, w: 0.92388827}
-  m_LocalPosition: {x: 0, y: 11.6, z: 74.1}
+  m_LocalRotation: {x: -0.6087431, y: -0, z: -0, w: 0.7933675}
+  m_LocalPosition: {x: 1, y: 4, z: 210}
   m_LocalScale: {x: 12.303967, y: 12.303967, z: 12.303967}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -44.997, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -74.997, y: 0, z: 0}
 --- !u!114 &985000623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,8 +510,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333271379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.1, z: 3.4}
-  m_LocalScale: {x: 10.907713, y: 1.0707, z: 22.92382}
+  m_LocalPosition: {x: 1, y: 3.1, z: 160}
+  m_LocalScale: {x: 10.128936, y: 1.0707, z: 62.641632}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -530,7 +530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9256abbfb83df14bbe629af55320197, type: 3}
       propertyPath: m_LocalScale.x
-      value: 65.59587
+      value: 76.77341
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9256abbfb83df14bbe629af55320197, type: 3}
       propertyPath: m_LocalScale.y
@@ -542,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9256abbfb83df14bbe629af55320197, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.0568
+      value: 3.4251
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9256abbfb83df14bbe629af55320197, type: 3}
       propertyPath: m_LocalPosition.y

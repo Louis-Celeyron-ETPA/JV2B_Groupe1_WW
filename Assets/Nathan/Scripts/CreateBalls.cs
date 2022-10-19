@@ -21,7 +21,7 @@ namespace Pediluve
             {
                 var myobject = Instantiate(objectToSpawn, parent);
 
-                myobject.transform.position = new Vector3(0, -20, 100);
+                myobject.transform.position = new Vector3(0, 20, 50);
                  
 
                 //Instantiate(objectToSpawn, new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), Random.Range(-10, 10)), Quaternion.identity, parent);
