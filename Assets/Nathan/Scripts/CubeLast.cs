@@ -16,7 +16,7 @@ namespace Pediluve
 
         public bool dontMove = false;
 
-        public InputManager inputManag;
+        public InputMini1 inputManag;
 
         public int counterMax;
         public int counterReturnMax;

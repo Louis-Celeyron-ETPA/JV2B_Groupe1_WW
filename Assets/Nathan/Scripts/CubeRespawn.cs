@@ -7,7 +7,7 @@ namespace Pediluve
         public class CubeRespawn : MonoBehaviour
     {
 
-        public InputManager player;
+        public InputMini1 player;
 
         private void OnCollisionEnter(Collision collision)
         {

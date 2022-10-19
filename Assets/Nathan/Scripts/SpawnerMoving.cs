@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace Pediluve
 {
-    public class ObjectMoving : MonoBehaviour
+    public class SpawnerMoving : MonoBehaviour
     {
         public Rigidbody rb;
         public bool ChangeDirection = false;
         public int speed;
 
-        public InputMini1 player;
-        // Start is called before the first frame update
+        public int coutnerChangeDirection;
+        public float coutnerChangeDirectionMax = 200;
+
         void Start()
         {
 
@@ -25,11 +25,28 @@ namespace Pediluve
 
             if (ChangeDirection == false)
             {
-                rb.AddForce(Vector3.forward * (speed));
+                rb.AddForce(-Vector3.left * (speed));
             }
             if (ChangeDirection == true)
             {
-                rb.AddForce(-Vector3.forward * (speed));
+                rb.AddForce(-Vector3.right * (speed));
+            }
+
+            coutnerChangeDirection++;
+
+            if (coutnerChangeDirection >= coutnerChangeDirectionMax)
+            {
+                if (ChangeDirection == false)
+                {
+                    ChangeDirection = true;
+                }
+                if (ChangeDirection == true)
+                {
+                    ChangeDirection = false;
+                }
+
+                coutnerChangeDirectionMax = Random.Range(500, 2000);
+                coutnerChangeDirection = 0;
             }
 
         }
@@ -42,24 +59,12 @@ namespace Pediluve
                     ChangeDirection = true;
                 }
                 else
+                 if (ChangeDirection == true)
                 {
                     ChangeDirection = false;
                 }
             }
 
-            if (collision.gameObject.tag == "Player")
-            {
-                player.respawn = true;
-            }
-        }
-
-        private void OnCollisionExit(Collision collision)
-        {
-            if (collision.gameObject.tag == "Player")
-            {
-                player.respawn = false;
-            }
         }
     }
 }
-

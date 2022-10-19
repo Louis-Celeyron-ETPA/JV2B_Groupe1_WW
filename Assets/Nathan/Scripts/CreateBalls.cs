@@ -7,26 +7,34 @@ namespace Pediluve
     public class CreateBalls : MonoBehaviour
     {
         public GameObject objectToSpawn;
-        public Transform parent;
+
+        private float spawnerX;
+        private float spawnerY;
+        private float spawnerZ;
+
+        private int counter;
+        public int counterSpawnMax;
 
         void Start()
         {
-
+          
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                var myobject = Instantiate(objectToSpawn, parent);
+            spawnerX = transform.position.x;
+            spawnerY = transform.position.y;
+            spawnerZ = transform.position.z;
 
-                myobject.transform.position = new Vector3(0, 20, 50);
-                 
+            counter++;
 
-                //Instantiate(objectToSpawn, new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), Random.Range(-10, 10)), Quaternion.identity, parent);
+            if (counter >+ counterSpawnMax)
+            { 
+                counter = 0;
+                Instantiate(objectToSpawn, new Vector3(spawnerX, spawnerY + 10, spawnerZ - 14), Quaternion.identity);
             }
-
         }
     }
+
 }

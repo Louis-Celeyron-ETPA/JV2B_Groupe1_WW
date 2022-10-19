@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Pediluve
 {
-    public class InputManager : MonoBehaviour
+    public class InputMini1 : MonoBehaviour
     {
 
         public float speed = 125;
