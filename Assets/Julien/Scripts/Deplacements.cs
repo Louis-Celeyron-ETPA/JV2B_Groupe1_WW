@@ -5,8 +5,9 @@ namespace Cunegonde
 {
 public class Deplacements : MonoBehaviour
 {
-        public int chrono = 1000;
+        public int chrono = 10000;
         public float speed = 0.002f;
+        public float vitesseBaguette = 0.000000003f;
         public float sensitivity = 1.5f;
         public KeyCode avance;
         public KeyCode recule;
@@ -34,6 +35,7 @@ public class Deplacements : MonoBehaviour
             if (chrono > 1)
             {
                 chrono--;
+                transform.Translate(-Vector3.up * vitesseBaguette);
             }
             else
             {
