@@ -6,8 +6,9 @@ using UnityEngine;
 
 namespace Gael
 {
-    public class G1_CARR_ : MonoBehaviour
+    public class G1_MAC_01 : MonoBehaviour
     {
+        public Transform tra;
         // Start is called before the first frame update
         void Start()
         {
@@ -17,7 +18,10 @@ namespace Gael
         // Update is called once per frame
         void Update()
         {
-
+            if (Input.GetKey(KeyCode.Space))
+            {
+                tra.position += new Vector3(0f, 0.02f, 0f);
+            }
         }
     }
 }
