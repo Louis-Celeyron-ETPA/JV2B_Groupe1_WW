@@ -17,7 +17,7 @@ namespace Paul
         void Update()
         {
             rb.velocity = rb.velocity.normalized;
-            rb.AddForce(Vector3.back * 100);
+            rb.AddForce(Vector3.forward * 2f);
         }
     }
 }
