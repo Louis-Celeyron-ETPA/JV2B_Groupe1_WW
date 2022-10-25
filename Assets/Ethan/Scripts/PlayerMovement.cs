@@ -6,10 +6,10 @@ namespace BananaLover
 {
     public class PlayerMovement : MonoBehaviour
     {
-        Vector3 pos1 = new Vector3(-2.5f, 2, -4);
-        Vector3 pos2 = new Vector3(2.5f, 2, -4);
+        Vector3 pos1 = new Vector3(-2.5f, 3f, -4f);
+        Vector3 pos2 = new Vector3(2.5f, 3f, -4f);
         float pourcentage = 0f;
-        float speed = 0.001f;
+        float speed = 0.005f;
         bool retour = false;
 
         // Start is called before the first frame update

@@ -18,7 +18,17 @@ namespace BananaLover
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                tb.throwBall();
+                tb.Throw();
+            }
+
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                tb.IncreasePower();
+            }
+
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                tb.DecreasePower();
             }
         }
     }
