@@ -5,41 +5,41 @@ using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
-    public UnityEvent onRight, onLeft, onUp, onDown, onAction;
-    public UnityEvent onRightPressed, onLeftPressed, onUpPressed, onDownPresed, onActionPressed;
+    public InputStruct right, left, up, down, action;
+    private float deadZone = 0.8f;
 
     private void Update()
     {
-        if(Input.GetAxis("Horizontal")>=0.2)
+        if(Input.GetAxis("Horizontal")>= deadZone)
         {
-            onRight.Invoke();
+            right.onStayed.Invoke();
         }
-        if (Input.GetAxis("Horizontal") <= -0.2)
+        if (Input.GetAxis("Horizontal") <= -deadZone)
         {
-            onLeft.Invoke();
+            left.onStayed.Invoke();
         }
-        if(Input.GetAxis("Vertical")>=0.2)
+        if(Input.GetAxis("Vertical")>= deadZone)
         {
-            onUp.Invoke();
+            up.onStayed.Invoke();
         }
-        if (Input.GetAxis("Vertical") <= -0.2)
+        if (Input.GetAxis("Vertical") <= -deadZone)
         {
-            onDown.Invoke();
+            down.onStayed.Invoke();
         }
-        if(Input.GetAxis("Fire1")>=0.2)
+        if(Input.GetAxis("Fire1")>= deadZone)
         {
-            onAction.Invoke();
+            action.onStayed.Invoke();
         }
 
         if(Input.GetButtonDown("Horizontal"))
         {
             if (Input.GetAxisRaw("Horizontal") > 0)
             {
-                onRightPressed.Invoke();
+                right.onPressed.Invoke();
             }
             if(Input.GetAxisRaw("Horizontal")<0)
             {
-                onLeftPressed.Invoke();
+                left.onPressed.Invoke();
             }
         }
 
@@ -47,17 +47,19 @@ public class InputManager : MonoBehaviour
         {
             if (Input.GetAxisRaw("Vertical") > 0)
             {
-                onUpPressed.Invoke();
+                up.onPressed.Invoke();
             }
             if (Input.GetAxisRaw("Vertical") < 0)
             {
-                onDownPresed.Invoke();
+                down.onPressed.Invoke();
             }
         }
         if (Input.GetButtonDown("Fire1"))
         {
-            onActionPressed.Invoke();
+            action.onPressed.Invoke();
         }
+
+
     }
 
     public void DebugLog(string input)
@@ -65,4 +67,9 @@ public class InputManager : MonoBehaviour
         Debug.Log(input);
     }
 
+}
+
+public struct InputStruct
+{
+    public UnityEvent onPressed, onUp, onStayed;
 }
