@@ -5,10 +5,7 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     public GameObject objectToSpawn;
-    public Transform parent;
-    public Transform parent1;
-    public Transform parent2;
-    public Transform parent3;
+    public Transform []parents;
     public Vector3 initialPosition;
     public Vector3 targetPosition;
     public Transform target;
@@ -27,9 +24,7 @@ public class Spawn : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(objectToSpawn, parent);
-            Instantiate(objectToSpawn, new Vector3(0, 1, 9), Quaternion.identity);
-            Instantiate(objectToSpawn, new Vector3(0, 1, 9), Quaternion.identity, parent);
+            Instantiate(objectToSpawn, new Vector3(0, 1, 9), Quaternion.identity, parents[Random.Range(0,4)]);
         }
 
         

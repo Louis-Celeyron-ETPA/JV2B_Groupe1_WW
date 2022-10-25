@@ -128,7 +128,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e8879f11b40884e429a82d14649b6bd7, type: 3}
   m_PrefabInstance: {fileID: 1034412819}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &27291665
+--- !u!114 &27291669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,15 +141,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 27291661}
-  parent: {fileID: 696525638}
-  parent1: {fileID: 708301884}
-  parent2: {fileID: 382896545}
-  parent3: {fileID: 1766015705}
+  parents:
+  - {fileID: 696525638}
+  - {fileID: 708301884}
+  - {fileID: 382896545}
+  - {fileID: 1766015705}
   initialPosition: {x: 0, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
-  target: {fileID: 0}
+  target: {fileID: 1230040689}
   shouldGoToTarget: 0
   delta: 0
+--- !u!114 &27291670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27291661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: febce1904c65e164fb5d47aa68a6642f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &27291671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27291661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6697303, y: 0.6734044, z: 0.6583374}
+  m_Center: {x: 0, y: 0.3316588, z: 0}
 --- !u!1 &382896541
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,8 +480,8 @@ GameObject:
   - component: {fileID: 892330431}
   - component: {fileID: 892330430}
   m_Layer: 0
-  m_Name: shield
-  m_TagString: Untagged
+  m_Name: wall
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -795,6 +821,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1230040689 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac9bd0246a449e04e9aa0c5886a8dd40, type: 3}
+  m_PrefabInstance: {fileID: 1057650695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1492534335
 GameObject:
   m_ObjectHideFlags: 0
