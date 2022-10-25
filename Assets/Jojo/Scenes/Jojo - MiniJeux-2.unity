@@ -328,6 +328,8 @@ GameObject:
   - component: {fileID: 163879710}
   - component: {fileID: 163879709}
   - component: {fileID: 163879708}
+  - component: {fileID: 163879712}
+  - component: {fileID: 163879711}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -401,6 +403,109 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &163879711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163879707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0088e471564933b4cb2cbc5377bc7572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rt: {fileID: 1342623725}
+--- !u!114 &163879712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163879707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5031bd2d9dba241b4c6f3a9cf76af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onRight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 163879711}
+        m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
+        m_MethodName: RightMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onLeft:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 163879711}
+        m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
+        m_MethodName: LeftMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 163879711}
+        m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
+        m_MethodName: UpMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 163879711}
+        m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
+        m_MethodName: DownMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAction:
+    m_PersistentCalls:
+      m_Calls: []
+  onRightPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onLeftPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onUpPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onDownPresed:
+    m_PersistentCalls:
+      m_Calls: []
+  onActionPressed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &186480042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,7 +1872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d325e09fb8d16043a6ebc3ca85c1ed2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.4751
+      value: -5.99
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d325e09fb8d16043a6ebc3ca85c1ed2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2190,7 +2295,7 @@ RectTransform:
   m_GameObject: {fileID: 1342623724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9847456, y: 1.9847456, z: 1.9847456}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1730031023}
@@ -2221,7 +2326,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7f78ea87f3545b74199eba374df3c67c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2264,7 +2369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368526329}
   m_LocalRotation: {x: 0.000000014901161, y: -1, z: 0.000000029802322, w: 0.00000025331974}
-  m_LocalPosition: {x: -0.07, y: 0.1873, z: 0.0228}
+  m_LocalPosition: {x: -0.114, y: 0.1873, z: 0.0228}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4310,7 +4415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713349304986860493}
   m_LocalRotation: {x: -0.5000002, y: -0.49999985, z: -0.49999982, w: 0.5000002}
-  m_LocalPosition: {x: -18.23, y: 0.2691, z: 3.9}
+  m_LocalPosition: {x: -17.92, y: 0.08, z: 3.9}
   m_LocalScale: {x: 3.5703378, y: 13.588192, z: 13.588192}
   m_ConstrainProportionsScale: 0
   m_Children: []
