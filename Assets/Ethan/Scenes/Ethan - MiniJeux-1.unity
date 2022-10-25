@@ -948,7 +948,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1382296714}
-  - component: {fileID: 1382296713}
+  - component: {fileID: 1382296715}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -956,19 +956,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1382296713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382296712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2361598233a24cb469a4428fc2c7526b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tb: {fileID: 745523136}
 --- !u!4 &1382296714
 Transform:
   m_ObjectHideFlags: 0
@@ -984,6 +971,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1382296715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382296712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5031bd2d9dba241b4c6f3a9cf76af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onRight:
+    m_PersistentCalls:
+      m_Calls: []
+  onLeft:
+    m_PersistentCalls:
+      m_Calls: []
+  onUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 745523136}
+        m_TargetAssemblyTypeName: BananaLover.ThrowBall, Assembly-CSharp
+        m_MethodName: IncreasePower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 745523136}
+        m_TargetAssemblyTypeName: BananaLover.ThrowBall, Assembly-CSharp
+        m_MethodName: DecreasePower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAction:
+    m_PersistentCalls:
+      m_Calls: []
+  onRightPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onLeftPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onUpPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onDownPresed:
+    m_PersistentCalls:
+      m_Calls: []
+  onActionPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 745523136}
+        m_TargetAssemblyTypeName: BananaLover.ThrowBall, Assembly-CSharp
+        m_MethodName: Throw
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1492534335
 GameObject:
   m_ObjectHideFlags: 0
