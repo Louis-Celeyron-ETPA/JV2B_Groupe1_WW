@@ -21,6 +21,8 @@ namespace Pediluve
         public int counterStop;
         private int counterStopMax = 10;
 
+        public Animator animator;
+
 
         void Start()
         {
@@ -34,6 +36,7 @@ namespace Pediluve
             Physics.gravity = new Vector3(0, -300, 0);
             if (Input.GetKey(KeyCode.D))
             {
+
                 rb.AddForce(-Vector3.right * (speed));
             }
             if (Input.GetKey(KeyCode.Q))
@@ -45,6 +48,8 @@ namespace Pediluve
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    animator.SetTrigger("Ouvrir");
+
                     stopActive = true;
                     speed /= 3;
                 }
@@ -59,6 +64,7 @@ namespace Pediluve
                     {
                         stopActive = false;
                         counterStop = 0;
+                        animator.SetTrigger("Fermer");
                     }
                 }             
             }
