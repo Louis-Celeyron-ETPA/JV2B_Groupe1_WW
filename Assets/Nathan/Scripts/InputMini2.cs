@@ -52,6 +52,7 @@ namespace Pediluve
 
                     stopActive = true;
                     speed /= 3;
+                    Debug.Log("Ouvert");
                 }
             }
 
@@ -65,6 +66,8 @@ namespace Pediluve
                         stopActive = false;
                         counterStop = 0;
                         animator.SetTrigger("Fermer");
+                        speed /= 3;
+                        Debug.Log("Fermer");
                     }
                 }             
             }
