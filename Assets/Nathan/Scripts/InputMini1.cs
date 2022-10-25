@@ -30,35 +30,44 @@ namespace Pediluve
 
         void Update()
         {
-            rb.velocity = rb.velocity.normalized;
+            //rb.velocity = rb.velocity.normalized;
+            //rb.MovePosition(transform.position + Vector3.left * 0.25f);
+            
 
-            Physics.gravity = new Vector3(0, -300, 0);
             if (Input.GetKey(KeyCode.Z))
             {
-                rb.AddForce(Vector3.forward * (speed));
+                rb.velocity = Vector3.forward * speed;
                 if (moveOrDie == true)
                 { transform.position = new Vector3(startX, startY, startZ); }
             }
             if (Input.GetKey(KeyCode.S))
             {
-                rb.AddForce(-Vector3.forward * (speed));
+                rb.velocity = -Vector3.forward * speed;
                 if (moveOrDie == true)
                 { transform.position = new Vector3(startX, startY, startZ); }
             }
             if (Input.GetKey(KeyCode.Q))
             {
-                rb.AddForce(-Vector3.right * (speed));
+                rb.velocity = -Vector3.right * speed;
                 if (moveOrDie == true)
                 { transform.position = new Vector3(startX, startY, startZ); }
             }
             if (Input.GetKey(KeyCode.D))
             {
-                rb.AddForce(Vector3.right * (speed));
+                rb.velocity = Vector3.right * speed;
                 if (moveOrDie == true)
                 { transform.position = new Vector3(startX, startY, startZ); }
             }
 
-            if (cubeLast.dontMove == true)
+            if (Input.GetKeyUp(KeyCode.Z) && Input.GetKeyUp(KeyCode.S) && Input.GetKeyUp(KeyCode.Q) && Input.GetKeyUp(KeyCode.D))
+            {
+                rb.velocity = Vector3.forward * 0;
+                rb.velocity = Vector3.right * 0;
+                rb.velocity = -Vector3.forward * 0;
+                rb.velocity = -Vector3.right * 0;
+            }
+
+                if (cubeLast.dontMove == true)
             {
                 moveOrDie = true;
             }
