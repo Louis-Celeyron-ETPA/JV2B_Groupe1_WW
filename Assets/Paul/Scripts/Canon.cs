@@ -5,13 +5,17 @@ using UnityEngine;
 public class Canon : MonoBehaviour
 {
 
-    public float speed = 20f;
+    public float speed = 40f;
 
     public GameObject objectToSpawn;
 
-    private float spawnerX;
-    private float spawnerY;
-    private float spawnerZ;
+    public float spawnerX;
+    public float spawnerY;
+    public float spawnerZ;
+
+    public float rotationX;
+    public float rotationY;
+    public float rotationZ;
 
     private int counter;
     public int counterSpawnMax;
@@ -27,11 +31,25 @@ public class Canon : MonoBehaviour
 
         transform.Rotate(Vector3.forward * speed * Time.deltaTime);
 
+
+
+
+
+        if (transform.rotation.z >= 0.5)
+        {
+            speed = -40f;
+        }
+        if(transform.rotation.z <= -0.5)
+        {
+            speed = 40f;
+        }
         spawnerX = transform.position.x;
         spawnerY = transform.position.y;
         spawnerZ = transform.position.z;
 
-        
+        rotationX = transform.rotation.x;
+        rotationY = transform.rotation.y;
+        rotationZ = transform.rotation.z;
 
         counter++;
 
