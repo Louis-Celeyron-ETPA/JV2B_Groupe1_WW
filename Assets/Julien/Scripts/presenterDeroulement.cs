@@ -18,6 +18,11 @@ namespace Cunegonde
             GameObject.Find("FlecheBas").transform.position = new Vector3(0, 0, 0);
             GameObject.Find("FlecheDroite").transform.position = new Vector3(0, 0, 0);
             GameObject.Find("FlecheGauche").transform.position = new Vector3(0, 0, 0);
+            GameObject.Find("Bouton").transform.position = new Vector3(0, 0, 0);
+
+            GameObject.Find("BatonUn").transform.position = new Vector3(0, 0, 0);
+            GameObject.Find("BatonDeux").transform.position = new Vector3(0, 0, 0);
+            GameObject.Find("BatonTrois").transform.position = new Vector3(0, 0, 0);
             FonctionChoix();
         }
 
@@ -34,12 +39,15 @@ namespace Cunegonde
             if (choixDemande == 1)
             {
                 Debug.Log("Appuyer sur le bouton.png");
-                
+                GameObject.Find("Bouton").transform.position = new Vector3(-0.8423f, 1.523f, 4.146f);
+                GameObject.Find("BatonUn").transform.position = new Vector3(-0.8451f, 1.686f, 4.1381f);
+                GameObject.Find("BatonDeux").transform.position = new Vector3(-0.7448f, 1.686f, 4.1381f);
+                GameObject.Find("BatonTrois").transform.position = new Vector3(-0.9372f, 1.6894f, 4.1381f);
             }
             else if (choixDemande == 2)
             {
                 Debug.Log("Appuyer sur la flèche haut.png");
-                GameObject.Find("FlecheHaut").transform.position = new Vector3(-0.94f, 1.586f, 4.129f);
+                GameObject.Find("FlecheHaut").transform.position = new Vector3(-0.836f, 1.48f, 4.129f);
             }
             else if (choixDemande == 3)
             {
