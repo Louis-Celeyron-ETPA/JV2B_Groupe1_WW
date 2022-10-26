@@ -34,25 +34,38 @@ namespace Pediluve
             rb.velocity = rb.velocity.normalized;
 
             Physics.gravity = new Vector3(0, -300, 0);
-            if (Input.GetKey(KeyCode.D))
-            {
 
-                rb.AddForce(-Vector3.right * (speed));
-            }
-            if (Input.GetKey(KeyCode.Q))
+
+            actionMovement();
+
+            if (stopActive == true)
             {
-                rb.AddForce(Vector3.right * (speed));
+            }
+            if (stopActive == false)
+            {
+                speed = speedMax;
             }
 
+            scoreText.text = score.ToString();
+
+        }
+        public void leftMovement()
+        {
+            rb.AddForce(Vector3.right * (speed));
+        }
+        public void rightMovement()
+        {
+            rb.AddForce(-Vector3.right * (speed));
+        }
+        public void actionMovement()
+        {
             if (stopActive == false)
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     animator.SetTrigger("Ouvrir");
-
                     stopActive = true;
                     speed /= 3;
-                    Debug.Log("Ouvert");
                 }
             }
 
@@ -67,22 +80,11 @@ namespace Pediluve
                         counterStop = 0;
                         animator.SetTrigger("Fermer");
                         speed /= 3;
-                        Debug.Log("Fermer");
                     }
-                }             
+                }
             }
-
-            if (stopActive == true)
-            {
-            }
-            if (stopActive == false)
-            {
-                speed = speedMax;
-            }
-
-            scoreText.text = score.ToString();
-
         }
+
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.tag == "otherBall" && stopActive == true)
