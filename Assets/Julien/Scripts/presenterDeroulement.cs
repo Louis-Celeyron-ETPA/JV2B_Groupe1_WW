@@ -6,19 +6,18 @@ namespace Cunegonde
     public class presenterDeroulement : MonoBehaviour
     {
         public int choixDemande;
-        private MeshRenderer FlecheHaut;
-        private MeshRenderer FlecheBas;
-        private MeshRenderer FlecheDroite;
-        private MeshRenderer FlecheGauche;
+        
 
 
         // Start is called before the first frame update
         void Start()
         {
-            FlecheHaut = GetComponent<MeshRenderer>();
-            FlecheBas = GetComponent<MeshRenderer>();
-            FlecheDroite = GetComponent<MeshRenderer>();
-            FlecheGauche = GetComponent<MeshRenderer>();
+            
+            
+            GameObject.Find("FlecheHaut").transform.position = new Vector3(0, 0, 0);
+            GameObject.Find("FlecheBas").transform.position = new Vector3(0, 0, 0);
+            GameObject.Find("FlecheDroite").transform.position = new Vector3(0, 0, 0);
+            GameObject.Find("FlecheGauche").transform.position = new Vector3(0, 0, 0);
             FonctionChoix();
         }
 
@@ -35,26 +34,27 @@ namespace Cunegonde
             if (choixDemande == 1)
             {
                 Debug.Log("Appuyer sur le bouton.png");
+                
             }
             else if (choixDemande == 2)
             {
                 Debug.Log("Appuyer sur la flèche haut.png");
-                FlecheHaut.enabled = false;
+                GameObject.Find("FlecheHaut").transform.position = new Vector3(-0.94f, 1.586f, 4.129f);
             }
             else if (choixDemande == 3)
             {
                 Debug.Log("Appuyer sur la flèche bas.png");
-                FlecheBas.enabled = false;
+                GameObject.Find("FlecheBas").transform.position = new Vector3(-0.84f, 1.685f, 4.129f);
             }
             else if (choixDemande == 4)
             {
                 Debug.Log("Appuyer sur la flèche droite.png");
-                FlecheDroite.enabled = false;
+                GameObject.Find("FlecheDroite").transform.position = new Vector3(-0.94f, 1.587f, 4.129f);
             }
             else if (choixDemande == 5)
             {
                 Debug.Log("Appuyer sur la flèche gauche.png");
-                FlecheGauche.enabled = false;
+                GameObject.Find("FlecheGauche").transform.position = new Vector3(-0.739f, 1.587f, 4.129f);
             }
         }
         public void FonctionExecution(int choixEntre)
