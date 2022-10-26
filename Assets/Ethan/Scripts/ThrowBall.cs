@@ -11,7 +11,6 @@ namespace BananaLover
         public GameObject ballPrefab;
         float forceForward = 4f;
         float forceUp = 7f;
-        int ballCapacity = 5;
         float puissance = 5f;
         float timeUp = 0f;
         float timeDown = 0f;
@@ -26,7 +25,6 @@ namespace BananaLover
         // Start is called before the first frame update
         void Start()
         {
-            score.text = ballCapacity.ToString();
             puissanceScore.text = puissance.ToString();
         }
 
@@ -58,13 +56,8 @@ namespace BananaLover
 
         public void Throw()
         {
-            if (ballCapacity > 0)
-            {
-                GameObject ball = Instantiate(ballPrefab, transform.position - new Vector3(0, 1, 0), Quaternion.identity) as GameObject;
-                ball.GetComponent<Rigidbody>().velocity = new Vector3(0, forceUp * (0.95f + (puissance / 60)), forceForward * (0.95f + (puissance / 60)));
-                ballCapacity -= 1;
-                score.text = ballCapacity.ToString();
-            }            
+            GameObject ball = Instantiate(ballPrefab, transform.position - new Vector3(0, 1, 0), Quaternion.identity) as GameObject;
+            ball.GetComponent<Rigidbody>().velocity = new Vector3(0, forceUp * (0.95f + (puissance / 60)), forceForward * (0.95f + (puissance / 60)));       
         }
 
         public void IncreasePower()
