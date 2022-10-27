@@ -839,7 +839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 190820874}
-  speed: 3500
+  speed: 5500
+  speedRotate: 5
 --- !u!1001 &221631573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7452,7 +7453,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 21c6a3846e542ac4485eb77352e1b8c6, type: 2}
+  - {fileID: 2100000, guid: ab90beccee9cf794d905f8513e553d4e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7510,7 +7511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 190820869}
-  counterSpawnMax: 250
+  counterSpawnMax: 175
 --- !u!54 &985000624
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7541,7 +7542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 985000624}
   ChangeDirection: 0
-  speed: -1500
+  speed: -2750
   coutnerChangeDirection: 0
   coutnerChangeDirectionMax: 0
 --- !u!1001 &998508954
@@ -10779,7 +10780,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333271379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -775.1531, y: 9.1, z: 176.7}
+  m_LocalPosition: {x: -775.1531, y: 9.1, z: -32.000015}
   m_LocalScale: {x: 54.460304, y: 1.1747721, z: 80.5172}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13708,7 +13709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 536f6e28d11ec8740a99e01f19f86072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1750
+  speed: 3500
   rb: {fileID: 1756290143}
   score: 0
   scoreText: {fileID: 1079067723}

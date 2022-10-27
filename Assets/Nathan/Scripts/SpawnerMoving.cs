@@ -45,7 +45,7 @@ namespace Pediluve
                     speed *= (-1);
                 }
 
-                coutnerChangeDirectionMax = Random.Range(250, 850);
+                coutnerChangeDirectionMax = Random.Range(50, 300);
                 coutnerChangeDirection = 0;
             }
 

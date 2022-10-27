@@ -11,6 +11,8 @@ namespace Pediluve
         public float speed;
         private bool stopRotateAndMove = false;
 
+        public float speedRotate;
+
         void Start()
         {
         }
@@ -24,7 +26,7 @@ namespace Pediluve
 
             if (stopRotateAndMove == false)
             {
-                transform.Rotate(Vector3.left * 2f);
+                transform.Rotate(Vector3.left * speedRotate);
                 rb.velocity = rb.velocity.normalized;
                 rb.AddForce(-Vector3.forward * (speed));
             }

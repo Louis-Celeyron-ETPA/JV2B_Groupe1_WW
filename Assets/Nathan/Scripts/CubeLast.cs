@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Pediluve
 {
-    public class CubeLast : MonoBehaviour
+    public class Stop : MonoBehaviour
     {
         public List<GameObject> cubeList;
         private int counter;

@@ -8,10 +8,9 @@ namespace Pediluve
     {
 
         public float speed = 125;
-        public float speedJump;
         public Rigidbody rb;
 
-        public CubeLast cubeLast;
+        public StopMove stop;
 
         public bool moveOrDie = false;
 
@@ -30,44 +29,10 @@ namespace Pediluve
 
         void Update()
         {
-            //rb.velocity = rb.velocity.normalized;
+            rb.velocity = rb.velocity.normalized;
             //rb.MovePosition(transform.position + Vector3.left * 0.25f);
-            
 
-            if (Input.GetKey(KeyCode.Z))
-            {
-                rb.velocity = Vector3.forward * speed;
-                if (moveOrDie == true)
-                { transform.position = new Vector3(startX, startY, startZ); }
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                rb.velocity = -Vector3.forward * speed;
-                if (moveOrDie == true)
-                { transform.position = new Vector3(startX, startY, startZ); }
-            }
-            if (Input.GetKey(KeyCode.Q))
-            {
-                rb.velocity = -Vector3.right * speed;
-                if (moveOrDie == true)
-                { transform.position = new Vector3(startX, startY, startZ); }
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                rb.velocity = Vector3.right * speed;
-                if (moveOrDie == true)
-                { transform.position = new Vector3(startX, startY, startZ); }
-            }
-
-            if (Input.GetKeyUp(KeyCode.Z) && Input.GetKeyUp(KeyCode.S) && Input.GetKeyUp(KeyCode.Q) && Input.GetKeyUp(KeyCode.D))
-            {
-                rb.velocity = Vector3.forward * 0;
-                rb.velocity = Vector3.right * 0;
-                rb.velocity = -Vector3.forward * 0;
-                rb.velocity = -Vector3.right * 0;
-            }
-
-                if (cubeLast.dontMove == true)
+            if (stop.dontMove == true)
             {
                 moveOrDie = true;
             }
@@ -80,6 +45,31 @@ namespace Pediluve
             {
                 transform.position = new Vector3(startX, startY, startZ);
             }
+        }
+
+        public void leftMovement()
+        {
+            rb.AddForce(-Vector3.right * (speed));
+                if (moveOrDie == true)
+                { transform.position = new Vector3(startX, startY, startZ); }
+        }
+        public void rightMovement()
+        {
+            rb.AddForce(Vector3.right * (speed));
+                if (moveOrDie == true)
+                { transform.position = new Vector3(startX, startY, startZ); }
+        }
+        public void upMovement()
+        {
+            rb.AddForce(Vector3.forward * (speed));
+                if (moveOrDie == true)
+                { transform.position = new Vector3(startX, startY, startZ); }
+        }
+        public void downMovement()
+        {
+            rb.AddForce(-Vector3.forward * (speed));
+                if (moveOrDie == true)
+                { transform.position = new Vector3(startX, startY, startZ); }
         }
 
     }
