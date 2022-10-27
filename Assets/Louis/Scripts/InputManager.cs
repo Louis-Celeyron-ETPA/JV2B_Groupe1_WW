@@ -1,60 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
-    public InputStruct right, left, up, down, action;
+    public InputStruct4 directions;
+    public InputStruct2 pointsMorts;
+    public InputStruct3  action;
     private float deadZone = 0.8f;
-
+    private bool isPointMortH = true, isPointMortV = true;
     private void Update()
     {
-        if(Input.GetAxis("Horizontal")>= deadZone)
+        if(Input.GetAxis("Horizontal") < deadZone && Input.GetAxis("Horizontal") > -deadZone)
         {
-            right.onStayed.Invoke();
+            if(!isPointMortH)
+            {
+                pointsMorts.horizontal.Invoke();
+                isPointMortH = true;
+            }
+        }
+        if (Input.GetAxis("Horizontal")>= deadZone)
+        {
+            directions.right.Invoke();
+            isPointMortH = false;
         }
         if (Input.GetAxis("Horizontal") <= -deadZone)
         {
-            left.onStayed.Invoke();
+            directions.left.Invoke();
+            isPointMortH = false;
         }
-        if(Input.GetAxis("Vertical")>= deadZone)
+
+        if (Input.GetAxis("Vertical") < deadZone && Input.GetAxis("Vertical") > -deadZone)
         {
-            up.onStayed.Invoke();
+            if (!isPointMortV)
+            {
+                pointsMorts.vertical.Invoke();
+                isPointMortV = true;
+            }
+        }
+        if (Input.GetAxis("Vertical")>= deadZone)
+        {
+            directions.up.Invoke();
+            isPointMortV = false;
+
         }
         if (Input.GetAxis("Vertical") <= -deadZone)
         {
-            down.onStayed.Invoke();
+            directions.down.Invoke();
+            isPointMortV = false;
         }
-        if(Input.GetAxis("Fire1")>= deadZone)
+
+        if (Input.GetAxis("Fire1")>= deadZone)
         {
             action.onStayed.Invoke();
         }
-
-        if(Input.GetButtonDown("Horizontal"))
-        {
-            if (Input.GetAxisRaw("Horizontal") > 0)
-            {
-                right.onPressed.Invoke();
-            }
-            if(Input.GetAxisRaw("Horizontal")<0)
-            {
-                left.onPressed.Invoke();
-            }
-        }
-
-        if (Input.GetButtonDown("Vertical"))
-        {
-            if (Input.GetAxisRaw("Vertical") > 0)
-            {
-                up.onPressed.Invoke();
-            }
-            if (Input.GetAxisRaw("Vertical") < 0)
-            {
-                down.onPressed.Invoke();
-            }
-        }
         if (Input.GetButtonDown("Fire1"))
+        {
+            action.onPressed.Invoke();
+        }
+        if (Input.GetButtonUp("Fire1"))
         {
             action.onPressed.Invoke();
         }
@@ -69,7 +75,18 @@ public class InputManager : MonoBehaviour
 
 }
 
-public struct InputStruct
+[System.Serializable]
+public struct InputStruct3
 {
     public UnityEvent onPressed, onUp, onStayed;
+}
+[System.Serializable]
+public struct InputStruct4
+{
+    public UnityEvent left,right,down,up;
+}
+[System.Serializable]
+public struct InputStruct2
+{
+    public UnityEvent horizontal, vertical;
 }
