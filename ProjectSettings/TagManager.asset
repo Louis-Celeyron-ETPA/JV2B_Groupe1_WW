@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - MyGameObjectTag
+  - Ennemy
+  - Mur
   layers:
   - Default
   - TransparentFX

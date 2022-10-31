@@ -1,45 +1,69 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Canon : MonoBehaviour
+namespace Paul
 {
-
-    public float speed = 20f;
-
-    public GameObject objectToSpawn;
-
-    private float spawnerX;
-    private float spawnerY;
-    private float spawnerZ;
-
-    private int counter;
-    public int counterSpawnMax;
-
-    void Start()
+    public class Canon : MonoBehaviour
     {
+        public float speed = 40f;
 
-    }
+        public GameObject objectToSpawn;
 
-    // Update is called once per frame
-    void Update()
-    {
+        public float spawnerX;
+        public float spawnerY;
+        public float spawnerZ;
 
-        transform.Rotate(Vector3.forward * speed * Time.deltaTime);
+        public float rotationX;
+        public float rotationY;
+        public float rotationZ;
 
-        spawnerX = transform.position.x;
-        spawnerY = transform.position.y;
-        spawnerZ = transform.position.z;
+        private int counter;
+        public int counterSpawnMax;
 
-        
-
-        counter++;
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        void Start()
         {
-            counter = 0;
-            Instantiate(objectToSpawn, new Vector3(spawnerX, spawnerY , spawnerZ), Quaternion.identity);
 
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+            transform.Rotate(Vector3.forward * speed * Time.deltaTime);
+
+
+
+
+
+            if (transform.rotation.z >= 0.20)
+            {
+                speed = -40f;
+            }
+            if (transform.rotation.z <= -0.20)
+            {
+                speed = 40f;
+            }
+            spawnerX = transform.position.x;
+            spawnerY = transform.position.y;
+            spawnerZ = transform.position.z;
+
+            rotationX = transform.rotation.x;
+            rotationY = transform.rotation.y;
+            rotationZ = transform.rotation.z;
+
+            counter++;
+
+            if (Input.GetKeyDown(KeyCode.Space)&&(counter > 100))
+            {
+                counter = 0;
+                Instantiate(objectToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+
+            }
+            if (counter < 101) 
+            {
+                counter++;
+                Debug.Log(counter);
+            }
         }
     }
 }
