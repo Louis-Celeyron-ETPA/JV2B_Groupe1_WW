@@ -3,31 +3,117 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Laury
 {
-public class simonSaid : MonoBehaviour
-{
+    public class simonSaid : MonoBehaviour
+    {
         public GameObject FlecheH;
         public GameObject FlecheB;
         public GameObject FlecheD;
         public GameObject FlecheG;
+        public Light LFlecheH;
+        public Light LFlecheB;
+        public Light LFlecheD;
+        public Light LFlecheG;
         public List<int> Simon;
         private int choix;
         private int limit;
-    // Start is called before the first frame update
-    void Start()
-    {
-        limit = 4; 
-        for (int i = 0; i < limit; i++)
+        public float timeo;
+        public float delai;
+        public int nombre = 0;
+        public bool voir;
+        public int actionOnTime;
+            // Start is called before the first frame update
+        void Start()
         {
-            choix = Random.Range(1, 5);
-            Simon.Add(choix);
-            print(Simon);
+            delai = 1;
+            limit = 4; 
+            for (int i = 0; i < limit; i++)
+            {
+                choix = Random.Range(1, 5);
+                Simon.Add(choix);
+                print(Simon);
+            }
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            timeo += Time.deltaTime;
+            if(timeo >= delai)
+            {
+                if(actionOnTime == 0 && nombre < 4)
+                {
+                    AllumerLumiere();
+                }
+                if(actionOnTime == 2 && nombre < 4)
+                {
+                    EteindreLumiere();
+                }
+                timeo = 0;
+                actionOnTime++;
+                if(actionOnTime>=3)
+                {
+                    actionOnTime = 0;
+                    nombre += 1;
+                }
+            }
+
+        }
+        void AllumerLumiere()
+        {
+            if (Simon[nombre] == 1)
+            {
+                LFlecheH.enabled = true;
+                voir = true;
+                print("1");
+            }
+            if (Simon[nombre] == 2)
+            {
+                LFlecheB.enabled = true;
+                voir = true;
+                print("2");
+            }
+            if (Simon[nombre] == 3)
+            {
+                LFlecheD.enabled = true;
+                voir = true;
+                print("3");
+            }
+            if (Simon[nombre] == 4)
+            {
+                LFlecheG.enabled = true;
+                voir = true;
+                print("4");
+            }
+            
+        }
+        void EteindreLumiere()
+        {
+            if (Simon[nombre] == 1)
+            {
+                LFlecheH.enabled = false;
+                voir = false;
+                print("haut");
+            }
+            if (Simon[nombre] == 2)
+            {
+                LFlecheB.enabled = false;
+                voir = false;
+                print("bas");
+            }
+            if (Simon[nombre] == 3)
+            {
+                LFlecheD.enabled = false;
+                voir = false;
+                print("droite");
+            }
+            if (Simon[nombre] == 4)
+            {
+                LFlecheG.enabled = false;
+                voir = false;
+                print("gauche");
+            }
+
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-      
-    }
-}
 }
