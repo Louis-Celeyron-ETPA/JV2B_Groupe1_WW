@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - upper
+  - destroyablefood
   layers:
   - Default
   - TransparentFX

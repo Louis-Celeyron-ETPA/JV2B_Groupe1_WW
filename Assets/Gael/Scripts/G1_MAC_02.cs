@@ -8,8 +8,13 @@ namespace Gael
 {
     public class G1_MAC_02 : MonoBehaviour
     {
-        
+        public float cubeSize = .5f;
         public bool touch;
+        public GameObject Cube;
+        public float forceImpact ;
+        public float finalImpact = 1f;
+
+
         // Start is called before the first frame update
         void Start()
         {
@@ -21,15 +26,29 @@ namespace Gael
         {
             if (touch == true)
             {
-                transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                transform.localScale = Vector3.one * cubeSize;
             }
+            transform.localScale = new Vector3(0.5f, cubeSize, 0.5f);
+
         }
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.name == "upperteeth")
             {
-             transform.localScale -= new Vector3(0f, 0.03f, 0f);
+                cubeSize -= finalImpact;
+                cubeSize = Mathf.Clamp01(cubeSize);
             }
+            if (cubeSize <= 0)
+            {
+                Destroy(gameObject);
+            }
+
+            Debug.Log(collision.impulse);
+
+            forceImpact =(collision.impulse.y );
+            finalImpact = (forceImpact / 100);
+
+
             //if (localScale == new Vector3(1F, 0F, 1f));
             {
                 //object.Destroy(Cube);
