@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
-namespace Pediluve
+namespace Pediluves
 {
     public class InputMini2 : MonoBehaviour
     {
@@ -18,11 +18,13 @@ namespace Pediluve
 
         public bool stopActive = false;
 
-        public int counterStop;
-        private int counterStopMax = 10;
+        //public int counterStop;
+        //private int counterStopMax = 10;
 
         public Animator animator;
 
+        public bool openEnd = false;
+        public bool closeEnd = false;
 
         void Start()
         {
@@ -35,12 +37,6 @@ namespace Pediluve
 
             Physics.gravity = new Vector3(0, -300, 0);
 
-
-            actionMovement();
-
-            if (stopActive == true)
-            {
-            }
             if (stopActive == false)
             {
                 speed = speedMax;
@@ -48,6 +44,7 @@ namespace Pediluve
 
             scoreText.text = score.ToString();
 
+            Debug.Log(stopActive);
         }
         public void leftMovement()
         {
@@ -59,30 +56,29 @@ namespace Pediluve
         }
         public void actionMovement()
         {
-            if (stopActive == false)
+            if (stopActive == false && closeEnd == true)
             {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    animator.SetTrigger("Ouvrir");
-                    stopActive = true;
-                    speed /= 3;
-                }
+                animator.SetTrigger("Ouvrir");
+                stopActive = true;
+                speed /= 3;
             }
 
-            if (stopActive == true)
+            if (stopActive == true && openEnd == true)
             {
-                counterStop++;
-                if (counterStop >= counterStopMax)
-                {
-                    if (Input.GetKeyDown(KeyCode.Space))
-                    {
-                        stopActive = false;
-                        counterStop = 0;
-                        animator.SetTrigger("Fermer");
-                        speed /= 3;
-                    }
-                }
+                stopActive = false;
+                animator.SetTrigger("Fermer");
             }
+        }
+
+        public void OpenEnd()
+        {
+            openEnd = true;
+            closeEnd = false;
+        }
+        public void CloseEnd()
+        {
+            closeEnd = true;
+            openEnd = false;
         }
 
         private void OnCollisionEnter(Collision collision)
