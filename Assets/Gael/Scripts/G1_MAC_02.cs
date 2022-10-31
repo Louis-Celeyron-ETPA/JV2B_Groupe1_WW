@@ -28,7 +28,11 @@ namespace Gael
         {
             if (collision.gameObject.name == "upperteeth")
             {
-             transform.localScale -= new Vector3(0f, 0.1f, 0f);
+             transform.localScale -= new Vector3(0f, 0.03f, 0f);
+            }
+            //if (localScale == new Vector3(1F, 0F, 1f));
+            {
+                //object.Destroy(Cube);
             }
         }
     }

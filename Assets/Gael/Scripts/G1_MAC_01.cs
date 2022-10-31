@@ -22,6 +22,7 @@ namespace Gael
             {
                 tra.position += new Vector3(0f, 0.02f, 0f);
             }
+           
         }
     }
 }
