@@ -4,8 +4,6 @@ using UnityEngine;
 
 namespace Jojo
 {
-    public list Thiefs;
-
     public class RandomPickThief : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -20,4 +18,5 @@ namespace Jojo
         
     }
 }
+
 }
