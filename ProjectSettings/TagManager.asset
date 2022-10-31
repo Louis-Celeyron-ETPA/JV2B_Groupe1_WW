@@ -7,6 +7,7 @@ TagManager:
   - MyGameObjectTag
   - Ennemy
   - Mur
+  - Machine
   layers:
   - Default
   - TransparentFX
