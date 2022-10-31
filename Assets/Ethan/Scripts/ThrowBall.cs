@@ -16,6 +16,7 @@ namespace BananaLover
         float timeDown = 0f;
         float timeAutoDecreasePower = 0.4f;
         float maxCoutdown = 0.1f;
+        bool stopCountdown = false;
 
         // UI
         public TextMeshProUGUI puissanceScore;
@@ -37,14 +38,14 @@ namespace BananaLover
             {
                 timeDown -= Time.deltaTime;
             }
-            if (timeAutoDecreasePower > 0)
+            if (timeAutoDecreasePower > 0 && stopCountdown == false)
             {
                 timeAutoDecreasePower -= Time.deltaTime;
             }
             else
             {
                 timeAutoDecreasePower = maxCoutdown*4;
-                if (puissance>0)
+                if (puissance>0 && stopCountdown == false)
                 {
                     puissance -= 1;
                     puissanceScore.text = puissance.ToString();
@@ -60,22 +61,29 @@ namespace BananaLover
 
         public void IncreasePower()
         {
+            stopCountdown = true;
             if (puissance<10 && timeUp <= 0)
             {
                 puissance += 1;
                 puissanceScore.text = puissance.ToString();
-                timeUp = maxCoutdown;
+                timeUp = maxCoutdown;                
             }            
         }
 
         public void DecreasePower()
         {
+            stopCountdown = true;
             if (puissance > 0 && timeDown <= 0)
             {
                 puissance -= 1;
                 puissanceScore.text = puissance.ToString();
                 timeDown = maxCoutdown;
             }
+        }
+
+        public void DoingNothing()
+        {
+            stopCountdown = false;
         }
     }
 }

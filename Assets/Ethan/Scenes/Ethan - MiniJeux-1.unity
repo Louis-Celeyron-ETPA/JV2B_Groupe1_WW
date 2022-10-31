@@ -1533,72 +1533,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5031bd2d9dba241b4c6f3a9cf76af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onRight:
-    m_PersistentCalls:
-      m_Calls: []
-  onLeft:
-    m_PersistentCalls:
-      m_Calls: []
-  onUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 745523136}
-        m_TargetAssemblyTypeName: BananaLover.ThrowBall, Assembly-CSharp
-        m_MethodName: IncreasePower
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 745523136}
-        m_TargetAssemblyTypeName: BananaLover.ThrowBall, Assembly-CSharp
-        m_MethodName: DecreasePower
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onAction:
-    m_PersistentCalls:
-      m_Calls: []
-  onRightPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onLeftPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onUpPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onDownPresed:
-    m_PersistentCalls:
-      m_Calls: []
-  onActionPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 745523136}
-        m_TargetAssemblyTypeName: BananaLover.ThrowBall, Assembly-CSharp
-        m_MethodName: Throw
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  directions:
+    left:
+      m_PersistentCalls:
+        m_Calls: []
+    right:
+      m_PersistentCalls:
+        m_Calls: []
+    down:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 745523136}
+          m_TargetAssemblyTypeName: BananaLover.ThrowBall, Assembly-CSharp
+          m_MethodName: DecreasePower
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    up:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 745523136}
+          m_TargetAssemblyTypeName: BananaLover.ThrowBall, Assembly-CSharp
+          m_MethodName: IncreasePower
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  pointsMorts:
+    horizontal:
+      m_PersistentCalls:
+        m_Calls: []
+    vertical:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 745523136}
+          m_TargetAssemblyTypeName: BananaLover.ThrowBall, Assembly-CSharp
+          m_MethodName: DoingNothing
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  action:
+    onPressed:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 745523136}
+          m_TargetAssemblyTypeName: BananaLover.ThrowBall, Assembly-CSharp
+          m_MethodName: Throw
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onUp:
+      m_PersistentCalls:
+        m_Calls: []
+    onStayed:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1397594929 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4793791746673898885, guid: c36b7625c0777d943acca3c5618da702, type: 3}
@@ -1854,7 +1866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60ab91d84ed76249af8f58f7b9e1e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 1771908009}
   score: 0
 --- !u!1 &1721244909 stripped
 GameObject:

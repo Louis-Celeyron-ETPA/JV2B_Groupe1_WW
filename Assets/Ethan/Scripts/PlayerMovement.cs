@@ -9,7 +9,7 @@ namespace BananaLover
         Vector3 pos1 = new Vector3(-2.5f, 3f, -4f);
         Vector3 pos2 = new Vector3(2.5f, 3f, -4f);
         float pourcentage = 0f;
-        float speed = 0.005f;
+        float speed = 0.003f;
         bool retour = false;
 
         // Start is called before the first frame update
