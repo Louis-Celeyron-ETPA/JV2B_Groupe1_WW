@@ -17,9 +17,7 @@ namespace BananaLover
         float timeAutoDecreasePower = 0.4f;
         float maxCoutdown = 0.1f;
 
-
         // UI
-        public TextMeshProUGUI score;
         public TextMeshProUGUI puissanceScore;
 
         // Start is called before the first frame update
