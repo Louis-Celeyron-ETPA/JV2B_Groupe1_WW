@@ -15,7 +15,7 @@ public class moveTrain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = Vector3.forward * speed;
+        rb.velocity = Vector3.right * speed;
     }
 
 }
