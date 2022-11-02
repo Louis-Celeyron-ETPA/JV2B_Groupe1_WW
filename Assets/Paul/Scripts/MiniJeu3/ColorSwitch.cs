@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ColorSwitch : MonoBehaviour
 {
+    public Boite boite;
 
     public Material Material1;
     public Material Material2;
@@ -14,10 +15,12 @@ public class ColorSwitch : MonoBehaviour
     public Text colorChose;
 
     public int colorTest;
+    public bool checkCouleur2;
 
     void Start()
     {
         Object.GetComponent<MeshRenderer>().material = Material1;
+        checkCouleur2 = false;
     }
 
     // Update is called once per frame
@@ -26,15 +29,21 @@ public class ColorSwitch : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             Object.GetComponent<MeshRenderer>().material = Material2;
-            colorTest += 1;
-
+            
+            checkCouleur2 = false;
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             Object.GetComponent<MeshRenderer>().material = Material1;
-            colorTest -= 1;
+            
+            checkCouleur2 = true;
         }
 
+        
+
+        
+
         colorChose.text = colorTest.ToString();
+
     }
 }

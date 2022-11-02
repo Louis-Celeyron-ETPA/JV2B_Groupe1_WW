@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Boite : MonoBehaviour
 {
+    public ColorSwitch colorSwitch;
     public Rigidbody rb;
     public bool verifier;
+    public bool checkCouleur;
     public Material Material1;
     public Material Material2;
     public GameObject Object;
@@ -18,11 +20,12 @@ public class Boite : MonoBehaviour
         if (random < 0.5f)
         {
             Object.GetComponent<MeshRenderer>().material = Material1;
-
+            checkCouleur = true;
         }
         if (random > 0.5f)
         {
             Object.GetComponent<MeshRenderer>().material = Material2;
+            checkCouleur = false;
         }
     }
 
@@ -32,13 +35,14 @@ public class Boite : MonoBehaviour
         rb.velocity = rb.velocity.normalized;
         transform.position += transform.right * 0.01f;
     }
-    private void OnTriggerEnter(Collider collision)
+    public void OnTriggerStay(Collider collision)
     {
-        if (collision.gameObject.tag == "Machine")
+        if (collision.gameObject.tag == "Machine" && Input.GetKeyDown(KeyCode.Space) && checkCouleur == colorSwitch.checkCouleur2)
         {
             verifier = true;
             Debug.Log(verifier);
         }
+        
     }
 
 }
