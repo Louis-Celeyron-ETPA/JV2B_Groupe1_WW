@@ -6,8 +6,8 @@ namespace BananaLover
 {
     public class PlayerMovement : MonoBehaviour
     {
-        Vector3 pos1 = new Vector3(-2.65f, 3f, -5f);
-        Vector3 pos2 = new Vector3(2.65f, 3f, -5f);
+        Vector3 pos1 = new Vector3(-2.65f, 3.5f, -5f);
+        Vector3 pos2 = new Vector3(2.65f, 3.5f, -5f);
         float pourcentage = 0f;
         float speed = 0.003f;
         bool retour = false;

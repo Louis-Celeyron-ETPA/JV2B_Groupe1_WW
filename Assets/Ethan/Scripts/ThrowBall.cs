@@ -9,8 +9,8 @@ namespace BananaLover
     {
         // Normal
         public GameObject ballPrefab;
-        float forceForward = 6.5f;
-        float forceUp = 5f;
+        float forceForward = 4.5f;
+        float forceUp = 7f;
         float puissance = 5f;
         float timeUp = 0f;
         float timeDown = 0f;
