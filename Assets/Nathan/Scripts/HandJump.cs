@@ -2,29 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandJump : MonoBehaviour
+namespace Pediluves
 {
-    public float jumpAmount = 10;
-    public Rigidbody rb;
-
-    void Start()
+    public class HandJump : MonoBehaviour
     {
-        
-    }
+        public float jumpAmount = 10;
+        public Rigidbody rb;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Wall")
+        void Start()
         {
-            rb.AddForce(Vector3.up * jumpAmount, ForceMode.Impulse);
+
         }
 
+        // Update is called once per frame
+        void Update()
+        {
 
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Wall")
+            {
+                rb.AddForce(Vector3.up * jumpAmount, ForceMode.Impulse);
+            }
+
+
+        }
     }
 }

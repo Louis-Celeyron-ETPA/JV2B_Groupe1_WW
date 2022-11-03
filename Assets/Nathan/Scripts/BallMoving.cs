@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-namespace Pediluve
+namespace Pediluves
 {
     public class BallMoving : MonoBehaviour
     {

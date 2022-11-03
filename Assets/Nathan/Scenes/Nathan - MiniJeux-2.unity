@@ -2581,7 +2581,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1756290145}
-        m_TargetAssemblyTypeName: Pediluve.InputMini2, Assembly-CSharp
+        m_TargetAssemblyTypeName: Pediluves.InputMini2, Assembly-CSharp
         m_MethodName: actionMovement
         m_Mode: 1
         m_Arguments:
@@ -13715,8 +13715,7 @@ MonoBehaviour:
   scoreText: {fileID: 1079067723}
   stopActive: 0
   animator: {fileID: 919132147688923408}
-  openEnd: 0
-  closeEnd: 0
+  isClose: 1
 --- !u!1 &1766917752
 GameObject:
   m_ObjectHideFlags: 0

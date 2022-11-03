@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Pediluve
+namespace Pediluves
 {
     public class SpawnerMoving : MonoBehaviour
     {

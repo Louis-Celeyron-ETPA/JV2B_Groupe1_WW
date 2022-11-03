@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class moveTrain : MonoBehaviour
+namespace Pediluves
 {
-    public Rigidbody rb;
-    public int speed;
-
-    void Start()
+    public class moveTrain : MonoBehaviour
     {
-        
-    }
+        public Rigidbody rb;
+        public int speed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        rb.velocity = Vector3.right * speed;
-    }
+        void Start()
+        {
 
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            rb.velocity = Vector3.right * speed;
+        }
+
+    }
 }

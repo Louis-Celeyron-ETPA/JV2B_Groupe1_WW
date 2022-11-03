@@ -23,8 +23,7 @@ namespace Pediluves
 
         public Animator animator;
 
-        public bool openEnd = false;
-        public bool closeEnd = false;
+        public bool isClose = true;
 
         void Start()
         {
@@ -43,8 +42,6 @@ namespace Pediluves
             }
 
             scoreText.text = score.ToString();
-
-            Debug.Log(stopActive);
         }
         public void leftMovement()
         {
@@ -56,14 +53,14 @@ namespace Pediluves
         }
         public void actionMovement()
         {
-            if (stopActive == false && closeEnd == true)
+            if (stopActive == false && isClose == true)
             {
                 animator.SetTrigger("Ouvrir");
                 stopActive = true;
                 speed /= 3;
             }
 
-            if (stopActive == true && openEnd == true)
+            if (stopActive == true && isClose == false)
             {
                 stopActive = false;
                 animator.SetTrigger("Fermer");
@@ -72,13 +69,11 @@ namespace Pediluves
 
         public void OpenEnd()
         {
-            openEnd = true;
-            closeEnd = false;
+            isClose = false;
         }
         public void CloseEnd()
         {
-            closeEnd = true;
-            openEnd = false;
+            isClose = true;
         }
 
         private void OnCollisionEnter(Collision collision)

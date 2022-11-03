@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Pediluve
+namespace Pediluves
 {
     public class ObjectMoving : MonoBehaviour
     {
