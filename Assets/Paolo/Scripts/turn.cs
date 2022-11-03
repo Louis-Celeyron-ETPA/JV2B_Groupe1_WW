@@ -19,6 +19,21 @@ namespace Paolo
             {
 
             }
+
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+
+            }
         }
     }
 }
