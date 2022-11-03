@@ -8,7 +8,7 @@ public class AleatoireDeplacement : MonoBehaviour
 
     public int test = 0;
     public int chrono = 7600;
-    public float speed = 0.05f;
+    public float speed = 0.02f;
     public float time = 1f;
     public float sensitivity = 1.5f;
     public KeyCode avance;
@@ -53,12 +53,13 @@ public class AleatoireDeplacement : MonoBehaviour
         {
 
             VariableTemporaireDeplacement = Random.Range(1, 4);
-            if(transform.position.z == -8)
+
+
+            if (transform.position.z <= -7)
             {
                 VariableTemporaireDeplacement = Random.Range(2, 4);
             }
-
-            if (transform.position.z == 8)
+            else if (transform.position.z >= 7)
             {
                 VariableTemporaireDeplacement = Random.Range(1, 4);
 
@@ -67,6 +68,10 @@ public class AleatoireDeplacement : MonoBehaviour
                     VariableTemporaireDeplacement = 1;
                 }
 
+            }
+            else
+            {
+                VariableTemporaireDeplacement = Random.Range(1, 4);
             }
             
 

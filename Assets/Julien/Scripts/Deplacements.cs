@@ -5,9 +5,9 @@ namespace Cunegonde
 {
 public class Deplacements : MonoBehaviour
 {
-        public int chrono = 20000;
-        public float speed = 0.002f;
-        public float vitesseBaguette = 0.000000003f;
+        public int chrono = 7600;
+        public float speed = 0.0005f;
+        public float vitesseBaguette = 0.0003f;
         public float sensitivity = 1.5f;
         public KeyCode avance;
         public KeyCode recule;
