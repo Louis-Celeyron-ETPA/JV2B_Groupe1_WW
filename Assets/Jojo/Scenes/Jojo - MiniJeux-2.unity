@@ -329,7 +329,6 @@ GameObject:
   - component: {fileID: 163879709}
   - component: {fileID: 163879708}
   - component: {fileID: 163879712}
-  - component: {fileID: 163879711}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -403,19 +402,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &163879711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163879707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0088e471564933b4cb2cbc5377bc7572, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rt: {fileID: 1342623725}
 --- !u!114 &163879712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,84 +414,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5031bd2d9dba241b4c6f3a9cf76af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onRight:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 163879711}
-        m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
-        m_MethodName: RightMove
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onLeft:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 163879711}
-        m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
-        m_MethodName: LeftMove
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 163879711}
-        m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
-        m_MethodName: UpMove
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 163879711}
-        m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
-        m_MethodName: DownMove
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onAction:
-    m_PersistentCalls:
-      m_Calls: []
-  onRightPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onLeftPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onUpPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onDownPresed:
-    m_PersistentCalls:
-      m_Calls: []
-  onActionPressed:
-    m_PersistentCalls:
-      m_Calls: []
+  directions:
+    left:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1342623728}
+          m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
+          m_MethodName: LeftMove
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    right:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1342623728}
+          m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
+          m_MethodName: RightMove
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    down:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1342623728}
+          m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
+          m_MethodName: DownMove
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    up:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1342623728}
+          m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
+          m_MethodName: UpMove
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  pointsMorts:
+    horizontal:
+      m_PersistentCalls:
+        m_Calls: []
+    vertical:
+      m_PersistentCalls:
+        m_Calls: []
+  action:
+    onPressed:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1342623728}
+          m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
+          m_MethodName: Action
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onUp:
+      m_PersistentCalls:
+        m_Calls: []
+    onStayed:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &186480042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,6 +2434,7 @@ GameObject:
   - component: {fileID: 1342623725}
   - component: {fileID: 1342623727}
   - component: {fileID: 1342623726}
+  - component: {fileID: 1342623728}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -2458,9 +2457,9 @@ RectTransform:
   m_Father: {fileID: 1730031023}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 960, y: -540}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1342623726
@@ -2501,6 +2500,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342623724}
   m_CullTransparentMesh: 1
+--- !u!114 &1342623728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342623724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0088e471564933b4cb2cbc5377bc7572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rt: {fileID: 1342623725}
 --- !u!1 &1368526329
 GameObject:
   m_ObjectHideFlags: 0

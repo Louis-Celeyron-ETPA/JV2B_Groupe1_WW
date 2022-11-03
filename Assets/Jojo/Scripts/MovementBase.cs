@@ -45,17 +45,17 @@ namespace Jojo
 
             var positionDansLeMonde = new Vector3(convertedPosition.x, -convertedPosition.y, convertedPosition.z);
 
-            Debug.DrawRay(transform.position, positionDansLeMonde);
-
+            Debug.DrawRay(positionDansLeMonde, Camera.main.transform.forward);
+            Debug.Log(positionDansLeMonde);
             if (Physics.Raycast(positionDansLeMonde, Camera.main.transform.forward, out var other))
             {
+                Debug.Log(other.transform);
                 if (other.transform.tag == "Voleur")
                 {
                     Destroy(other.transform.gameObject);
                 }
             }
         }
-
     }
     
 }
