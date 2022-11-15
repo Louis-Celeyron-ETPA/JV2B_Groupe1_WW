@@ -39,15 +39,20 @@ namespace Jojo
         {
             var positionTemporaire = new Vector3(
             rt.anchoredPosition.x / Camera.main.pixelWidth,
-            rt.anchoredPosition.y / Camera.main.pixelHeight * -1,
+            rt.anchoredPosition.y / Camera.main.pixelHeight,
             Camera.main.nearClipPlane);
+
+
             var convertedPosition = Camera.main.ViewportToWorldPoint(positionTemporaire);
+            var pla = new Vector3(Camera.main.transform.position.x, -Camera.main.transform.position.y, Camera.main.transform.position.z) - convertedPosition;
 
-            var positionDansLeMonde = new Vector3(convertedPosition.x, -convertedPosition.y, convertedPosition.z);
 
-            Debug.DrawRay(positionDansLeMonde, Camera.main.transform.forward);
-            Debug.Log(positionDansLeMonde);
-            if (Physics.Raycast(positionDansLeMonde, Camera.main.transform.forward, out var other))
+            Debug.Log(Camera.main.ViewportToWorldPoint(convertedPosition));
+
+            //Debug.DrawRay(convertedPosition,Camera.main.transform.forward * 1000);
+            Debug.DrawRay(Camera.main.transform.position, pla.normalized* -1000);
+          
+            if (Physics.Raycast(Camera.main.transform.position, -pla.normalized, out var other))
             {
                 Debug.Log(other.transform);
                 if (other.transform.tag == "Voleur")
