@@ -20,12 +20,19 @@ namespace Laury
         public float delai;
         public int nombre = 0;
         public bool voir;
+        public float tour;
+        public bool attente;
+        public bool valide;
+        public toucheJoueur touchej;
         public int actionOnTime;
             // Start is called before the first frame update
         void Start()
         {
-            delai = 1;
-            limit = 4; 
+            delai = 0.3f;
+            limit = 2;
+            tour = 0;
+            attente = false;
+            valide = true;
             for (int i = 0; i < limit; i++)
             {
                 choix = Random.Range(1, 5);
@@ -37,26 +44,61 @@ namespace Laury
         // Update is called once per frame
         void Update()
         {
+            if (tour <= 3 && limit < 4)
+            {
+                if (tour == 2 && nombre == limit && attente == true) 
+                { limit = 3;
+                  choix = Random.Range(1, 5);
+                  Simon.Add(choix);
+                }
+                if (tour == 3 && nombre == limit && attente == true) 
+                { limit = 4;
+                  choix = Random.Range(1, 5);
+                  Simon.Add(choix);
+                }
+            }
+
             timeo += Time.deltaTime;
             if(timeo >= delai)
             {
-                if(actionOnTime == 0 && nombre < 4)
+                if(actionOnTime == 0 && nombre < 4 && valide == true)
                 {
                     AllumerLumiere();
                 }
-                if(actionOnTime == 2 && nombre < 4)
+                if(actionOnTime == 2 && nombre < 4 && valide == true)
                 {
                     EteindreLumiere();
                 }
                 timeo = 0;
                 actionOnTime++;
-                if(actionOnTime>=3)
+                if (actionOnTime >= 3 && valide == true)
                 {
                     actionOnTime = 0;
+                    tour += 1;
                     nombre += 1;
+                    if (tour == 2)
+                    {
+                        attente = true;
+                        verif();
+                    }
+                    if (tour == 3)
+                    {
+                        attente = true;
+                        verif();
+                    }
                 }
             }
 
+        }
+        void verif()
+        {
+            if (attente == true)
+            {
+                for (int i = 0; i < limit; i++)
+                {
+                    if (touchej.valeurs[i] == Simon[i]) { valide = false; attente = false; }
+                }
+            }
         }
         void AllumerLumiere()
         {
