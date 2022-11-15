@@ -6,9 +6,11 @@ using UnityEngine;
 namespace Jojo
 {
 
+
 public class ChooseThief : MonoBehaviour
 {
-    public List<ThiefMovement> ListThief;
+
+    public List<ThiefMovement> ListThief1;
     int randomThief;
     int randomMove;
     private float compteur;
@@ -17,7 +19,7 @@ public class ChooseThief : MonoBehaviour
     void Start()
     {
         compteur = cooldown;
-        randomThief = Random.Range(0,ListThief.Count);
+        randomThief = Random.Range(0,ListThief1.Count);
         randomMove = Random.Range(0,1);
     }
 
@@ -31,13 +33,13 @@ public class ChooseThief : MonoBehaviour
         }else
             {
             if(randomMove==0){
-                ListThief[randomThief].BigMove=true;
+                ListThief1[randomThief].BigMove=true;
             }
 
             if(randomMove==1 || randomMove==2 ){
-                ListThief[randomThief].SmallMove=true;
+                ListThief1[randomThief].SmallMove=true;
             }
-            randomThief = Random.Range(0,ListThief.Count);
+            randomThief = Random.Range(0,ListThief1.Count);
             randomMove = Random.Range(0,2);
             compteur = cooldown;
             }
