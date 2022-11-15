@@ -17,21 +17,22 @@ namespace Paolo
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-
+                transform.eulerAngles = Vector3.zero;
             }
 
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-
+                transform.eulerAngles = Vector3.up*180;
             }
 
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-
+                transform.eulerAngles = Vector3.up * 270;
             }
 
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
+                transform.eulerAngles = Vector3.up * 90;
 
             }
         }
