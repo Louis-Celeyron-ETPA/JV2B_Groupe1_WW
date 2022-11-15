@@ -6,14 +6,17 @@ namespace Cunegonde
     public class presenterDeroulement : MonoBehaviour
     {
         public int choixDemande;
-        
+        public int avantFin = 0;
+
 
 
         // Start is called before the first frame update
         void Start()
         {
-            
-            
+
+
+
+
             GameObject.Find("FlecheHaut").transform.position = new Vector3(0, 0, 0);
             GameObject.Find("FlecheBas").transform.position = new Vector3(0, 0, 0);
             GameObject.Find("FlecheDroite").transform.position = new Vector3(0, 0, 0);
@@ -23,13 +26,21 @@ namespace Cunegonde
             GameObject.Find("BatonUn").transform.position = new Vector3(0, 0, 0);
             GameObject.Find("BatonDeux").transform.position = new Vector3(0, 0, 0);
             GameObject.Find("BatonTrois").transform.position = new Vector3(0, 0, 0);
+
+            GameObject.Find("ecritureTableau").transform.position = new Vector3(0, 0, 0);
+
+
+
             FonctionChoix();
+
+
+
         }
 
         // Update is called once per frame
         void Update()
         {
-            
+
         }
         public void FonctionChoix()
         {
@@ -70,11 +81,64 @@ namespace Cunegonde
             if (choixDemande == choixEntre)
             {
                 Debug.Log("QTE réussi.png");
+                avantFin += 1;
+
+                GameObject.Find("FlecheHaut").transform.position = new Vector3(0, 0, 0);
+                GameObject.Find("FlecheBas").transform.position = new Vector3(0, 0, 0);
+                GameObject.Find("FlecheDroite").transform.position = new Vector3(0, 0, 0);
+                GameObject.Find("FlecheGauche").transform.position = new Vector3(0, 0, 0);
+                GameObject.Find("Bouton").transform.position = new Vector3(0, 0, 0);
+
+                GameObject.Find("BatonUn").transform.position = new Vector3(0, 0, 0);
+                GameObject.Find("BatonDeux").transform.position = new Vector3(0, 0, 0);
+                GameObject.Find("BatonTrois").transform.position = new Vector3(0, 0, 0);
+
+                if (avantFin < 4)
+                {
+                    StartCoroutine(Attente());
+                }
+                else
+                {
+                    Debug.Log("Victoire !");
+                }
             }
             else if (choixDemande != choixEntre)
             {
                 Debug.Log("-1 vie");
+
+                GameObject.Find("FlecheHaut").transform.position = new Vector3(0, 0, 0);
+                GameObject.Find("FlecheBas").transform.position = new Vector3(0, 0, 0);
+                GameObject.Find("FlecheDroite").transform.position = new Vector3(0, 0, 0);
+                GameObject.Find("FlecheGauche").transform.position = new Vector3(0, 0, 0);
+                GameObject.Find("Bouton").transform.position = new Vector3(0, 0, 0);
+
+                GameObject.Find("BatonUn").transform.position = new Vector3(0, 0, 0);
+                GameObject.Find("BatonDeux").transform.position = new Vector3(0, 0, 0);
+                GameObject.Find("BatonTrois").transform.position = new Vector3(0, 0, 0);
+
+                if (avantFin < 4)
+                {
+                    StartCoroutine(Attente()); ;
+                }
             }
+        }
+
+        public IEnumerator Attente()
+        {
+            //Wait for 1 seconds
+            yield return new WaitForSeconds(1);
+
+            GameObject.Find("ecritureTableau").transform.position = new Vector3(-0.152f, 2.095f, 4.877f);
+
+            int tempsAttente = Random.Range(1, 3);
+
+            yield return new WaitForSeconds(tempsAttente);
+
+            GameObject.Find("ecritureTableau").transform.position = new Vector3(0, 0, 0);
+
+            FonctionChoix();
+
+
         }
 
     }
