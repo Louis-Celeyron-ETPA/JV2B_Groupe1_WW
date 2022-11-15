@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Paul
 {
-    public class route : MonoBehaviour
+    public class Voitures : MonoBehaviour
     {
         public Rigidbody rb;
         // Start is called before the first frame update
@@ -16,8 +16,16 @@ namespace Paul
         // Update is called once per frame
         void Update()
         {
-            rb.velocity = rb.velocity.normalized;
-            rb.AddForce(Vector3.forward * 2f);
+
+        }
+        void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                rb.AddForce(Vector3.up * 1000);
+                rb.AddForce(Vector3.left * 500);
+
+            }
         }
     }
 }
