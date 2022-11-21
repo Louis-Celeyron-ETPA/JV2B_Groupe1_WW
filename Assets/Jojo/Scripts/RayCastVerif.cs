@@ -20,7 +20,7 @@ namespace Jojo
             if(Physics.Raycast(transform.position, direction,out var other, masklol))
             {
                 Debug.Log(other);
-                if (other.transform.tag == "Voleur")
+                if (other.transform.tag=="Voleur")
                 {
                     Destroy(other.transform.gameObject);
                 }

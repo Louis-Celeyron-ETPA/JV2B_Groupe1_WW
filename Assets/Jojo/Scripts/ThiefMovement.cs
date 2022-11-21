@@ -10,6 +10,7 @@ namespace Jojo
         public bool BigMove;
         public bool SmallMove;
         float pourcentageM = 0f;
+        public string Direction;
         float pourcentageM2 = 0f;
         bool FinMove1 = false;
         Vector3 PoseBase;
@@ -23,8 +24,17 @@ namespace Jojo
             BigMove = false;
             SmallMove = false;
             PoseBaseP = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            PoseFinPB = new Vector3(transform.position.x + 7, transform.position.y, transform.position.z);
-            PoseFinPS = new Vector3(transform.position.x + 3, transform.position.y, transform.position.z);
+            if (Direction == "droite")
+            {
+                PoseFinPB = transform.position + transform.up * 6f;
+                PoseFinPS = transform.position + transform.up * 2f;
+            }
+            if (Direction == "gauche")
+            {
+                PoseFinPB = transform.position + transform.up * 6f;
+                PoseFinPS = transform.position + transform.up * 2f;
+            }
+
         }
 
         // Update is called once per frame

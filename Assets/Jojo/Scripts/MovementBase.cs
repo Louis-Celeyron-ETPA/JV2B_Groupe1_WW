@@ -7,7 +7,7 @@ namespace Jojo
     public class MovementBase : MonoBehaviour
     {
         public RectTransform rt;
-        float speed = 8f;
+        float speed = 15f;
 
         void Start()
         {
