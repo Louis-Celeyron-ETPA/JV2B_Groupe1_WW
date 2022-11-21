@@ -30,7 +30,7 @@ namespace Pediluves
                     spawnerX = spawner[t].transform.position.x;
                     spawnerY = spawner[t].transform.position.y;
                     spawnerZ = spawner[t].transform.position.z;
-                    Instantiate(objectToSpawn, new Vector3(spawnerX, spawnerY + 10, spawnerZ), Quaternion.identity, parent);
+                    Instantiate(objectToSpawn, new Vector3(spawnerX, spawnerY , spawnerZ), Quaternion.Euler(-90,0,-90), parent);
                     counterEnd++;
                 }
 
