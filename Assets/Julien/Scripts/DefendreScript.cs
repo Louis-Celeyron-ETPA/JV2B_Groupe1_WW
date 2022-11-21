@@ -26,18 +26,22 @@ namespace Cunegonde
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKey(KeyCode.LeftArrow))
+            
+
+
+        }
+
+        public void FonctionParapluie(int ChoixParapluie)
+        {
+            if (ChoixParapluie == 1)
             {
                 transform.localPosition += transform.up * speed;
             }
 
-            else if (Input.GetKey(KeyCode.RightArrow))
+            else if (ChoixParapluie == 2)
             {
                 transform.localPosition += transform.up * -speed;
             }
-
-
         }
-        
     }
 }

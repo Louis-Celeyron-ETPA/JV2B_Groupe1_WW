@@ -31,6 +31,8 @@ public class AleatoireDeplacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+            Debug.Log(VariableTemporaireDeplacement);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed);
 
     }
@@ -52,13 +54,14 @@ public class AleatoireDeplacement : MonoBehaviour
         public void AleatoireDeplacementCapsule()
         {
 
-            VariableTemporaireDeplacement = Random.Range(1, 4);
 
-
+            var tempVector = transform.position;
+            
             if (transform.position.z <= -7)
             {
                 VariableTemporaireDeplacement = Random.Range(2, 4);
             }
+
             else if (transform.position.z >= 7)
             {
                 VariableTemporaireDeplacement = Random.Range(1, 4);
@@ -73,6 +76,7 @@ public class AleatoireDeplacement : MonoBehaviour
             {
                 VariableTemporaireDeplacement = Random.Range(1, 4);
             }
+            
             
 
 
@@ -118,6 +122,10 @@ public class AleatoireDeplacement : MonoBehaviour
             {
                 Debug.Log("là y'a un problème si ça fait ça");
             }
+
+
+            transform.position = new Vector3(Mathf.Clamp(tempVector.x, -8, 8), tempVector.y, tempVector.z);
+
         }
 
 
@@ -125,7 +133,7 @@ public class AleatoireDeplacement : MonoBehaviour
         public IEnumerator Attente()
         {
             //Wait for 2 seconds
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(2.5f);
             OnFaitUnChoix = true;
 
             HonnetementJSP();

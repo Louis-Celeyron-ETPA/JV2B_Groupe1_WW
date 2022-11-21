@@ -7,7 +7,7 @@ namespace Cunegonde
     {
 
         public int chrono = 7600;
-        public float vitesseCamera = 0.0003f;
+        public float vitesseCamera = 0.003f;
 
         // Start is called before the first frame update
         void Start()
