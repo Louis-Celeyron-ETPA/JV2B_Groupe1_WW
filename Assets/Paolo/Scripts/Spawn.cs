@@ -20,9 +20,12 @@ public class Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            pokeboulle pokeball = Instantiate(objectToSpawn, parents[Random.Range(0, 4)]).GetComponent<pokeboulle>();
+            var parent = parents[Random.Range(0, 4)];
+            pokeboulle pokeball = Instantiate(objectToSpawn, parent,false).GetComponent<pokeboulle>();
+            pokeball.transform.localPosition = Vector3.zero;
+            pokeball.transform.localEulerAngles = Vector3.zero;
             pokeball.tragrt = target;
         }
 

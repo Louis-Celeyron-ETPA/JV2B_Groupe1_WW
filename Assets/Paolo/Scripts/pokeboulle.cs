@@ -49,7 +49,12 @@ public class pokeboulle : MonoBehaviour
 
         if (other.gameObject.tag == "galade")
         {
-         
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.tag == "galade")
+        {
+            Destroy(gameObject);
         }
     }
 }

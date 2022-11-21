@@ -22,7 +22,7 @@ namespace Paolo
 
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                transform.eulerAngles = Vector3.up*180;
+                transform.eulerAngles = Vector3.up * 180;
             }
 
             if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -35,6 +35,12 @@ namespace Paolo
                 transform.eulerAngles = Vector3.up * 90;
 
             }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            //Check for a match with the specified name on any GameObject that collides with your GameObject
+            
         }
     }
 }

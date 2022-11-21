@@ -625,6 +625,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5964906276257114187, guid: ac9bd0246a449e04e9aa0c5886a8dd40, type: 3}
+      propertyPath: m_TagString
+      value: galade
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ac9bd0246a449e04e9aa0c5886a8dd40, type: 3}
       propertyPath: m_Name
       value: Gallade
