@@ -46,7 +46,7 @@ namespace Gael
             Debug.Log(collision.impulse);
 
             forceImpact =(collision.impulse.y );
-            finalImpact = (forceImpact / 100);
+            finalImpact = (forceImpact / 350);
 
 
             //if (localScale == new Vector3(1F, 0F, 1f));
