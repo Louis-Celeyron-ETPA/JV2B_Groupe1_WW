@@ -36,7 +36,7 @@ namespace Paul
         void Update()
         {
             rb.velocity = rb.velocity.normalized;
-            transform.position += transform.right * 0.01f;
+            transform.position += transform.right * 0.15f;
         }
     }
 }

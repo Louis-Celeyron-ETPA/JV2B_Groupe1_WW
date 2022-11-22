@@ -33,7 +33,7 @@ public class Spawner : MonoBehaviour
                 spawnerY = spawnerRight[t].transform.position.y;
                 spawnerZ = spawnerRight[t].transform.position.z;
             }
-            Instantiate(objectToSpawn, new Vector3(spawnerX, spawnerY, spawnerZ), Quaternion.identity);
+            Instantiate(objectToSpawn, new Vector3(spawnerX, spawnerY, spawnerZ), Quaternion.Euler(0,90,90));
 
         }
 
