@@ -27,18 +27,20 @@ namespace Paul
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                Object.GetComponent<MeshRenderer>().material = Material2;
 
-                checkCouleur2 = false;
-            }
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                Object.GetComponent<MeshRenderer>().material = Material1;
+        }
+        public void RightInput()
+        {
+            Object.GetComponent<MeshRenderer>().material = Material2;
 
-                checkCouleur2 = true;
-            }
+            checkCouleur2 = false;
+        }
+
+        public void LeftInput()
+        {
+            Object.GetComponent<MeshRenderer>().material = Material1;
+
+            checkCouleur2 = true;
         }
     }
 }

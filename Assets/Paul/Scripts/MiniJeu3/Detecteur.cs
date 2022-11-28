@@ -22,10 +22,12 @@ namespace Paul
         // Update is called once per frame
         void Update()
         {
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                OnSpace();
-            }
+
+        }
+
+        public void ActionInput()
+        {
+            OnSpace();
         }
 
         public void OnSpace()

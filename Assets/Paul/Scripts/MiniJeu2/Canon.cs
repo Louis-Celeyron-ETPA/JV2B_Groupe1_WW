@@ -53,17 +53,23 @@ namespace Paul
 
             counter++;
 
-            if (Input.GetKeyDown(KeyCode.Space)&&(counter > 100))
-            {
-                counter = 0;
-                Instantiate(objectToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-
-            }
+            
             if (counter < 101) 
             {
                 counter++;
                 Debug.Log(counter);
             }
+
+        }
+        public void ToucheEspace()
+        {
+            if (counter > 100)
+            {
+                counter = 0;
+                Instantiate(objectToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+
+            }
+
         }
     }
 }
