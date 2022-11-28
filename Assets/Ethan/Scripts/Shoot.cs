@@ -26,7 +26,7 @@ namespace BananaLover
         {
             lr.positionCount = 2;
             lr.SetPosition(0, transform.position - new Vector3(0, 0.1f, 0)); //Origin
-            lr.SetPosition(1, transform.position + transform.forward * 25);//Origin+direction*longueur
+            lr.SetPosition(1, transform.position + transform.forward * 2);//Origin+direction*longueur
         }
 
         public void ShootBullet()
