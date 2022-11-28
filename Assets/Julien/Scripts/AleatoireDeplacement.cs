@@ -7,7 +7,7 @@ public class AleatoireDeplacement : MonoBehaviour
 {
 
     public int test = 0;
-    public int chrono = 7600;
+    public int chrono = 760;
     public float speed = 0.02f;
     public float time = 1f;
     public float sensitivity = 1.5f;
@@ -32,6 +32,11 @@ public class AleatoireDeplacement : MonoBehaviour
     void Update()
     {
 
+            if (chrono > 1)
+            {
+                chrono--;
+            }
+
             Debug.Log(VariableTemporaireDeplacement);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed);
 
@@ -41,6 +46,7 @@ public class AleatoireDeplacement : MonoBehaviour
         {
             if (chrono > 1 || OnFaitUnChoix == true)
             {
+                chrono--;
                 OnFaitUnChoix = false;
                 AleatoireDeplacementCapsule();
                 StartCoroutine(Attente());
@@ -54,7 +60,10 @@ public class AleatoireDeplacement : MonoBehaviour
         public void AleatoireDeplacementCapsule()
         {
 
+            if (chrono > 1)
+            {
 
+            
             var tempVector = transform.position;
             
             if (transform.position.z <= -7)
@@ -126,6 +135,7 @@ public class AleatoireDeplacement : MonoBehaviour
 
             transform.position = new Vector3(Mathf.Clamp(tempVector.x, -8, 8), tempVector.y, tempVector.z);
 
+        }
         }
 
 

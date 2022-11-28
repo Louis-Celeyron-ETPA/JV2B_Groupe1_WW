@@ -5,7 +5,7 @@ namespace Cunegonde
 {
     public class DefendreScript : MonoBehaviour
     {
-        public int chrono = 7600;
+        public int chrono = 800;
         public float speed = 0.05f;
         public float vitesseBaguette = 0.0003f;
         public float sensitivity = 1.5f;
@@ -26,22 +26,28 @@ namespace Cunegonde
         // Update is called once per frame
         void Update()
         {
-            
+            if (chrono > 1)
+            {
+                chrono--;
+            }
 
 
         }
 
-        public void FonctionParapluie(int ChoixParapluie)
+            public void FonctionParapluie(int ChoixParapluie)
         {
-            if (ChoixParapluie == 1)
+            if (chrono > 1)
             {
-                transform.localPosition += transform.up * speed;
-            }
+                if (ChoixParapluie == 1)
+                {
+                    transform.localPosition += transform.up * speed;
+                }
 
-            else if (ChoixParapluie == 2)
-            {
-                transform.localPosition += transform.up * -speed;
+                else if (ChoixParapluie == 2)
+                {
+                    transform.localPosition += transform.up * -speed;
+                }
+            }
             }
         }
-    }
 }

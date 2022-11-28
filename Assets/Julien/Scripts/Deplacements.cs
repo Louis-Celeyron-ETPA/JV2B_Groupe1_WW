@@ -5,7 +5,7 @@ namespace Cunegonde
 {
     public class Deplacements : MonoBehaviour
     {
-        public int chrono = 7600;
+        public int chrono = 760;
         public float speed = 0.05f;
         public float vitesseBaguette = 0.003f;
         public float sensitivity = 1.5f;
@@ -20,7 +20,9 @@ namespace Cunegonde
         // Update is called once per frame
         void Update()
         {
-            if (chrono > 1)
+            Debug.Log(chrono);
+
+            if (chrono > 1) 
             {
                 chrono--;
                 transform.Translate(-Vector3.up * vitesseBaguette);

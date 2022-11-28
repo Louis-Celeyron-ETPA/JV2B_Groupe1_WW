@@ -6,7 +6,7 @@ namespace Cunegonde
     public class DeplacementCamera : MonoBehaviour
     {
 
-        public int chrono = 7600;
+        public int chrono = 760;
         public float vitesseCamera = 0.003f;
 
         // Start is called before the first frame update
