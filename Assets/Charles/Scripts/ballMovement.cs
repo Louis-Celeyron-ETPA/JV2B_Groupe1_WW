@@ -5,37 +5,32 @@ using UnityEngine;
 public class ballMovement : MonoBehaviour
 {
     public Rigidbody rb;
-    
-
-
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                rb.velocity = rb.velocity + new Vector3(1f,0f,0f);
-            }
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                rb.velocity = rb.velocity + new Vector3(-1f, 0f, 0f);
-            }
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                rb.velocity = rb.velocity + new Vector3(0f, 0f, 1f);
-            }
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                rb.velocity = rb.velocity + new Vector3(0f, 0f, -1f);
-            }
-        }
+    }
 
+    public void RightMove()
+    {
+        rb.velocity += new Vector3(0.01f, 0f, 0f);
+    }
+    public void LeftMove()
+    {
+        rb.velocity += new Vector3(-0.01f, 0f, 0f);
+    }
+    public void FrontMove()
+    {
+        rb.velocity += new Vector3(0f, 0f, 0.01f);
+    }
+    public void BackMove() 
+    {
+        rb.velocity += new Vector3(0f, 0f, -0.01f);
     }
 }
