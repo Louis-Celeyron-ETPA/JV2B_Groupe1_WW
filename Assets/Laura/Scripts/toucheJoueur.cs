@@ -6,16 +6,9 @@ namespace Laury
 
     public class toucheJoueur : MonoBehaviour
     {
-        public MeshRenderer FH;
-        public Material colorR;
-        public Material colorV;
-        public Material colorJ;
-        public Material colorB;
-        public Material []listR;
-        public Material []listV;
-        public Material []listJ;
-        public Material []listB;
+        public MeshRenderer FH,FB,FD,FG;
         public List<int> valeurs;
+        private bool inputEntered = false;
         // Start is called before the first frame update
         void Start()
         {
@@ -29,27 +22,56 @@ namespace Laury
         }
         public void FlecheH()
         {
-            FH.materials = listR;
-            valeurs.Add(1);
-            Debug.Log("Rouge");
+            if(inputEntered == false)
+            {
+                inputEntered = true;
+                FH.materials[1].color = Color.red;
+                valeurs.Add(1);
+                Debug.Log("Rouge");
+            }
         }
         public void FlecheD()
         {
-            FH.materials = listV;
-            valeurs.Add(3);
-            Debug.Log("Vert");
+            if (inputEntered == false)
+            {
+                inputEntered = true;
+
+                FD.materials[1].color = Color.green;
+                valeurs.Add(3);
+                Debug.Log("Vert");
+            }
         }
         public void FlecheB()
         {
-            FH.materials = listJ;
-            valeurs.Add(2);
-            Debug.Log("Jaune");
+            if (inputEntered == false)
+            {
+                inputEntered = true;
+
+                FB.materials[1].color = Color.yellow;
+                valeurs.Add(2);
+                Debug.Log("Jaune");
+            }
         }
         public void FlecheG()
         {
-            FH.materials = listB;
-            valeurs.Add(4);
-            Debug.Log("Bleu");
+            if (inputEntered == false)
+            {
+                inputEntered = true;
+
+                FG.materials[1].color = Color.blue;
+                valeurs.Add(4);
+                Debug.Log("Bleu");
+            }
+        }
+
+        public void ResetColor()
+        {
+            inputEntered = false;
+
+            FG.materials[1].color = Color.white;
+            FD.materials[1].color = Color.white;
+            FH.materials[1].color = Color.white;
+            FB.materials[1].color = Color.white;
         }
     }
 

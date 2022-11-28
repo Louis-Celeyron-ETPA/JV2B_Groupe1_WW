@@ -19,16 +19,15 @@ namespace Laury
         public float timeo;
         public float delai;
         public int nombre = 0;
-        public bool voir;
         public float tour;
         public bool attente;
         public bool valide;
-        public toucheJoueur touchej;
+        public toucheJoueur lista;
         public int actionOnTime;
             // Start is called before the first frame update
         void Start()
         {
-            delai = 0.3f;
+            delai = 1f;
             limit = 2;
             tour = 0;
             attente = false;
@@ -37,7 +36,6 @@ namespace Laury
             {
                 choix = Random.Range(1, 5);
                 Simon.Add(choix);
-                print(Simon);
             }
         }
 
@@ -59,44 +57,45 @@ namespace Laury
             }
 
             timeo += Time.deltaTime;
-            if(timeo >= delai)
+            if (timeo >= delai)
             {
-                if(actionOnTime == 0 && nombre < 4 && valide == true)
+                if (actionOnTime == 0 && valide == true)
                 {
                     AllumerLumiere();
                 }
-                if(actionOnTime == 2 && nombre < 4 && valide == true)
+                if (actionOnTime == 1 && valide == true)
                 {
                     EteindreLumiere();
+                    nombre += 1;
+                    tour += 1;
                 }
                 timeo = 0;
-                actionOnTime++;
-                if (actionOnTime >= 3 && valide == true)
+                actionOnTime += 1;
+            }
+            
+            if (actionOnTime == 2 && valide == true)
+            {
+                actionOnTime = 0;
+                if (tour == 2)
                 {
-                    actionOnTime = 0;
-                    tour += 1;
-                    nombre += 1;
-                    if (tour == 2)
-                    {
-                        attente = true;
-                        verif();
-                    }
-                    if (tour == 3)
-                    {
-                        attente = true;
-                        verif();
-                    }
+                    attente = true;
+                    verif();
+                }
+                if (tour == 3)
+                {
+                    attente = true;
+                    verif();
                 }
             }
-
         }
-        void verif()
+        public void verif()
         {
+            valide = false;
             if (attente == true)
             {
                 for (int i = 0; i < limit; i++)
                 {
-                    if (touchej.valeurs[i] == Simon[i]) { valide = false; attente = false; }
+                    if (lista.valeurs[i] == Simon[i]) { valide = true; attente = false; nombre = 0; }
                 }
             }
         }
@@ -105,26 +104,22 @@ namespace Laury
             if (Simon[nombre] == 1)
             {
                 LFlecheH.enabled = true;
-                voir = true;
-                print("1");
+                Debug.Log("1");
             }
             if (Simon[nombre] == 2)
             {
                 LFlecheB.enabled = true;
-                voir = true;
-                print("2");
+                Debug.Log("2");
             }
             if (Simon[nombre] == 3)
             {
                 LFlecheD.enabled = true;
-                voir = true;
-                print("3");
+                Debug.Log("3");
             }
             if (Simon[nombre] == 4)
             {
                 LFlecheG.enabled = true;
-                voir = true;
-                print("4");
+                Debug.Log("4");
             }
             
         }
@@ -133,26 +128,22 @@ namespace Laury
             if (Simon[nombre] == 1)
             {
                 LFlecheH.enabled = false;
-                voir = false;
-                print("haut");
+                Debug.Log("haut");
             }
             if (Simon[nombre] == 2)
             {
                 LFlecheB.enabled = false;
-                voir = false;
-                print("bas");
+                Debug.Log("bas");
             }
             if (Simon[nombre] == 3)
             {
                 LFlecheD.enabled = false;
-                voir = false;
-                print("droite");
+                Debug.Log("droite");
             }
             if (Simon[nombre] == 4)
             {
                 LFlecheG.enabled = false;
-                voir = false;
-                print("gauche");
+                Debug.Log("gauche");
             }
 
         }
