@@ -9,6 +9,7 @@ namespace Laury
         public MeshRenderer FH,FB,FD,FG;
         public List<int> valeurs;
         private bool inputEntered = false;
+        public simonSaid simonSaid;
         // Start is called before the first frame update
         void Start()
         {
@@ -39,6 +40,7 @@ namespace Laury
                 FD.materials[1].color = Color.green;
                 valeurs.Add(3);
                 Debug.Log("Vert");
+
             }
         }
         public void FlecheB()
@@ -50,6 +52,7 @@ namespace Laury
                 FB.materials[1].color = Color.yellow;
                 valeurs.Add(2);
                 Debug.Log("Jaune");
+
             }
         }
         public void FlecheG()
@@ -61,6 +64,7 @@ namespace Laury
                 FG.materials[1].color = Color.blue;
                 valeurs.Add(4);
                 Debug.Log("Bleu");
+
             }
         }
 
@@ -72,6 +76,8 @@ namespace Laury
             FD.materials[1].color = Color.white;
             FH.materials[1].color = Color.white;
             FB.materials[1].color = Color.white;
+            simonSaid.verif();
+
         }
     }
 

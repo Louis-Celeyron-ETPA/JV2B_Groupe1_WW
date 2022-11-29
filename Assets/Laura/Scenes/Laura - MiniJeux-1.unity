@@ -813,6 +813,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80e324242c2428a4db0f9772d5cb28ec, type: 3}
+--- !u!23 &631324439 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 49e8cfe0598c3464380514d501cfaa23, type: 3}
+  m_PrefabInstance: {fileID: 277249866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &701153456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -994,6 +999,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49e8cfe0598c3464380514d501cfaa23, type: 3}
+--- !u!23 &969820825 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 49e8cfe0598c3464380514d501cfaa23, type: 3}
+  m_PrefabInstance: {fileID: 76155614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &972087269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1089,6 +1099,11 @@ MeshRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80e324242c2428a4db0f9772d5cb28ec, type: 3}
   m_PrefabInstance: {fileID: 1650920064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1109363716 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 49e8cfe0598c3464380514d501cfaa23, type: 3}
+  m_PrefabInstance: {fileID: 972087269}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1119822559
 GameObject:
@@ -1408,14 +1423,19 @@ MonoBehaviour:
   LFlecheD: {fileID: 1119822561}
   LFlecheG: {fileID: 1967450213}
   Simon: 
+  barre: {fileID: 1488207638}
+  p1: {fileID: 969820825}
+  p2: {fileID: 1109363716}
+  p3: {fileID: 631324439}
   timeo: 0
   delai: 10
   nombre: 0
   tour: 0
   attente: 0
   valide: 0
-  lista: {fileID: 0}
+  lista: {fileID: 1366833642}
   actionOnTime: 0
+  points: 0
 --- !u!114 &1366833642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1433,6 +1453,12 @@ MonoBehaviour:
   FD: {fileID: 1933100132}
   FG: {fileID: 801123496}
   valeurs: 
+  simonSaid: {fileID: 1366833641}
+--- !u!23 &1488207638 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 49e8cfe0598c3464380514d501cfaa23, type: 3}
+  m_PrefabInstance: {fileID: 945567504}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1492534335
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,10 @@ namespace Laury
         public Light LFlecheD;
         public Light LFlecheG;
         public List<int> Simon;
+        public MeshRenderer barre;
+        public MeshRenderer p1;
+        public MeshRenderer p2;
+        public MeshRenderer p3;
         private int choix;
         private int limit;
         public float timeo;
@@ -24,12 +28,14 @@ namespace Laury
         public bool valide;
         public toucheJoueur lista;
         public int actionOnTime;
+        public int points;
             // Start is called before the first frame update
         void Start()
         {
-            delai = 1f;
-            limit = 2;
-            tour = 0;
+            delai = 0.5f;
+            limit = 4;
+            tour = 2;
+            points = 0;
             attente = false;
             valide = true;
             for (int i = 0; i < limit; i++)
@@ -42,61 +48,90 @@ namespace Laury
         // Update is called once per frame
         void Update()
         {
-            if (tour <= 3 && limit < 4)
+            if(nombre<tour)
             {
-                if (tour == 2 && nombre == limit && attente == true) 
-                { limit = 3;
-                  choix = Random.Range(1, 5);
-                  Simon.Add(choix);
-                }
-                if (tour == 3 && nombre == limit && attente == true) 
-                { limit = 4;
-                  choix = Random.Range(1, 5);
-                  Simon.Add(choix);
-                }
+                GestionLumiere();
+                barre.materials[2].color = Color.red;
             }
-
-            timeo += Time.deltaTime;
-            if (timeo >= delai)
+            else
             {
-                if (actionOnTime == 0 && valide == true)
-                {
-                    AllumerLumiere();
-                }
-                if (actionOnTime == 1 && valide == true)
-                {
-                    EteindreLumiere();
-                    nombre += 1;
-                    tour += 1;
-                }
-                timeo = 0;
-                actionOnTime += 1;
+                attente = true;
+                barre.materials[2].color = Color.green;
+            }
+            if (points == 1)
+            {
+                p1.materials[2].color = Color.green;
+            }
+            if (points == 2)
+            {
+                p2.materials[2].color = Color.green;
+            }
+            if (points == 3)
+            {
+                p3.materials[2].color = Color.green;
+                //mettre le #ManagerManager
             }
             
-            if (actionOnTime == 2 && valide == true)
-            {
-                actionOnTime = 0;
-                if (tour == 2)
-                {
-                    attente = true;
-                    verif();
-                }
-                if (tour == 3)
-                {
-                    attente = true;
-                    verif();
-                }
-            }
         }
         public void verif()
         {
+            if (lista.valeurs.Count != tour)
+            {
+                return;
+            }
             valide = false;
             if (attente == true)
             {
-                for (int i = 0; i < limit; i++)
+                var tempIsOkay = true;
+                for (int i = 0; i < tour; i++)
                 {
-                    if (lista.valeurs[i] == Simon[i]) { valide = true; attente = false; nombre = 0; }
+                    
+                    if (lista.valeurs[i] != Simon[i])
+                    {
+                        tempIsOkay = false;
+                    }
                 }
+                if (tempIsOkay == true)
+                {
+                    barre.materials[2].color = Color.red;
+                    valide = true;
+                    attente = false;
+                    nombre = 0;
+                    points++;
+                    lista.valeurs = new List<int>();
+                    tour++;
+                }
+                else
+                {
+                    barre.materials[2].color = Color.red;
+                    nombre = 0;
+                    valide = true;
+                    attente = false;
+                    lista.valeurs = new List<int>();
+                    GestionLumiere();
+                }
+            }
+        }
+        private void GestionLumiere()
+        {
+            timeo += Time.deltaTime;
+            if (timeo >= delai && valide == true)
+            {
+                if (actionOnTime == 0)
+                {
+                    AllumerLumiere();
+                }
+                if (actionOnTime == 1)
+                {
+                    EteindreLumiere();
+                    nombre += 1;
+                }
+                if (actionOnTime == 2)
+                {
+                    actionOnTime = -1;
+                }
+                actionOnTime += 1;
+                timeo = 0;
             }
         }
         void AllumerLumiere()
