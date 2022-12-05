@@ -9,17 +9,15 @@ namespace Julien
     {
 
         public Shove shove;
-        // Start is called before the first frame update
-        void Start()
+        public RectTransform rt;
+
+        private void Update()
         {
-        
+            transform.position += transform.right;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
+
+
     }
 
 }
