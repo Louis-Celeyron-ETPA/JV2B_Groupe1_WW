@@ -11,7 +11,7 @@ namespace BananaLover
         float force = 20f;
         public GameObject tip;
 
-        // LineRenderer et Autres
+        // Autres
         public LineRenderer lr;
         float rotationSpeed = 0.3f;               
 
