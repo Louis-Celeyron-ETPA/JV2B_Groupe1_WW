@@ -30,14 +30,20 @@ namespace Paul
             }
             rb.velocity = rb.velocity.normalized;
             rb.AddForce(Vector3.forward * vitesse);
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                rb.AddForce(Vector3.left * (vitesse/4));
-            }
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                rb.AddForce(Vector3.right * (vitesse/4));
-            }
+            
+           
+        }
+        public void ToucheDroite()
+        {
+          
+                rb.AddForce(Vector3.right * (vitesse / 4));
+            
+        }
+        public void ToucheGauche()
+        {
+
+            rb.AddForce(Vector3.left * (vitesse / 4));
+
         }
         void OnCollisionEnter(Collision collision)
         {
