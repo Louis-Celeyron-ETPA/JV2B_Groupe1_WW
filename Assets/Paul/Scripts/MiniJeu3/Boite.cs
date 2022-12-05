@@ -38,5 +38,14 @@ namespace Paul
             rb.velocity = rb.velocity.normalized;
             transform.position += transform.right * 0.15f;
         }
+
+        public void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Ennemy")
+            {
+                Destroy(collision.gameObject);
+                Destroy(gameObject);
+            }
+        }
     }
 }
