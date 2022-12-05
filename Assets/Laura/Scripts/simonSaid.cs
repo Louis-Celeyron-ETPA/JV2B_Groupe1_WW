@@ -32,7 +32,7 @@ namespace Laury
             // Start is called before the first frame update
         void Start()
         {
-            delai = 0.5f;
+            delai = 0.3f;
             limit = 4;
             tour = 2;
             points = 0;
@@ -61,17 +61,19 @@ namespace Laury
             if (points == 1)
             {
                 p1.materials[2].color = Color.green;
+                //ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
             }
             if (points == 2)
             {
                 p2.materials[2].color = Color.green;
+                //ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
             }
             if (points == 3)
             {
                 p3.materials[2].color = Color.green;
-                //mettre le #ManagerManager
+                //ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Perfect);
             }
-            
+
         }
         public void verif()
         {
