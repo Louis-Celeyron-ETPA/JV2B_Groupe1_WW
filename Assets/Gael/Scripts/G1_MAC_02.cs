@@ -28,12 +28,12 @@ namespace Gael
             {
                 transform.localScale = Vector3.one * cubeSize;
             }
-            transform.localScale = new Vector3(0.5f, cubeSize, 0.5f);
+            transform.localScale = new Vector3(1f, cubeSize, 1f);
 
         }
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.name == "upperteeth")
+            if (collision.gameObject.tag == "upper")
             {
                 cubeSize -= finalImpact;
                 cubeSize = Mathf.Clamp01(cubeSize);
@@ -46,7 +46,7 @@ namespace Gael
             Debug.Log(collision.impulse);
 
             forceImpact =(collision.impulse.y );
-            finalImpact = (forceImpact / 350);
+            finalImpact = (forceImpact / 50);
 
 
             //if (localScale == new Vector3(1F, 0F, 1f));
