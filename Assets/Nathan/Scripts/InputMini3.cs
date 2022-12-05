@@ -11,30 +11,45 @@ namespace Pediluves
         public Text counterText;
         public bool end = false;
 
+        public bool isPress = false;
+
         public RandomSpawner randomSpawner;
 
         void Start()
         {
-
         }
 
         // Update is called once per frame
         void Update()
         {
-            counterText.text = counter.ToString();           
+            counterText.text = counter.ToString();
         }
 
         public void leftMovement()
         {
-            if (counter > 0)
+            if(!isPress)
             {
-                counter --;
+                if (counter > 0)
+                {
+                    isPress = true;
+                    counter --;
+                }
             }
         }
         public void rightMovement()
         {
-            counter++;
+            if (!isPress)
+            {
+                isPress = true;
+                counter++;
+            }
         }
+
+        public void onUp()
+        {
+            isPress = false;
+        }
+
         public void actionMovement()
         {
             Debug.Log(end);
@@ -42,6 +57,7 @@ namespace Pediluves
             if (counter == randomSpawner.counterEnd)
             {
                 end = true;
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
             }
             else
             {

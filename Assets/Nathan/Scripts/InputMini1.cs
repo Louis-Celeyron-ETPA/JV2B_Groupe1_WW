@@ -7,7 +7,9 @@ namespace Pediluves
     public class InputMini1 : MonoBehaviour
     {
 
-        public float speed = 125;
+        public float speed2 = 0.50f ;
+        public float speed ;
+
         public Rigidbody rb;
 
         public StopMove stop;
@@ -50,26 +52,42 @@ namespace Pediluves
         public void leftMovement()
         {
             rb.AddForce(-Vector3.right * (speed));
-                if (moveOrDie == true)
+            //transform.localPosition += -transform.right * speed2;
+
+            if (moveOrDie == true)
                 { transform.position = new Vector3(startX, startY, startZ); }
         }
         public void rightMovement()
         {
             rb.AddForce(Vector3.right * (speed));
-                if (moveOrDie == true)
+            //transform.localPosition += transform.right * speed2;
+
+            if (moveOrDie == true)
                 { transform.position = new Vector3(startX, startY, startZ); }
         }
         public void upMovement()
         {
             rb.AddForce(Vector3.forward * (speed));
-                if (moveOrDie == true)
+            //transform.localPosition += transform.forward * speed2;
+
+            if (moveOrDie == true)
                 { transform.position = new Vector3(startX, startY, startZ); }
         }
         public void downMovement()
         {
             rb.AddForce(-Vector3.forward * (speed));
-                if (moveOrDie == true)
+            //transform.localPosition += -transform.forward * speed2;
+
+            if (moveOrDie == true)
                 { transform.position = new Vector3(startX, startY, startZ); }
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Finish")
+            {
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+            }
         }
 
     }

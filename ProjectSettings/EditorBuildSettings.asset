@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nathan/Scenes/Nathan - MiniJeux-2.unity
     guid: 9a5f392cadbf088498e76348b8dc19c5
+  - enabled: 1
+    path: Assets/Nathan/Scenes/Nathan - MiniJeux-3.unity
+    guid: 89858d93f132e974c884adaf014ae1e3
   m_configObjects: {}

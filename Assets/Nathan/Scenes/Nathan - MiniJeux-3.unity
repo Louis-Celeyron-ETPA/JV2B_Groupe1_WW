@@ -2011,75 +2011,99 @@ MonoBehaviour:
   m_GameObject: {fileID: 781877934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e5031bd2d9dba241b4c6f3a9cf76af3, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a2ad937c589ee941943ab66a6ff27ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onRight:
-    m_PersistentCalls:
-      m_Calls: []
-  onLeft:
-    m_PersistentCalls:
-      m_Calls: []
-  onUp:
-    m_PersistentCalls:
-      m_Calls: []
-  onDown:
-    m_PersistentCalls:
-      m_Calls: []
-  onAction:
-    m_PersistentCalls:
-      m_Calls: []
-  onRightPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1468951592}
-        m_TargetAssemblyTypeName: Pediluves.InputMini3, Assembly-CSharp
-        m_MethodName: rightMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onLeftPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1468951592}
-        m_TargetAssemblyTypeName: Pediluves.InputMini3, Assembly-CSharp
-        m_MethodName: leftMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onUpPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onDownPresed:
-    m_PersistentCalls:
-      m_Calls: []
-  onActionPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1468951592}
-        m_TargetAssemblyTypeName: Pediluves.InputMini3, Assembly-CSharp
-        m_MethodName: actionMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  directions:
+    left:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1468951592}
+          m_TargetAssemblyTypeName: Pediluves.InputMini3, Assembly-CSharp
+          m_MethodName: leftMovement
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    right:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1468951592}
+          m_TargetAssemblyTypeName: Pediluves.InputMini3, Assembly-CSharp
+          m_MethodName: rightMovement
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    down:
+      m_PersistentCalls:
+        m_Calls: []
+    up:
+      m_PersistentCalls:
+        m_Calls: []
+  pointsMorts:
+    horizontal:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1468951592}
+          m_TargetAssemblyTypeName: Pediluves.InputMini3, Assembly-CSharp
+          m_MethodName: onUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    vertical:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  action:
+    onPressed:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1468951592}
+          m_TargetAssemblyTypeName: Pediluves.InputMini3, Assembly-CSharp
+          m_MethodName: actionMovement
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onUp:
+      m_PersistentCalls:
+        m_Calls: []
+    onStayed:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &781877936
 Transform:
   m_ObjectHideFlags: 0
@@ -2332,7 +2356,7 @@ GameObject:
   - component: {fileID: 885611457}
   - component: {fileID: 885611456}
   m_Layer: 0
-  m_Name: ee
+  m_Name: light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3986,6 +4010,7 @@ MonoBehaviour:
   counter: 0
   counterText: {fileID: 1518416349}
   end: 0
+  isPress: 0
   randomSpawner: {fileID: 1797356179}
 --- !u!1 &1518416347
 GameObject:

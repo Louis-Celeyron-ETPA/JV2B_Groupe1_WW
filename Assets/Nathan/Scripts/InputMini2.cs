@@ -25,6 +25,8 @@ namespace Pediluves
 
         public bool isClose = true;
 
+        public int scoreMax;
+
         void Start()
         {
             speedMax = speed;
@@ -39,6 +41,11 @@ namespace Pediluves
             if (stopActive == false)
             {
                 speed = speedMax;
+            }
+
+            if (score == scoreMax)
+            {
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
             }
 
             scoreText.text = score.ToString();

@@ -225,53 +225,35 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 35bac60e9fa34794ca23e63a6080f64b, type: 3}
   m_PrefabInstance: {fileID: 33949098}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &33949100
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!54 &33949103
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33949099}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  serializedVersion: 2
   m_Mass: 1
-  m_LinearDrag: 0
+  m_Drag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_Constraints: 126
   m_CollisionDetection: 0
-  m_Constraints: 7
---- !u!61 &33949101
-BoxCollider2D:
+--- !u!65 &33949104
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33949099}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Size: {x: 4.23, y: 1, z: 2.08}
+  m_Center: {x: 0, y: 0, z: 0.3}
 --- !u!1 &121694859
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 130423081}
   - component: {fileID: 130423082}
+  - component: {fileID: 130423084}
   - component: {fileID: 130423083}
   m_Layer: 0
   m_Name: Player
@@ -489,7 +472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130423080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -379.11404, y: 96.32656, z: 79.4854}
+  m_LocalPosition: {x: -386.4, y: 96.32656, z: 79.4854}
   m_LocalScale: {x: 1.5, y: 1, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -525,7 +508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0588e2b61a4ccb04d8ae13d041900f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2250
+  speed2: 0.5
+  speed: 1750
   rb: {fileID: 130423082}
   stop: {fileID: 1902991536}
   moveOrDie: 0
@@ -533,6 +517,20 @@ MonoBehaviour:
   startY: 0
   startZ: 0
   respawn: 0
+--- !u!136 &130423084
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130423080}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 4.7
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: -98.2, y: -80, z: -59.8}
 --- !u!1 &171394628
 GameObject:
   m_ObjectHideFlags: 0
@@ -3062,87 +3060,87 @@ MonoBehaviour:
   m_GameObject: {fileID: 1553402458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e5031bd2d9dba241b4c6f3a9cf76af3, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a2ad937c589ee941943ab66a6ff27ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onRight:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 130423083}
-        m_TargetAssemblyTypeName: Pediluve.InputMini1, Assembly-CSharp
-        m_MethodName: rightMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onLeft:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 130423083}
-        m_TargetAssemblyTypeName: Pediluve.InputMini1, Assembly-CSharp
-        m_MethodName: leftMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 130423083}
-        m_TargetAssemblyTypeName: Pediluve.InputMini1, Assembly-CSharp
-        m_MethodName: upMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 130423083}
-        m_TargetAssemblyTypeName: Pediluve.InputMini1, Assembly-CSharp
-        m_MethodName: downMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onAction:
-    m_PersistentCalls:
-      m_Calls: []
-  onRightPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onLeftPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onUpPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onDownPresed:
-    m_PersistentCalls:
-      m_Calls: []
-  onActionPressed:
-    m_PersistentCalls:
-      m_Calls: []
+  directions:
+    left:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130423083}
+          m_TargetAssemblyTypeName: Pediluves.InputMini1, Assembly-CSharp
+          m_MethodName: leftMovement
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    right:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130423083}
+          m_TargetAssemblyTypeName: Pediluves.InputMini1, Assembly-CSharp
+          m_MethodName: rightMovement
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    down:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130423083}
+          m_TargetAssemblyTypeName: Pediluves.InputMini1, Assembly-CSharp
+          m_MethodName: downMovement
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    up:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 130423083}
+          m_TargetAssemblyTypeName: Pediluves.InputMini1, Assembly-CSharp
+          m_MethodName: upMovement
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  pointsMorts:
+    horizontal:
+      m_PersistentCalls:
+        m_Calls: []
+    vertical:
+      m_PersistentCalls:
+        m_Calls: []
+  action:
+    onPressed:
+      m_PersistentCalls:
+        m_Calls: []
+    onUp:
+      m_PersistentCalls:
+        m_Calls: []
+    onStayed:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &1553402460
 Transform:
   m_ObjectHideFlags: 0
@@ -3497,7 +3495,6 @@ GameObject:
   - component: {fileID: 1840479078}
   - component: {fileID: 1840479081}
   - component: {fileID: 1840479080}
-  - component: {fileID: 1840479079}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -3520,20 +3517,6 @@ Transform:
   m_Father: {fileID: 130423081}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!136 &1840479079
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840479077}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1840479080
 MeshRenderer:
   m_ObjectHideFlags: 0

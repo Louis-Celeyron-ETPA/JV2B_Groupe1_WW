@@ -7,11 +7,11 @@ namespace Pediluves
     public class SpawnerMoving : MonoBehaviour
     {
         public Rigidbody rb;
-        public bool ChangeDirection = false;
+        public bool ChangeDirection = true;
         public int speed;
 
-        public int coutnerChangeDirection;
-        public float coutnerChangeDirectionMax = 200;
+        public float coutnerChangeDirection;
+        public float coutnerChangeDirectionMax;
 
         void Start()
         {
@@ -32,7 +32,8 @@ namespace Pediluves
                 rb.AddForce(-Vector3.right * (speed));
             }
 
-            coutnerChangeDirection++;
+            coutnerChangeDirection += Time.deltaTime;
+            Debug.Log(coutnerChangeDirectionMax);
 
             if (coutnerChangeDirection >= coutnerChangeDirectionMax)
             {
@@ -45,7 +46,7 @@ namespace Pediluves
                     speed *= (-1);
                 }
 
-                coutnerChangeDirectionMax = Random.Range(50, 300);
+                coutnerChangeDirectionMax = Random.Range(2, 6);
                 coutnerChangeDirection = 0;
             }
 
