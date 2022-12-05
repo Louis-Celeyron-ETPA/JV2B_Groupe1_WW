@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 794414479}
   m_Layer: 0
   m_Name: Pokemanager
-  m_TagString: Untagged
+  m_TagString: poukeboule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -450,6 +450,8 @@ MonoBehaviour:
   - {fileID: 382896545}
   - {fileID: 1766015705}
   target: {fileID: 1230040689}
+  interval: 0.3
+  timer: 0
 --- !u!4 &794414480
 Transform:
   m_ObjectHideFlags: 0
@@ -492,7 +494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892330428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7800007, z: 3}
+  m_LocalPosition: {x: 0, y: 1.7800007, z: 1.8}
   m_LocalScale: {x: 8, y: 4, z: 0.40000007}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -705,7 +707,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e3681800e08b6d34eb0c76a0997278b4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1047,3 +1049,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36a723e6017b3046a96833088761b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpgalade: 5

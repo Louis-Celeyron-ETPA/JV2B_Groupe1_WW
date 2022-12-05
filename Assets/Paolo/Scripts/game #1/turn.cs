@@ -6,6 +6,7 @@ namespace Paolo
 {
     public class turn : MonoBehaviour
     {
+        public float hpgalade = 5;
         // Start is called before the first frame update
         void Start()
         {
@@ -39,8 +40,11 @@ namespace Paolo
 
         private void OnTriggerEnter(Collider other)
         {
-            //Check for a match with the specified name on any GameObject that collides with your GameObject
-            
+            if (other.gameObject.tag == "poukeboule")
+            {
+                hpgalade = hpgalade - 1;
+            }
+
         }
     }
 }

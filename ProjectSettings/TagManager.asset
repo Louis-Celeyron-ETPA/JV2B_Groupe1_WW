@@ -6,6 +6,7 @@ TagManager:
   tags:
   - wall
   - galade
+  - poukeboule
   layers:
   - Default
   - TransparentFX
