@@ -62,7 +62,7 @@ public class InputManager : MonoBehaviour
         }
         if (Input.GetButtonUp("Fire1"))
         {
-            action.onPressed.Invoke();
+            action.onUp.Invoke();
         }
 
 
