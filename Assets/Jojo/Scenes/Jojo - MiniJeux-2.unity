@@ -605,8 +605,8 @@ GameObject:
   - component: {fileID: 163879710}
   - component: {fileID: 163879709}
   - component: {fileID: 163879708}
-  - component: {fileID: 163879712}
   - component: {fileID: 163879713}
+  - component: {fileID: 163879714}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -680,7 +680,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &163879712
+--- !u!114 &163879713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -689,7 +689,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 163879707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e5031bd2d9dba241b4c6f3a9cf76af3, type: 3}
+  m_Script: {fileID: 11500000, guid: d00327c9b5699db4f8ba7aaa1943c75f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListThief1:
+  - {fileID: 5218685268459799482}
+  - {fileID: 1848463308}
+  - {fileID: 3469287837203757200}
+  - {fileID: 3469287837173387502}
+  - {fileID: 481116418}
+  cooldown: 3
+--- !u!114 &163879714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163879707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ad937c589ee941943ab66a6ff27ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   directions:
@@ -764,13 +783,13 @@ MonoBehaviour:
     onPressed:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1342623728}
-          m_TargetAssemblyTypeName: Jojo.MovementBase, Assembly-CSharp
-          m_MethodName: Action
+        - m_Target: {fileID: 163879707}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -782,25 +801,6 @@ MonoBehaviour:
     onStayed:
       m_PersistentCalls:
         m_Calls: []
---- !u!114 &163879713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163879707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d00327c9b5699db4f8ba7aaa1943c75f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListThief1:
-  - {fileID: 5218685268459799482}
-  - {fileID: 1848463308}
-  - {fileID: 3469287837203757200}
-  - {fileID: 3469287837173387502}
-  - {fileID: 481116418}
-  cooldown: 3
 --- !u!1 &201369485
 GameObject:
   m_ObjectHideFlags: 0
