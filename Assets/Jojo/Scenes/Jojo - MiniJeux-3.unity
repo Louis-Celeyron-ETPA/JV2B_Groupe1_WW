@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 163879710}
   - component: {fileID: 163879709}
   - component: {fileID: 163879708}
+  - component: {fileID: 163879711}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +208,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &163879711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163879707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ad937c589ee941943ab66a6ff27ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directions:
+    left:
+      m_PersistentCalls:
+        m_Calls: []
+    right:
+      m_PersistentCalls:
+        m_Calls: []
+    down:
+      m_PersistentCalls:
+        m_Calls: []
+    up:
+      m_PersistentCalls:
+        m_Calls: []
+  pointsMorts:
+    horizontal:
+      m_PersistentCalls:
+        m_Calls: []
+    vertical:
+      m_PersistentCalls:
+        m_Calls: []
+  action:
+    onPressed:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1538529696}
+          m_TargetAssemblyTypeName: Jojo.ActionHand, Assembly-CSharp
+          m_MethodName: ActionServir
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onUp:
+      m_PersistentCalls:
+        m_Calls: []
+    onStayed:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &213860244
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfcc97ad4c6b6544fa1687a8407a0402, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.15
+      value: -10.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfcc97ad4c6b6544fa1687a8407a0402, type: 3}
       propertyPath: m_LocalRotation.w
@@ -905,6 +960,24 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1538529693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cfcc97ad4c6b6544fa1687a8407a0402, type: 3}
+  m_PrefabInstance: {fileID: 979833289}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1538529696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538529693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: febd616e1c47d2449879f5e74005c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hand: {fileID: 1538529693}
 --- !u!1001 &1812101297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1008,6 +1081,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707fb46afd21ded49aad9c5f62801bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1812101304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812101298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6e9ab2e4743d541b5b15aa55a5a398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tasse: {fileID: 6253168979820390854}
 --- !u!33 &239186569477837398
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1420,13 +1506,27 @@ GameObject:
   - component: {fileID: 1637701824739848315}
   - component: {fileID: 239186569477837398}
   - component: {fileID: 5019733823139007431}
+  - component: {fileID: 6253168979820390855}
   m_Layer: 0
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: TasseTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &6253168979820390855
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6253168979820390854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.022014908, y: 0.03019266, z: 0.020000001}
+  m_Center: {x: -0.00030771238, y: -0.0044610063, z: 0.01018079}
 --- !u!4 &6712749702480648974
 Transform:
   m_ObjectHideFlags: 0
