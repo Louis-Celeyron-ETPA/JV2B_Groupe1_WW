@@ -978,6 +978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hand: {fileID: 1538529693}
+  TasseObject: {fileID: 6253168979820390854}
 --- !u!1001 &1812101297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1508,7 +1509,7 @@ GameObject:
   - component: {fileID: 5019733823139007431}
   - component: {fileID: 6253168979820390855}
   m_Layer: 0
-  m_Name: Cube.001
+  m_Name: Tasse_001
   m_TagString: TasseTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
