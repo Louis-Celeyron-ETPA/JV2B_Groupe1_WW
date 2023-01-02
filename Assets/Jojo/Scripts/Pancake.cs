@@ -24,6 +24,9 @@ namespace Jojo
         // Update is called once per frame
         void Update()
         {
+            if(ScoreP.Score==6){
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+            }
             if (transform.position.y <= -1.9f)
             {
                 ScoreP.Score -= 1;
