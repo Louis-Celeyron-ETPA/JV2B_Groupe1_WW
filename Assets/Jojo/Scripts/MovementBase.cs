@@ -8,15 +8,17 @@ namespace Jojo
     {
         public RectTransform rt;
         float speed = 15f;
-
+        public int ScoreVoleur;
         void Start()
         {
-
+            ScoreVoleur=0;
         }
 
         void Update()
         {
-
+            if(ScoreVoleur>=3){
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+            }
         }
 
         public void RightMove(){
@@ -57,6 +59,7 @@ namespace Jojo
                 Debug.Log(other.transform);
                 if (other.transform.tag == "Voleur")
                 {
+                    ScoreVoleur+=1;
                     Destroy(other.transform.gameObject);
                 }
             }
