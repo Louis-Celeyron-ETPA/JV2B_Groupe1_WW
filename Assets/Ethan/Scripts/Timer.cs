@@ -31,6 +31,5 @@ public class Timer : MonoBehaviour
         {
             ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
         }
-        Debug.Log(showedTimer);
     }
 }

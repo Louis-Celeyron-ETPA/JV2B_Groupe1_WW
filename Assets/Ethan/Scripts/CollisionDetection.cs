@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace BananaLover
 {
-
     public class CollisionDetection : MonoBehaviour
     {
 
@@ -22,14 +21,15 @@ namespace BananaLover
             {
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
             }
+            Debug.Log(nbrCollisions);
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
             nbrCollisions ++;
         }
 
-        private void OnCollisionExit(Collision collision)
+        private void OnTriggerExit(Collider other)
         {
             nbrCollisions --;
         }
