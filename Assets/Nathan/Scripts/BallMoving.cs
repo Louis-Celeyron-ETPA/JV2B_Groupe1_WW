@@ -7,22 +7,21 @@ namespace Pediluves
 {
     public class BallMoving : MonoBehaviour
     {
+        ////////////////  VARIABLES  /////////////////
+
         public Rigidbody rb;
         public float speed;
         private bool stopRotateAndMove = false;
 
         public float speedRotate;
 
-        void Start()
-        {
-        }
+        ///////////////////////////////////////////////////
 
         void Update()
         {
             Physics.gravity = new Vector3(0, -100, 0);
 
             rb.velocity = rb.velocity.normalized;
-
 
             if (stopRotateAndMove == false)
             {

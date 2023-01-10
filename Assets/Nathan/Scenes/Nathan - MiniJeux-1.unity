@@ -1847,7 +1847,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859992894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 247.13991, y: 76.65746, z: -125.0839}
+  m_LocalPosition: {x: 214.1, y: 76.65746, z: -125.0839}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2232,7 +2232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098389126}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 247.13991, y: 76.65746, z: 40.216095}
+  m_LocalPosition: {x: 214.1, y: 76.65746, z: 40.216095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3862,8 +3862,8 @@ MonoBehaviour:
   - {fileID: 1902991535}
   dontMove: 0
   inputManag: {fileID: 130423083}
-  counterMax: 30
-  counterReturnMax: 40
+  counterMax: 0.6
+  counterReturnMax: 0.75
   color: {r: 1, g: 0.3254717, b: 0.3254717, a: 0}
   colorLast: {r: 1, g: 0, b: 0, a: 0}
   colorFirst: {r: 1, g: 1, b: 1, a: 0}

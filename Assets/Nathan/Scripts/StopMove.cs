@@ -7,39 +7,46 @@ namespace Pediluves
 {
     public class StopMove : MonoBehaviour
     {
-            public List<GameObject> cubeList;
-            private int counter;
-            private int counterReturn;
+        ////////////////  VARIABLES  /////////////////
+        
+        public List<GameObject> cubeList;
+        private float counter;
+        private float counterReturn;
 
-            private int i;
-            private int nbrCubeRouge;
+        private int i;
+        private int nbrCubeRouge;
 
-            public bool dontMove = false;
+        public bool dontMove = false;
 
-            public InputMini1 inputManag;
+        public InputMini1 inputManag;
 
-            public int counterMax;
-            public int counterReturnMax;
+        public float counterMax;
+        public float counterReturnMax;
 
-            public Color color;
-            public Color colorLast;
-            public Color colorFirst;
+        public Color color;
+        public Color colorLast;
+        public Color colorFirst;
 
-            void Start()
+        ///////////////////////////////////////////////////
+
+        void Start()
             {
+
                 for (int t = 0; t < 7; t++)
-                        {
-                            cubeList[t].GetComponent<Renderer>().material.color = colorFirst;
-                        }
+                {
+                    cubeList[t].GetComponent<Renderer>().material.color = colorFirst;
+                }
             }
 
             void Update()
             {
+                // 1 cubes de plus qui s'allume pour avancer le timer au niveau du visuel
+
                 if (dontMove == false)
                 {
-                    counter++;
+                    counter += Time.deltaTime;
 
-                    if (counter == counterMax)
+                    if (counter >= counterMax)
                     {
                         if (i == 6)
                         {
@@ -55,6 +62,8 @@ namespace Pediluves
                     }
                 }
 
+                // si tous les cubes sont allumés, le dernier sera le boutton stop et le joueur ne doit plu se déplacer
+
                 if (nbrCubeRouge == 7)
                 {
                     nbrCubeRouge = 0;
@@ -63,10 +72,13 @@ namespace Pediluves
                     dontMove = true;
                 }
 
+                // temps pendant lequel le joueur ne doit pas bouger
+
                 if (dontMove == true)
                 {
-                    counterReturn++;
-                    if (counterReturn == counterReturnMax)
+                    counterReturn += Time.deltaTime;
+
+                    if (counterReturn >= counterReturnMax)
                     {
                         for (int t = 0; t < 7; t++)
                         {

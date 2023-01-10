@@ -6,6 +6,7 @@ namespace Pediluves
 {
     public class InputMini1 : MonoBehaviour
     {
+        ////////////////  VARIABLES  /////////////////
 
         public float speed2 = 0.50f ;
         public float speed ;
@@ -22,8 +23,12 @@ namespace Pediluves
 
         public bool respawn = false;
 
+        ///////////////////////////////////////////////////
+
         void Start()
         {
+            // save la position de l'object au début
+
             startX = transform.position.x;
             startY = transform.position.y;
             startZ = transform.position.z;
@@ -32,7 +37,6 @@ namespace Pediluves
         void Update()
         {
             rb.velocity = rb.velocity.normalized;
-            //rb.MovePosition(transform.position + Vector3.left * 0.25f);
 
             if (stop.dontMove == true)
             {
@@ -51,39 +55,49 @@ namespace Pediluves
 
         public void leftMovement()
         {
-            rb.AddForce(-Vector3.right * (speed));
-            //transform.localPosition += -transform.right * speed2;
+            // déplacement vers la gauche
 
+            rb.AddForce(-Vector3.right * (speed));
+
+            // si le joueur bouge pendant que le boutton stop est allumé, il respawn au début
             if (moveOrDie == true)
                 { transform.position = new Vector3(startX, startY, startZ); }
         }
         public void rightMovement()
         {
-            rb.AddForce(Vector3.right * (speed));
-            //transform.localPosition += transform.right * speed2;
+            // déplacement vers la droite
 
+            rb.AddForce(Vector3.right * (speed));
+
+            // si le joueur bouge pendant que le boutton stop est allumé, il respawn au début
             if (moveOrDie == true)
                 { transform.position = new Vector3(startX, startY, startZ); }
         }
         public void upMovement()
         {
-            rb.AddForce(Vector3.forward * (speed));
-            //transform.localPosition += transform.forward * speed2;
+            // déplacement vers le haut
 
+            rb.AddForce(Vector3.forward * (speed));
+
+            // si le joueur bouge pendant que le boutton stop est allumé, il respawn au début
             if (moveOrDie == true)
                 { transform.position = new Vector3(startX, startY, startZ); }
         }
         public void downMovement()
         {
-            rb.AddForce(-Vector3.forward * (speed));
-            //transform.localPosition += -transform.forward * speed2;
+            // déplacement vers le bas
 
+            rb.AddForce(-Vector3.forward * (speed));
+
+            // si le joueur bouge pendant que le boutton stop est allumé, il respawn au début
             if (moveOrDie == true)
                 { transform.position = new Vector3(startX, startY, startZ); }
         }
 
         private void OnCollisionEnter(Collision collision)
         {
+            // fin du jeu lorsque le joueur touche le lit
+
             if (collision.gameObject.tag == "Finish")
             {
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);

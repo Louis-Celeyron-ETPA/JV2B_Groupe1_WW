@@ -6,19 +6,12 @@ namespace Pediluves
 {
     public class HandJump : MonoBehaviour
     {
+        ////////////////  VARIABLES  /////////////////
+
         public float jumpAmount = 10;
         public Rigidbody rb;
 
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        ///////////////////////////////////////////////////
 
         private void OnCollisionEnter(Collision collision)
         {

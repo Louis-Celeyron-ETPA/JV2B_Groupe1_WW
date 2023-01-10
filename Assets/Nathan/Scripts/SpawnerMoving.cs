@@ -6,6 +6,8 @@ namespace Pediluves
 {
     public class SpawnerMoving : MonoBehaviour
     {
+        ////////////////  VARIABLES  /////////////////
+        
         public Rigidbody rb;
         public bool ChangeDirection = true;
         public int speed;
@@ -13,20 +15,19 @@ namespace Pediluves
         public float coutnerChangeDirection;
         public float coutnerChangeDirectionMax;
 
-        void Start()
-        {
+        ///////////////////////////////////////////////////
 
-        }
-
-        // Update is called once per frame
         void Update()
         {
             rb.velocity = rb.velocity.normalized;
 
+            // déplacement vers la droite 
             if (ChangeDirection == false)
             {
                 rb.AddForce(-Vector3.left * (speed));
             }
+
+            // déplacement vers la gauche 
             if (ChangeDirection == true)
             {
                 rb.AddForce(-Vector3.right * (speed));
@@ -46,6 +47,7 @@ namespace Pediluves
                     speed *= (-1);
                 }
 
+                // changement de direction après un temps random
                 coutnerChangeDirectionMax = Random.Range(2, 6);
                 coutnerChangeDirection = 0;
             }
@@ -53,6 +55,8 @@ namespace Pediluves
         }
         private void OnCollisionEnter(Collision collision)
         {
+            // lorsque l'object touche 1 des murs, il part dans le sens opposé
+
             if (collision.gameObject.tag == "Wall")
             {
                 if (ChangeDirection == false)

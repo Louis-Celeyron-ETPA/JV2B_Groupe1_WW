@@ -7,18 +7,16 @@ namespace Pediluves
 {
     public class ObjectMoving : MonoBehaviour
     {
+        ////////////////  VARIABLES  /////////////////
+
         public Rigidbody rb;
         public bool ChangeDirection = false;
         public int speed;
 
         public InputMini1 player;
-        // Start is called before the first frame update
-        void Start()
-        {
 
-        }
+        ///////////////////////////////////////////////////
 
-        // Update is called once per frame
         void Update()
         {
             rb.velocity = rb.velocity.normalized;

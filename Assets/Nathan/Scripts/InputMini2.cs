@@ -8,6 +8,7 @@ namespace Pediluves
 {
     public class InputMini2 : MonoBehaviour
     {
+        ////////////////  VARIABLES  /////////////////
 
         public float speed;
         private float speedMax;
@@ -26,6 +27,8 @@ namespace Pediluves
         public bool isClose = true;
 
         public int scoreMax;
+
+        ///////////////////////////////////////////////////
 
         void Start()
         {
@@ -52,20 +55,28 @@ namespace Pediluves
         }
         public void leftMovement()
         {
+            // déplace vers la gauche
+
             rb.AddForce(Vector3.right * (speed));
         }
         public void rightMovement()
         {
+            // déplace vers la droite
+
             rb.AddForce(-Vector3.right * (speed));
         }
         public void actionMovement()
         {
+            // permet d'ouvrir les gants et de stop la balle
+
             if (stopActive == false && isClose == true)
             {
                 animator.SetTrigger("Ouvrir");
                 stopActive = true;
                 speed /= 3;
             }
+
+            // permet de fermer les gants et de stop la balle
 
             if (stopActive == true && isClose == false)
             {
@@ -85,6 +96,8 @@ namespace Pediluves
 
         private void OnCollisionEnter(Collision collision)
         {
+            // lorsque une balle rentre en collision, elle se détruit et augmente le score global
+
             if (collision.gameObject.tag == "otherBall" && stopActive == true)
             {
                 score++;

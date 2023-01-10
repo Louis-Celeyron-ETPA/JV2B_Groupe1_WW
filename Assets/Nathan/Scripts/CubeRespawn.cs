@@ -6,8 +6,11 @@ namespace Pediluves
 {
         public class CubeRespawn : MonoBehaviour
     {
+        ////////////////  VARIABLES  /////////////////
 
         public InputMini1 player;
+
+        ///////////////////////////////////////////////////
 
         private void OnCollisionEnter(Collision collision)
         {

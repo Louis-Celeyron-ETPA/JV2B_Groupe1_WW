@@ -6,6 +6,8 @@ namespace Pediluves
 {
     public class RandomSpawner : MonoBehaviour
     {
+        ////////////////  VARIABLES  /////////////////
+
         public List<GameObject> spawner;
         public GameObject objectToSpawn;
         public Transform parent;
@@ -19,8 +21,12 @@ namespace Pediluves
 
         public int counterEnd;
 
+        ///////////////////////////////////////////////////
+
         void Start()
         {
+            // fait spawn les objets à compter aléatoirement avec une chance que je définit dans l'ispecteur
+
             for (int t = 0; t < spawner.Count; t++)
             {
                 spawnOrNot = Random.Range(0f, 1f);
@@ -35,12 +41,6 @@ namespace Pediluves
                 }
 
             }
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 }

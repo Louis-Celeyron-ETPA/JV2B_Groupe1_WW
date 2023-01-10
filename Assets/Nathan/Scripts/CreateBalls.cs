@@ -6,6 +6,8 @@ namespace Pediluves
 {
     public class CreateBalls : MonoBehaviour
     {
+         ////////////////  VARIABLES  /////////////////
+        
         public GameObject objectToSpawn;
 
         private float spawnerX;
@@ -15,12 +17,8 @@ namespace Pediluves
         private int counter;
         public int counterSpawnMax;
 
-        void Start()
-        {
-          
-        }
+        ///////////////////////////////////////////////////
 
-        // Update is called once per frame
         void Update()
         {
             spawnerX = transform.position.x;
@@ -28,6 +26,8 @@ namespace Pediluves
             spawnerZ = transform.position.z;
 
             counter++;
+
+            // spawn de balles tous les X temps
 
             if (counter >+ counterSpawnMax)
             { 

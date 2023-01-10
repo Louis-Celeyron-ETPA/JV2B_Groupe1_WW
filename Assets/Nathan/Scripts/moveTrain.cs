@@ -4,19 +4,19 @@ using UnityEngine;
 
 namespace Pediluves
 {
-    public class moveTrain : MonoBehaviour
+    public class MoveTrain : MonoBehaviour
     {
+        ////////////////  VARIABLES  /////////////////
+
         public Rigidbody rb;
         public int speed;
 
-        void Start()
-        {
+        ///////////////////////////////////////////////////
 
-        }
-
-        // Update is called once per frame
         void Update()
         {
+            // déplacement du train
+
             rb.velocity = Vector3.right * speed;
         }
 

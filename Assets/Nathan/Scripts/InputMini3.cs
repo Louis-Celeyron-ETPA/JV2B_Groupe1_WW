@@ -7,6 +7,8 @@ namespace Pediluves
 {
     public class InputMini3 : MonoBehaviour
     {
+        ////////////////  VARIABLES  /////////////////
+
         public int counter = 0;
         public Text counterText;
         public bool end = false;
@@ -15,6 +17,8 @@ namespace Pediluves
 
         public RandomSpawner randomSpawner;
 
+        ///////////////////////////////////////////////////
+
         void Start()
         {
         }
@@ -22,12 +26,16 @@ namespace Pediluves
         // Update is called once per frame
         void Update()
         {
+            // actualise l'affichage en fonction de notre score
+
             counterText.text = counter.ToString();
         }
 
         public void leftMovement()
         {
-            if(!isPress)
+            // diminue la valeur
+            
+            if (!isPress)
             {
                 if (counter > 0)
                 {
@@ -38,6 +46,8 @@ namespace Pediluves
         }
         public void rightMovement()
         {
+            // augmente la valeur
+
             if (!isPress)
             {
                 isPress = true;
@@ -52,7 +62,7 @@ namespace Pediluves
 
         public void actionMovement()
         {
-            Debug.Log(end);
+            // valider le score
 
             if (counter == randomSpawner.counterEnd)
             {
