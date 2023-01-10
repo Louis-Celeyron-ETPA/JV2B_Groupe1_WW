@@ -9,7 +9,7 @@ namespace Jojo
     public class CamDeplacement : MonoBehaviour
     {
         //********* Init des variables *****************
-        private int GoalMove;
+        public int GoalMove;
         public int Score;
         private Vector3 initialPose;
         private Vector3 GoalPose;
@@ -33,7 +33,7 @@ namespace Jojo
                     initialPose = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                     GoalPose = new Vector3(transform.position.x, transform.position.y + 4, transform.position.z);       // mouvement de la camera quand score atteint X
                 }
-                transform.position=Vector3.Lerp(initialPose, GoalPose, pourcentage);
+                transform.position=Vector3.Lerp(initialPose, GoalPose, pourcentage);        
                 pourcentage += 0.005f;
             }
             if (pourcentage >= 0.93)
