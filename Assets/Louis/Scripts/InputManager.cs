@@ -58,15 +58,6 @@ public class InputManager : MonoBehaviour
         {
             onActionPressed.Invoke();
         }
-<<<<<<< HEAD
-=======
-        if (Input.GetButtonUp("Fire1"))
-        {
-            action.onUp.Invoke();
-        }
-
-
->>>>>>> main
     }
 
     public void DebugLog(string input)
