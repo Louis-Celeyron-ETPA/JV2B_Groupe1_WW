@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Ethan/Scenes/Ethan - MiniJeux-1.unity
+    guid: 993692f07e81774479d93fa60c71fafd
+  - enabled: 1
+    path: Assets/Ethan/Scenes/Ethan - MiniJeux-2.unity
+    guid: 37cb34f5c8589bf459e47ad2e63f6162
+  - enabled: 1
+    path: Assets/Ethan/Scenes/Ethan - MiniJeux-3.unity
+    guid: 5ee7eeada0ce0fa45bb6aeed4e082d28
   m_configObjects: {}
