@@ -34,13 +34,11 @@ namespace Paul
         {
             if(boite != null)
             {
-                Debug.Log("boite");
-                Debug.Log(colorSwitch.checkCouleur2);
-                Debug.Log(boite.checkCouleur);
+               
 
                 if (colorSwitch.checkCouleur2 == boite.checkCouleur)
                 {
-                    Debug.Log("yooooooooo");
+                    
                     if (stopApresUn == true)
                     {
                         gagner = gagner + 1;

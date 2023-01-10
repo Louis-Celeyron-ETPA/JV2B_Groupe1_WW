@@ -1,24 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class FinDuGame : MonoBehaviour
+namespace Paul
 {
-    public float timer = 0.0f;
-    // Start is called before the first frame update
-    void Start()
+    public class FinDuGame : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        timer += Time.deltaTime;
-        Debug.Log(timer);
-        if (timer >= 15f)
+        public Text text;
+        public float timer = 0.0f;
+        public Score score;
+        // Start is called before the first frame update
+        void Start()
         {
 
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            timer += Time.deltaTime;
+            Debug.Log(timer);
+
+
+            text.text = timer.ToString("#");
+
+            if (timer >= 15f)
+            {
+                score.defeat = true;
+                
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
+            }
         }
     }
 }

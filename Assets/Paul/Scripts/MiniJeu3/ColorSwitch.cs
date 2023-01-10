@@ -21,7 +21,7 @@ namespace Paul
         void Start()
         {
             Object.GetComponent<MeshRenderer>().material = Material1;
-            checkCouleur2 = false;
+            checkCouleur2 = true;
         }
 
         // Update is called once per frame

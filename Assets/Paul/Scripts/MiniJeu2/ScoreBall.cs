@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 namespace Paul
 {
-    public class Victoire : MonoBehaviour
+    public class ScoreBall : MonoBehaviour
     {
-        public Text text;
+        public int scoreTotal;
         public float timer;
-        public bool victory;
-        public bool defeat;
+        public Text text;
+        private bool victory;
+        private bool defeat;
         // Start is called before the first frame update
         void Start()
         {
+            scoreTotal = 0;
             timer = 15f;
             victory = false;
             defeat = false;
@@ -29,23 +31,18 @@ namespace Paul
                 text.text = timer.ToString("#");
             }
 
-            if (timer < 0f && victory == false)
+            if (scoreTotal == 4 && defeat == false)
             {
-                Debug.Log("Défaite");
-                text.text = "DEFAITE";
-                defeat = true;
-                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
-            }
-        }
-        public void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.tag == "Player" && defeat == false)
-            {
-                Debug.Log("Victoire");
-                Debug.Log(text .gameObject);
-                text.text = "VICTOIRE";
                 victory = true;
+                text.text = "VICTOIRE";
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+            }
+
+            if (timer <= 0 && victory == false)
+            {
+                defeat = true;
+                text.text = "DEFAITE";
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
             }
         }
     }

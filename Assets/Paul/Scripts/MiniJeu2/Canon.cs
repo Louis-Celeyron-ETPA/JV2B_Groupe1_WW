@@ -20,6 +20,8 @@ namespace Paul
         private int counter;
         public int counterSpawnMax;
 
+       
+
         void Start()
         {
 
@@ -57,7 +59,7 @@ namespace Paul
             if (counter < 101) 
             {
                 counter++;
-                Debug.Log(counter);
+                
             }
 
         }
