@@ -6,7 +6,7 @@ namespace Jojo
 {
     public class Movement3D : MonoBehaviour
     {
-        float speed = 0.13f;
+        private float speed = 0.13f;
         public Transform TF;
 
         void Start()
@@ -18,13 +18,13 @@ namespace Jojo
 
         void Update()
         {
-            if (TF.position.x > 4.24)
+            if (TF.position.x > 9.48)
             {
-                TF.position = new Vector3(-3.9f,0.52f,-6.8f);
+                TF.position = new Vector3(-9f,0.52f,-6.8f);
             }
-            if (TF.position.x < -4.24)
+            if (TF.position.x < -9.48)
             {
-                TF.position = new Vector3(3.9f, 0.52f, -6.8f);
+                TF.position = new Vector3(9f, 0.52f, -6.8f);
             }
 
         }

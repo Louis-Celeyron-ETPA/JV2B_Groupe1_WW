@@ -7,7 +7,7 @@ namespace Jojo
     public class RayCastVerif : MonoBehaviour
 {
     public Vector3 direction;
-        public LayerMask masklol;
+    public LayerMask masklol;
     // Start is called before the first frame update
     void Start()
     {

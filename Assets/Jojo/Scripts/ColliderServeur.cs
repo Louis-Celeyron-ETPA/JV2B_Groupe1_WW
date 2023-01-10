@@ -7,12 +7,12 @@ namespace Jojo
     public class ColliderServeur : MonoBehaviour
     {
         //********* Init des variables *****************
-        public int ScoreCoffee;
-        public GameObject Tasse;
+        private int ScoreCoffee;
+        private GameObject Tasse;
         // ***************************************************
         void Start()
         {
-            //************ Au lancement *************
+            //************ Au lancement **************************
             ScoreCoffee = 0;
             // ***************************************************
         }

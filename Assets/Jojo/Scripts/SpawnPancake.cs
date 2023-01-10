@@ -23,7 +23,7 @@ namespace Jojo
                 compteur -= Time.deltaTime;
             }else
             {
-                Vector3 randomSpawnPosition = new Vector3(Random.Range(-3f, 3f), transform.position.y, -6.8f);
+                Vector3 randomSpawnPosition = new Vector3(Random.Range(-5f, 5f), transform.position.y, -6.8f);
                 Quaternion RotatPancake = Quaternion.Euler(90,0,0);
                 Instantiate(Pancake, randomSpawnPosition, RotatPancake);
                 compteur = cooldown;

@@ -8,19 +8,22 @@ namespace Jojo
 {
     public class CamDeplacement : MonoBehaviour
     {
-        public int GoalMove;
+        //********* Init des variables *****************
+        private int GoalMove;
         public int Score;
-        Vector3 initialPose;
-        Vector3 GoalPose;
-        float pourcentage = 0f;
+        private Vector3 initialPose;
+        private Vector3 GoalPose;
+        private float pourcentage = 0f;
         public Text ScoreText;
-        // Start is called before the first frame update
+        // *********************************************
         void Start()
         {
+        //************ Au lancement **************************
             Score=0;
+        // ***************************************************
         }
 
-        // Update is called once per frame
+        //*************** Pour chaque frame *******************************
         void Update()
         {
             ScoreText.text=Score.ToString();
@@ -28,7 +31,7 @@ namespace Jojo
                 if (pourcentage == 0)
                 {
                     initialPose = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                    GoalPose = new Vector3(transform.position.x, transform.position.y + 4, transform.position.z);
+                    GoalPose = new Vector3(transform.position.x, transform.position.y + 4, transform.position.z);       // mouvement de la camera quand score atteint X
                 }
                 transform.position=Vector3.Lerp(initialPose, GoalPose, pourcentage);
                 pourcentage += 0.005f;
@@ -39,5 +42,6 @@ namespace Jojo
                 pourcentage = 0;
             }
         }
+        // ************************************************************
     }
 }

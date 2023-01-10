@@ -9,15 +9,16 @@ namespace Jojo
 
 public class ChooseThief : MonoBehaviour
 {
-
+    //********* Init des variables *****************
     public List<ThiefMovement> ListThief1;
     int randomThief;
     int randomMove;
     private float compteur;
     public int cooldown;
-    // Start is called before the first frame update
+    //*********************************************
     void Start()
     {
+        //************ Au lancement **************************
         compteur = cooldown;
         randomThief = Random.Range(0,ListThief1.Count);
         randomMove = Random.Range(0,1);

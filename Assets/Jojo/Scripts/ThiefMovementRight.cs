@@ -7,8 +7,8 @@ namespace Jojo
 
     public class ThiefMovementRight : MonoBehaviour
     {
-        public bool BigMove;
-        public bool SmallMove;
+        private bool BigMove;
+        private bool SmallMove;
         float pourcentageM = 0f;
         float pourcentageM2 = 0f;
         bool FinMove1 = false;
@@ -32,38 +32,19 @@ namespace Jojo
         {
             if (BigMove == true && SmallMove == false)
             {
-                if (FinMove1 == false)
-                {
-                    transform.position = Vector3.Lerp(PoseBaseP, PoseFinPB, pourcentageM);
-                    pourcentageM += 0.02f;
-                }
-                if (pourcentageM >= 1f)
-                {
-                    pourcentageM = 0f;
-                    PoseFin = PoseBaseP;
-                    PoseBase = transform.position;
-                    FinMove1 = true;
-                }
-                if (FinMove1 == true)
-                {
-                    transform.position = Vector3.Lerp(PoseBase, PoseFin, pourcentageM2);
-                    pourcentageM2 += 0.02f;
-                }
-                if (pourcentageM2 >= 1f)
-                {
-                    pourcentageM2 = 0f;
-                    BigMove = false;
-                    FinMove1 = false;
-                    PoseBase = PoseBaseP;
-                    PoseFin = PoseFinPB;
-                }
+                MovementVoleur(0.02f);
             }
             if (SmallMove == true && BigMove == false)
             {
+                MovementVoleur(0.05f);
+            }
+        }
+
+        private void MovementVoleur( float PourcentageMouvement){
                 if (FinMove1 == false)
                 {
                     transform.position = Vector3.Lerp(PoseBaseP, PoseFinPS, pourcentageM);
-                    pourcentageM += 0.05f;
+                    pourcentageM += PourcentageMouvement;
                 }
                 if (pourcentageM >= 1f)
                 {
@@ -85,7 +66,6 @@ namespace Jojo
                     PoseBase = PoseBaseP;
                     PoseFin = PoseFinPS;
                 }
-            }
         }
     }
 
