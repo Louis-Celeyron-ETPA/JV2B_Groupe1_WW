@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69072221a1fa53b46ba79863fbfd546a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counter: 0
   tra: {fileID: 17701511}
 --- !u!65 &17701513
 BoxCollider:
@@ -402,6 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69072221a1fa53b46ba79863fbfd546a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counter: 0
   tra: {fileID: 1136309899}
 --- !u!65 &1136309901
 BoxCollider:
@@ -630,6 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69072221a1fa53b46ba79863fbfd546a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counter: 0
   tra: {fileID: 1857634216}
 --- !u!1 &1943008195
 GameObject:
@@ -876,6 +879,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10127394b6f2ed5448f58fa2e81d0334, type: 3}
       propertyPath: m_Name
       value: higher_maw01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10127394b6f2ed5448f58fa2e81d0334, type: 3}
+      propertyPath: m_TagString
+      value: upper
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10127394b6f2ed5448f58fa2e81d0334, type: 3}
