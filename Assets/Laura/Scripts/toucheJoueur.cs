@@ -10,17 +10,7 @@ namespace Laury
         public List<int> valeurs;
         private bool inputEntered = false;
         public simonSaid simonSaid;
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        
         public void FlecheH()
         {
             if(inputEntered == false)

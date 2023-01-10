@@ -29,7 +29,7 @@ namespace Laury
         public toucheJoueur lista;
         public int actionOnTime;
         public int points;
-            // Start is called before the first frame update
+            
         void Start()
         {
             delai = 0.3f;
@@ -45,7 +45,7 @@ namespace Laury
             }
         }
 
-        // Update is called once per frame
+        
         void Update()
         {
             if(nombre<tour)
@@ -61,17 +61,17 @@ namespace Laury
             if (points == 1)
             {
                 p1.materials[2].color = Color.green;
-                //ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
             }
             if (points == 2)
             {
                 p2.materials[2].color = Color.green;
-                //ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
             }
             if (points == 3)
             {
                 p3.materials[2].color = Color.green;
-                //ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Perfect);
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Perfect);
             }
 
         }
