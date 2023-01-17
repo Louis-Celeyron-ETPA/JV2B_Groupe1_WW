@@ -6,21 +6,33 @@ namespace Jojo
 {
     public class MovementBase : MonoBehaviour
     {
+        //********* Init des variables *****************
         public RectTransform rt;
         float speed = 15f;
         public int ScoreVoleur;
+        public float TimerVoleur=15;
+        //**********************************************
+        //************ Au lancement ********************
         void Start()
         {
             ScoreVoleur=0;
         }
-
+        //**********************************************
+        //*************** Pour chaque frame ************
         void Update()
         {
-            if(ScoreVoleur>=3){
-                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+            TimerVoleur-=Time.deltaTime;
+            if(ScoreVoleur>=3){ 
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);     //verif si score atteint si oui alors victoire
             }
-        }
 
+            if(TimerVoleur<=0){
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);  // verifie si le temps est a zero si oui alors defaite
+            }
+            
+        }
+        //**********************************************
+        //**************Fonction mouvement**************
         public void RightMove(){
             rt.anchoredPosition += Vector2.right * speed;
         }
@@ -36,7 +48,8 @@ namespace Jojo
         public void DownMove(){
             rt.anchoredPosition -= Vector2.up * speed;
         }
-
+        //**********************************************
+        //*********Fonction Action*********************
         public void Action()
         {
             var positionTemporaire = new Vector3(
@@ -46,24 +59,23 @@ namespace Jojo
 
 
             var convertedPosition = Camera.main.ViewportToWorldPoint(positionTemporaire);
-            var pla = new Vector3(Camera.main.transform.position.x, -Camera.main.transform.position.y, Camera.main.transform.position.z) - convertedPosition;
+            var pla = new Vector3(Camera.main.transform.position.x, -Camera.main.transform.position.y, Camera.main.transform.position.z) - convertedPosition;           //calcule pour raycast 
 
 
             Debug.Log(Camera.main.ViewportToWorldPoint(convertedPosition));
-
-            //Debug.DrawRay(convertedPosition,Camera.main.transform.forward * 1000);
             Debug.DrawRay(Camera.main.transform.position, pla.normalized* -1000);
           
-            if (Physics.Raycast(Camera.main.transform.position, -pla.normalized, out var other))
+            if (Physics.Raycast(Camera.main.transform.position, -pla.normalized, out var other))        //lancement d'un raycast
             {
                 Debug.Log(other.transform);
-                if (other.transform.tag == "Voleur")
+                if (other.transform.tag == "Voleur")            //verifie si objet toucher est voleur
                 {
-                    ScoreVoleur+=1;
+                    ScoreVoleur+=1;                                             //ajoute 1 au score et enleve le voleur
                     Destroy(other.transform.gameObject);
                 }
             }
         }
+        //****************************************
     }
     
 }

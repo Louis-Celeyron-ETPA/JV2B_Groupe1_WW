@@ -15,6 +15,7 @@ namespace Jojo
         private Vector3 GoalPose;
         private float pourcentage = 0f;
         public Text ScoreText;
+        public float TimerPancake=15;
         // *********************************************
         void Start()
         {
@@ -26,6 +27,12 @@ namespace Jojo
         //*************** Pour chaque frame *******************************
         void Update()
         {
+            TimerPancake-=Time.deltaTime;
+
+            if(TimerPancake<=0){
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);  // verifie si le temps est a zero si oui alors defaite
+            }
+
             ScoreText.text=Score.ToString();
             if(Score==GoalMove){
                 if (pourcentage == 0)

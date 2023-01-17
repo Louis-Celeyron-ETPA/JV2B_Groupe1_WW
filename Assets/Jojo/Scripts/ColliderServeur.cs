@@ -9,6 +9,7 @@ namespace Jojo
         //********* Init des variables *****************
         private int ScoreCoffee;
         private GameObject Tasse;
+        private float TimerServ=15;
         // ***************************************************
         void Start()
         {
@@ -21,8 +22,13 @@ namespace Jojo
         void Update()
         {
             //*************** Pour chaque frame *******************************
+            TimerServ -= Time.deltaTime;
             if(ScoreCoffee>=3){
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);     // verifie si le joueur a servie trois tasse si oui alors victoire du mini jeu
+            }
+
+            if(TimerServ<=0){
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);  // verifie si le temps est a zero si oui alors defaite
             }
             // ***************************************************
         }

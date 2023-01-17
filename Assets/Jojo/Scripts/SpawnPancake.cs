@@ -9,12 +9,16 @@ namespace Jojo
         //********* Init des variables *****************
         public GameObject Pancake;
         private float compteur;
-        public int cooldown;
+        public float[] cooldown;
+        public float GetCoolDown(){
+            return cooldown[ManagerManager.DifficultyManager.GetDifficulty()];       //difficulté
+        }
+
         //**********************************************
         //************ Au lancement ********************
         void Start()
         {
-            compteur = cooldown;
+            compteur = GetCoolDown();
         }
         //**********************************************
         //*************** Pour chaque frame ************
@@ -28,7 +32,7 @@ namespace Jojo
                 Vector3 randomSpawnPosition = new Vector3(Random.Range(-5f, 5f), transform.position.y, -6.8f);  //Position aléatoire
                 Quaternion RotatPancake = Quaternion.Euler(90,0,0);                                                           // rotate de la pancake
                 Instantiate(Pancake, randomSpawnPosition, RotatPancake);        //creation de la pancake
-                compteur = cooldown;        //reset cooldown
+                compteur = GetCoolDown();        //reset cooldown
             }
         }
         //**********************************************
