@@ -741,9 +741,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -50}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &724096385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,8 +773,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -791,15 +791,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1049,7 +1049,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 377c235911647c44f9517410028abf2f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1716,7 +1716,7 @@ PrefabInstance:
     - target: {fileID: -7159236951463829038, guid: 16c2446048eff514e9d84b535951d654, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c61633415f1ca1546813db41bda08c82, type: 2}
+      objectReference: {fileID: 2100000, guid: 84bde70b3e6a60b48b3e882da1077cd2, type: 2}
     - target: {fileID: 919132149155446097, guid: 16c2446048eff514e9d84b535951d654, type: 3}
       propertyPath: m_Name
       value: Grillage2
@@ -1724,7 +1724,7 @@ PrefabInstance:
     - target: {fileID: 2502432061147645856, guid: 16c2446048eff514e9d84b535951d654, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 58028819f8246fb4aafeb5b940c06df1, type: 2}
+      objectReference: {fileID: 2100000, guid: 08a10f74d230bf541ba7369595cfe702, type: 2}
     - target: {fileID: 4758970445588001700, guid: 16c2446048eff514e9d84b535951d654, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -1748,15 +1748,15 @@ PrefabInstance:
     - target: {fileID: 5694059874591286030, guid: 16c2446048eff514e9d84b535951d654, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 58028819f8246fb4aafeb5b940c06df1, type: 2}
+      objectReference: {fileID: 2100000, guid: 08a10f74d230bf541ba7369595cfe702, type: 2}
     - target: {fileID: 6793926990551356191, guid: 16c2446048eff514e9d84b535951d654, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c61633415f1ca1546813db41bda08c82, type: 2}
+      objectReference: {fileID: 2100000, guid: 84bde70b3e6a60b48b3e882da1077cd2, type: 2}
     - target: {fileID: 6877476350376008592, guid: 16c2446048eff514e9d84b535951d654, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 58028819f8246fb4aafeb5b940c06df1, type: 2}
+      objectReference: {fileID: 2100000, guid: 08a10f74d230bf541ba7369595cfe702, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16c2446048eff514e9d84b535951d654, type: 3}
 --- !u!1 &1380704194 stripped
@@ -2517,9 +2517,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1771908009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2549,8 +2549,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2567,15 +2567,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 4
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
