@@ -4,10 +4,12 @@ using UnityEngine;
 
 namespace Paolo
 { 
-    public class falling_flag : MonoBehaviour
+    public class FallingFlag : MonoBehaviour
     {
         public Rigidbody rgbd;
         public Vector3 initialPosition;
+        public float maxHeight=0.9f;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -30,7 +32,17 @@ namespace Paolo
 
         private void MONTE()
         {
-            transform.position += new Vector3(0, 1.5f, 0);
+            var tempPosition = transform.position + new Vector3(0, 1.5f, 0);
+            if(tempPosition.y>maxHeight)
+            {
+                transform.position = new Vector3(transform.position.x, maxHeight, transform.position.z);
+                Debug.Log(transform.position.y);
+            }
+            else
+            {
+                transform.position = tempPosition;
+            }
+
             Debug.Log("il monte");
             StartCoroutine(WaitToRelaunchPhysiscs());
         }
@@ -38,7 +50,7 @@ namespace Paolo
         private IEnumerator WaitToRelaunchPhysiscs()
         {
             rgbd.velocity = Vector3.zero;
-            yield return new WaitForSeconds(0.000001f);
+            yield return new WaitForEndOfFrame();
 
         }
 
