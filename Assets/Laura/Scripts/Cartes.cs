@@ -1,15 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Cartes : MonoBehaviour
+namespace Laury
 {
-    public MeshRenderer mr;
-    public void ChangeColor(Color color)
+
+    public class Cartes : MonoBehaviour
     {
-        mr.material.color = color;
+        public MeshRenderer mr;
+        public Vector3 initialPos;
+        private void Awake()
+        {
+            initialPos = transform.position;
+        }
+        public void ChangeColor(Color color)
+        {
+            mr.material.color = color;  
+        }
+        public void ChangePosition()
+        {
+            transform.position += transform.forward * -0.75f;
+        }
+        public void ResetPosition()
+        {
+            transform.position = initialPos;
+
+        }
     }
-    
-    // Start is called before the first frame update
-   
 }

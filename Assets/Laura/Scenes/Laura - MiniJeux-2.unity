@@ -1103,9 +1103,9 @@ MonoBehaviour:
     horizontal:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Laury.toucheJoueur, Assembly-CSharp
-          m_MethodName: ResetColor
+        - m_Target: {fileID: 393298459}
+          m_TargetAssemblyTypeName: Laury.taper, Assembly-CSharp
+          m_MethodName: ResetTape
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1118,9 +1118,9 @@ MonoBehaviour:
     vertical:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Laury.toucheJoueur, Assembly-CSharp
-          m_MethodName: ResetColor
+        - m_Target: {fileID: 393298459}
+          m_TargetAssemblyTypeName: Laury.taper, Assembly-CSharp
+          m_MethodName: ResetTape
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

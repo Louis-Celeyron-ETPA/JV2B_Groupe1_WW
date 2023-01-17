@@ -8,10 +8,10 @@ namespace Laury
     {
         public List<Cartes> cartes;
         public int currentIndex;
+
         // Start is called before the first frame update
         void Start()
         {
-            print(cartes);
             SelectNewCard(0);
         }
 
@@ -36,12 +36,12 @@ namespace Laury
             foreach (var card in cartes)
             {
                 card.ChangeColor(Color.white);
+                card.ResetPosition();
             }
 
             currentIndex = index;
             cartes[index].ChangeColor(Color.yellow);
-
-
+            cartes[index].ChangePosition();
         }
     }
 }
