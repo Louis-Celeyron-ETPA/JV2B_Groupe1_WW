@@ -12,17 +12,22 @@ namespace Charles
         public Vector3 miniScale = new Vector3(0f, 0f, 0f);
         public float delta;
         public bool shouldShrink = false;
+        public bool inVentiloS = false;
     // Start is called before the first frame update
         void Start()
         {
+            //forme de base de la boule
             startScale = transform.localScale;
+            //position de base la boule
             startPos = transform.position;
+
             rb = GetComponent<Rigidbody>();
         }
 
         // Update is called once per frame
         void Update()
         {
+            //lerp pour réduire la taille de la balle pour l'anim de victoire
             if (shouldShrink)
             {
                 delta += Time.deltaTime;
@@ -33,6 +38,11 @@ namespace Charles
                 shouldShrink = false;
                 delta = 0;
                 TpBack();
+            }
+            //La balle bouge si
+            if (inVentiloS)
+            {
+                rb.velocity += new Vector3(0f, 0f, -0.005f);
             }
         }
 
@@ -65,7 +75,26 @@ namespace Charles
                 delta = 0;
                 shouldShrink = true;
             }
+            
+        }
 
+        private void OnTriggerEnter(Collider other)
+        {
+            
+            if (other.gameObject.tag == "ventilo")
+            {
+                Debug.Log("oui");
+                inVentiloS = true;
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            
+            if (other.gameObject.tag == "ventilo")
+            {
+                inVentiloS = false;
+            }
         }
 
         private void TpBack()
