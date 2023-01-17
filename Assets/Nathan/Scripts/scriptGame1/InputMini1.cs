@@ -8,8 +8,8 @@ namespace Pediluves
     {
         ////////////////  VARIABLES  /////////////////
 
-        public float speed2 = 0.50f ;
-        public float speed ;
+        public float speed2 = 0.50f ;   
+        public float speed;
 
         public Rigidbody rb;
 
@@ -22,6 +22,10 @@ namespace Pediluves
         public float startZ;
 
         public bool respawn = false;
+
+        public float timer = 15;
+
+       
 
         ///////////////////////////////////////////////////
 
@@ -50,6 +54,13 @@ namespace Pediluves
             if (respawn == true)
             {
                 transform.position = new Vector3(startX, startY, startZ);
+            }
+
+            timer -= Time.deltaTime;
+
+            if (timer <= 0)
+            {
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
             }
         }
 

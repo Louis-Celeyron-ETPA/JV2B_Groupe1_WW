@@ -841,6 +841,10 @@ MonoBehaviour:
   rb: {fileID: 190820874}
   speed: 5500
   speedRotate: 5
+  vitesseBalle:
+  - 5500
+  - 5750
+  - 6000
 --- !u!1001 &221631573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7512,7 +7516,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 190820869}
-  counterSpawnMax: 175
+  counter: 0
+  counterSpawnMax: 1.5
 --- !u!54 &985000624
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7546,6 +7551,10 @@ MonoBehaviour:
   speed: -2750
   coutnerChangeDirection: 0
   coutnerChangeDirectionMax: 0
+  vitesseSpawner:
+  - -2300
+  - -2750
+  - -3200
 --- !u!1001 &998508954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13717,7 +13726,8 @@ MonoBehaviour:
   stopActive: 0
   animator: {fileID: 919132147688923408}
   isClose: 1
-  scoreMax: 5
+  scoreMax: 4
+  timer: 15
 --- !u!1 &1766917752
 GameObject:
   m_ObjectHideFlags: 0

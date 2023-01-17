@@ -15,6 +15,14 @@ namespace Pediluves
 
         public InputMini1 player;
 
+        public float[] speedMax;
+
+        public float GetSpeedMax()
+        {
+            return speedMax[0];
+            //return speedMax[ManagerManager.DifficultyManager.GetDifficulty()];
+        }
+
         ///////////////////////////////////////////////////
 
         void Update()
@@ -23,11 +31,11 @@ namespace Pediluves
 
             if (ChangeDirection == false)
             {
-                rb.AddForce(Vector3.forward * (speed));
+                rb.AddForce(Vector3.forward * (GetSpeedMax()));
             }
             if (ChangeDirection == true)
             {
-                rb.AddForce(-Vector3.forward * (speed));
+                rb.AddForce(-Vector3.forward * (GetSpeedMax()));
             }
 
         }

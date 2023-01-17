@@ -17,6 +17,8 @@ namespace Pediluves
 
         public RandomSpawner randomSpawner;
 
+        public float timer = 15;
+
         ///////////////////////////////////////////////////
 
         void Start()
@@ -29,6 +31,13 @@ namespace Pediluves
             // actualise l'affichage en fonction de notre score
 
             counterText.text = counter.ToString();
+
+            timer -= Time.deltaTime;
+
+            if (timer <= 0)
+            {
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
+            }
         }
 
         public void leftMovement()

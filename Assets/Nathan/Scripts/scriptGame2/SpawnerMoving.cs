@@ -10,12 +10,25 @@ namespace Pediluves
         
         public Rigidbody rb;
         public bool ChangeDirection = true;
-        public int speed;
+        public float speed;
 
         public float coutnerChangeDirection;
         public float coutnerChangeDirectionMax;
 
+        public float[] vitesseSpawner;
+
+        public float GetVitesseMax()
+        {
+            return vitesseSpawner[2];
+            //return vitesseSpawner[ManagerManager.DifficultyManager.GetDifficulty()];
+        }
+
         ///////////////////////////////////////////////////
+
+        public void Start()
+        {
+            speed = GetVitesseMax();
+        }
 
         void Update()
         {
@@ -24,13 +37,13 @@ namespace Pediluves
             // déplacement vers la droite 
             if (ChangeDirection == false)
             {
-                rb.AddForce(-Vector3.left * (speed));
+                rb.AddForce(-Vector3.left * (GetVitesseMax()));
             }
 
             // déplacement vers la gauche 
             if (ChangeDirection == true)
             {
-                rb.AddForce(-Vector3.right * (speed));
+                rb.AddForce(-Vector3.right * (GetVitesseMax()));
             }
 
             coutnerChangeDirection += Time.deltaTime;

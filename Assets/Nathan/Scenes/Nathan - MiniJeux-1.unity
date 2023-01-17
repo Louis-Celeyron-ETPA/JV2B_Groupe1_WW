@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed2: 0.5
-  speed: 1750
+  speed: 2750
   rb: {fileID: 130423082}
   stop: {fileID: 1902991536}
   moveOrDie: 0
@@ -517,6 +517,7 @@ MonoBehaviour:
   startY: 0
   startZ: 0
   respawn: 0
+  timer: 15
 --- !u!136 &130423084
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1244,6 +1245,10 @@ MonoBehaviour:
   ChangeDirection: 0
   speed: 1000
   player: {fileID: 130423083}
+  speedMax:
+  - 750
+  - 1000
+  - 1250
 --- !u!65 &524498392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2937,6 +2942,10 @@ MonoBehaviour:
   ChangeDirection: 0
   speed: 1000
   player: {fileID: 130423083}
+  speedMax:
+  - 750
+  - 1000
+  - 1250
 --- !u!65 &1393866425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3862,11 +3871,15 @@ MonoBehaviour:
   - {fileID: 1902991535}
   dontMove: 0
   inputManag: {fileID: 130423083}
-  counterMax: 0.6
+  counterMax: 0.7
   counterReturnMax: 0.75
   color: {r: 1, g: 0.3254717, b: 0.3254717, a: 0}
   colorLast: {r: 1, g: 0, b: 0, a: 0}
   colorFirst: {r: 1, g: 1, b: 1, a: 0}
+  VitesseStop:
+  - 0.8
+  - 0.6
+  - 0.4
 --- !u!1 &1982436647
 GameObject:
   m_ObjectHideFlags: 0

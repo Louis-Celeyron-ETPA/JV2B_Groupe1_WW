@@ -14,8 +14,8 @@ namespace Pediluves
         private float spawnerY;
         private float spawnerZ;
 
-        private int counter;
-        public int counterSpawnMax;
+        public float counter;
+        public float counterSpawnMax;
 
         ///////////////////////////////////////////////////
 
@@ -25,7 +25,7 @@ namespace Pediluves
             spawnerY = transform.position.y;
             spawnerZ = transform.position.z;
 
-            counter++;
+            counter += Time.deltaTime;
 
             // spawn de balles tous les X temps
 

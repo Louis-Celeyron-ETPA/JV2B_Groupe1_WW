@@ -27,6 +27,14 @@ namespace Pediluves
         public Color colorLast;
         public Color colorFirst;
 
+        public float[] vitesseStop;
+
+        public float GetVitesseMax()
+        {
+            return vitesseStop[0];
+            //return vitesseStop[ManagerManager.DifficultyManager.GetDifficulty()];
+        }
+
         ///////////////////////////////////////////////////
 
         void Start()
@@ -46,7 +54,7 @@ namespace Pediluves
                 {
                     counter += Time.deltaTime;
 
-                    if (counter >= counterMax)
+                    if (counter >= GetVitesseMax())
                     {
                         if (i == 6)
                         {

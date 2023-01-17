@@ -28,6 +28,8 @@ namespace Pediluves
 
         public int scoreMax;
 
+        public float timer = 15;
+
         ///////////////////////////////////////////////////
 
         void Start()
@@ -46,12 +48,20 @@ namespace Pediluves
                 speed = speedMax;
             }
 
+            scoreText.text = score.ToString();
+
+            timer -= Time.deltaTime;
+
+            if (timer <= 0)
+            {
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
+            }
+
             if (score == scoreMax)
             {
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
             }
 
-            scoreText.text = score.ToString();
         }
         public void leftMovement()
         {

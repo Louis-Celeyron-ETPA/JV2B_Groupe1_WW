@@ -15,6 +15,14 @@ namespace Pediluves
 
         public float speedRotate;
 
+        public float[] vitesseBalle;
+
+        public float GetVitessBalleeMax()
+        {
+            return vitesseBalle[0];
+            //return vitesseBalle[ManagerManager.DifficultyManager.GetDifficulty()];
+        }
+
         ///////////////////////////////////////////////////
 
         void Update()
@@ -27,7 +35,7 @@ namespace Pediluves
             {
                 transform.Rotate(Vector3.left * speedRotate);
                 rb.velocity = rb.velocity.normalized;
-                rb.AddForce(-Vector3.forward * (speed));
+                rb.AddForce(-Vector3.forward * (GetVitessBalleeMax()));
             }
         }
         private void OnCollisionEnter(Collision collision)
