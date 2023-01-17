@@ -8,30 +8,34 @@ namespace Laury
     {
         public List<Cartes> cartes;
         public int currentIndex;
-
-        // Start is called before the first frame update
+        public int ChoixCarte;
+        private int aleatoire;
+        public Material Carte1, Carte2, Carte3, Carte4;
+        public MeshRenderer CarteImite;
         void Start()
         {
-            SelectNewCard(0);
+            SelectionCarte(0);
+            aleatoire = Random.Range(1, 5);
+            print(aleatoire);
+            ChoixCarte = aleatoire;
+            AfficheCarte();
         }
-
-        // Update is called once per frame
         void Update()
         {
+            
+
             if(Input.GetKeyDown(KeyCode.RightArrow))
             {
                 if (currentIndex == 3){ currentIndex = -1; }
-                SelectNewCard(currentIndex + 1); 
+                SelectionCarte(currentIndex + 1); 
             }
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 if (currentIndex == 0) { currentIndex = 4; }
-                SelectNewCard(currentIndex - 1); 
+                SelectionCarte(currentIndex - 1); 
             }
         }
-
-
-        public void SelectNewCard(int index)
+        public void SelectionCarte(int index)
         {
             foreach (var card in cartes)
             {
@@ -42,6 +46,25 @@ namespace Laury
             currentIndex = index;
             cartes[index].ChangeColor(Color.yellow);
             cartes[index].ChangePosition();
+        }
+        public void AfficheCarte()
+        {
+            if (ChoixCarte == 1)
+            {
+                CarteImite.material = Carte1;
+            }
+            if (ChoixCarte == 2)
+            {
+                CarteImite.material = Carte2;
+            }
+            if (ChoixCarte == 3)
+            {
+                CarteImite.material = Carte3;
+            }
+            if (ChoixCarte == 4)
+            {
+                CarteImite.material = Carte4;
+            }
         }
     }
 }

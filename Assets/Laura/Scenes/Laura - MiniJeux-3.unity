@@ -724,6 +724,12 @@ MonoBehaviour:
   - {fileID: 589327988}
   - {fileID: 1337669880}
   currentIndex: 0
+  ChoixCarte: 0
+  Carte1: {fileID: 2100000, guid: b6efccb9ad3c24f46861111e01423edf, type: 2}
+  Carte2: {fileID: 2100000, guid: ed279583886ccf64db401a8754d1d0ed, type: 2}
+  Carte3: {fileID: 2100000, guid: 479654252398b5e48adcee3b6ff1c7e8, type: 2}
+  Carte4: {fileID: 2100000, guid: 8ba05818e59fb5446be23a42501ec32f, type: 2}
+  CarteImite: {fileID: 1362558626}
 --- !u!4 &562239325
 Transform:
   m_ObjectHideFlags: 0
@@ -1409,7 +1415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362558624}
   m_LocalRotation: {x: 0.0058823195, y: -0.79799116, z: 0.6026138, w: 0.005669764}
-  m_LocalPosition: {x: 0.23, y: 4.97, z: 2.88}
+  m_LocalPosition: {x: 0.23, y: 5.19, z: 2.94}
   m_LocalScale: {x: 1.8025312, y: 0.2452618, z: 2.7517061}
   m_ConstrainProportionsScale: 0
   m_Children: []

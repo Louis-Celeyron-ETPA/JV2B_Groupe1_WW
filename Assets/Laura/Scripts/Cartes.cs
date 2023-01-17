@@ -18,7 +18,7 @@ namespace Laury
         }
         public void ChangePosition()
         {
-            transform.position += transform.forward * -0.75f;
+            transform.position += transform.forward * -0.5f;
         }
         public void ResetPosition()
         {
