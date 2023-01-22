@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44626fd9d0083384aa1a3eb88986dff3, type: 3}
+  m_Name: Point7
+  m_EditorClassIdentifier: 
+  theTransform: {fileID: 7261718293635564654, guid: b780d94b2aecbd14ab91d1f3f292490f, type: 3}
+  nearPoints:
+  - {fileID: 11400000, guid: 247a2d7d3c5a82b4095f6bd843091b6d, type: 2}
+  - {fileID: 11400000, guid: b80a2248beb057941af5c7cfb727777f, type: 2}
+  - {fileID: 11400000, guid: eefa6ffb5a2920849a65dec2b33c132e, type: 2}
+  - {fileID: 11400000, guid: 0a906ce72b117a545aaefe9b5911942e, type: 2}
+  pointIndex: 6
