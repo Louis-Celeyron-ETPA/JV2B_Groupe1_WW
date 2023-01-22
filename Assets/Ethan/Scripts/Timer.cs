@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
+    // UI
+    public TextMeshProUGUI tempsText;
+
     float timer = 1f;
     float maxTimer = 1f;
     int showedTimer = 15;
@@ -25,6 +29,7 @@ public class Timer : MonoBehaviour
         {
             showedTimer --;
             timer = maxTimer;
+            tempsText.text = showedTimer.ToString();
         }
 
         if (showedTimer == 0)

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TasseTag
   - Voleur
+  - NeComptePas
   layers:
   - Default
   - TransparentFX

@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace BananaLover
 {
     public class CollisionDetection : MonoBehaviour
     {
+        // UI
+        public TextMeshProUGUI nbrGobeletRestants;
 
+        // Normal
         int nbrCollisions = 0;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -21,17 +26,24 @@ namespace BananaLover
             {
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
             }
-            Debug.Log(nbrCollisions);
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            nbrCollisions ++;
+            if (other.gameObject.tag != "NeComptePas")
+            {
+                nbrCollisions++;
+            }
+            nbrGobeletRestants.text = "Il reste " + nbrCollisions.ToString() + " gobelets";
         }
 
         private void OnTriggerExit(Collider other)
         {
-            nbrCollisions --;
+            if (other.gameObject.tag != "NeComptePas")
+            {
+                nbrCollisions--;
+            }
+            nbrGobeletRestants.text = "Il reste " + nbrCollisions.ToString() + " gobelets";
         }
     }
 }
