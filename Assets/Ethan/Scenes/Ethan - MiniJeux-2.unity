@@ -169,8 +169,18 @@ Transform:
   - {fileID: 1603079641}
   - {fileID: 1801419657}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &22066253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 2122193804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &37744181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1840429889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &142658408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -224,7 +234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -233,7 +247,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 142658408}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &163879707
+--- !u!1 &158033189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1129867712}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &216772830 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1929157873900325122, guid: 6a4478402be8e1a4f9316cda40aecebb, type: 3}
+  m_PrefabInstance: {fileID: 1929157873700551132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &221972643
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,92 +265,268 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 163879710}
-  - component: {fileID: 163879709}
-  - component: {fileID: 163879708}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
+  - component: {fileID: 221972644}
+  - component: {fileID: 221972646}
+  - component: {fileID: 221972645}
+  m_Layer: 5
+  m_Name: Temps
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &163879708
-AudioListener:
+--- !u!224 &221972644
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163879707}
-  m_Enabled: 1
---- !u!20 &163879709
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163879707}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &163879710
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163879707}
+  m_GameObject: {fileID: 221972643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 1235826989}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &216772830 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1929157873900325122, guid: 6a4478402be8e1a4f9316cda40aecebb, type: 3}
-  m_PrefabInstance: {fileID: 1929157873700551132}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 145, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &221972645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221972643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 15
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 100
+  m_fontSizeBase: 100
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 1024
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &221972646
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221972643}
+  m_CullTransparentMesh: 1
+--- !u!1 &229780831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1898836924}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &274287644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1967867764983428280, guid: a3dd85f60f5717149abed4ee598e3f8c, type: 3}
   m_PrefabInstance: {fileID: 1967867764712290468}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &323580669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 797585006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &370708920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1136232287}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &377592144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377592148}
+  - component: {fileID: 377592147}
+  - component: {fileID: 377592146}
+  - component: {fileID: 377592145}
+  - component: {fileID: 377592149}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &377592145
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377592144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &377592146
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377592144}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &377592147
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377592144}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &377592148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377592144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.323, y: 0.813, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.4, z: 0.3}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 652119376}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &377592149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377592144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26061a2d76e92d04fb213a50b789ac72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 652119374}
+  drone: {fileID: 1733186431}
+  allDesks: {fileID: 1518936616}
 --- !u!1001 &379671421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -381,6 +581,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
       value: BureauChaise
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -457,7 +661,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -502,6 +710,101 @@ Transform:
   m_Father: {fileID: 1644796911}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &635209492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1436502339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &650536592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1329522115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &652119373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652119376}
+  - component: {fileID: 652119374}
+  - component: {fileID: 652119375}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &652119374
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652119373}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &652119375
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652119373}
+  m_Enabled: 1
+--- !u!4 &652119376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652119373}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.58300006, z: 0.000000086824414}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1608412918}
+  m_Father: {fileID: 377592148}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &663189162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -555,7 +858,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -617,7 +924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -625,6 +936,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 675933269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &705979835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1468169004}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &724317306 stripped
 Transform:
@@ -635,6 +951,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 371846418428106694, guid: a6f485f678070fc418b51b2f7430709d, type: 3}
   m_PrefabInstance: {fileID: 371846418084146225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &771688429 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1469775727}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &797585006
 PrefabInstance:
@@ -689,7 +1010,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -697,6 +1022,29 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 797585006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &797585008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323580669}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
+--- !u!1 &824600173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1236551158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &827266512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1435057241}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &840484752 stripped
 Transform:
@@ -756,7 +1104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -857,8 +1209,76 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &943486225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 943486228}
+  - component: {fileID: 943486227}
+  - component: {fileID: 943486226}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &943486226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943486225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &943486227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943486225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &943486228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943486225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &994019760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3347290027624446338, guid: 96a41dec8cb1dd64fb4eddddc1b4ba7e, type: 3}
@@ -953,7 +1373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -1015,7 +1439,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -1033,7 +1461,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: af3ac1422f769694f95d5aaef3c091ab, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af3ac1422f769694f95d5aaef3c091ab, type: 3}
       propertyPath: m_LocalScale.x
@@ -1146,7 +1574,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -1155,6 +1587,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1097579789}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1098026073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1519627825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1106371516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1097579789}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1106371517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106371516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!1 &1122944731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,7 +1699,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -1253,6 +1712,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1129867712}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1129867714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158033189}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!1001 &1136232287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1306,7 +1778,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -1315,6 +1791,162 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1136232287}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1136232289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370708920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
+--- !u!1 &1139146973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1436175305}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1165419664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1038079643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1165419665
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165419664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
+--- !u!1 &1234632508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 663189162}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1234632509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234632508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
+--- !u!1 &1235826985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235826989}
+  - component: {fileID: 1235826988}
+  - component: {fileID: 1235826987}
+  - component: {fileID: 1235826986}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1235826986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235826985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1235826987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235826985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1235826988
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235826985}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1235826989
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235826985}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1930453199}
+  - {fileID: 221972644}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1001 &1236551158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1368,7 +2000,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -1377,6 +2013,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1236551158}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1236551160
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824600173}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!4 &1246585063 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3085072489301797445, guid: dbd5d752d5d6cb44195f490816aa7371, type: 3}
@@ -1435,7 +2084,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -1444,6 +2097,141 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1329522115}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1329522117
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650536592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
+--- !u!1 &1337826721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1337826723}
+  - component: {fileID: 1337826722}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1337826722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337826721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ad937c589ee941943ab66a6ff27ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directions:
+    left:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 377592149}
+          m_TargetAssemblyTypeName: BananaLover.PlayerRotation, Assembly-CSharp
+          m_MethodName: RotateLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    right:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 377592149}
+          m_TargetAssemblyTypeName: BananaLover.PlayerRotation, Assembly-CSharp
+          m_MethodName: RotateRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    down:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 377592149}
+          m_TargetAssemblyTypeName: BananaLover.PlayerRotation, Assembly-CSharp
+          m_MethodName: RotateDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    up:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 377592149}
+          m_TargetAssemblyTypeName: BananaLover.PlayerRotation, Assembly-CSharp
+          m_MethodName: RotateUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  pointsMorts:
+    horizontal:
+      m_PersistentCalls:
+        m_Calls: []
+    vertical:
+      m_PersistentCalls:
+        m_Calls: []
+  action:
+    onPressed:
+      m_PersistentCalls:
+        m_Calls: []
+    onUp:
+      m_PersistentCalls:
+        m_Calls: []
+    onStayed:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!4 &1337826723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337826721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1354300339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,6 +2323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BureauChaise
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
 --- !u!4 &1359254975 stripped
@@ -1542,6 +2334,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1359254974}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1366216555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 2002003227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1371178129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 379671421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1371178130
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371178129}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
+--- !u!1 &1374738854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1086290420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1374738855
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374738854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
+--- !u!1 &1418307285 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 675933269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1418307286
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418307285}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
+--- !u!1 &1420150653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 142658408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1420150654
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420150653}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!1001 &1435057241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1597,6 +2466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BureauChaise
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
 --- !u!4 &1435057242 stripped
@@ -1604,6 +2477,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1435057241}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1435057243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827266512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!1001 &1436175305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1657,7 +2543,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -1666,6 +2556,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1436175305}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1436175307
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139146973}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!1001 &1436502339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1721,6 +2624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BureauChaise
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
 --- !u!4 &1436502340 stripped
@@ -1728,6 +2635,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1436502339}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1436502341
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635209492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!1001 &1468169004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1781,7 +2701,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -1790,6 +2714,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1468169004}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1468169006
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705979835}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!1001 &1469775727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1843,7 +2780,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -1852,6 +2793,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1469775727}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1469775729
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771688429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!4 &1497053499 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7261718293635564654, guid: b780d94b2aecbd14ab91d1f3f292490f, type: 3}
@@ -1902,6 +2856,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1518936613}
+  - component: {fileID: 1518936614}
+  - component: {fileID: 1518936615}
+  - component: {fileID: 1518936616}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1922,8 +2879,64 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1518936614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518936612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84be015ccba269940820471dc0f87125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1930453200}
+  score: 0
+--- !u!114 &1518936615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518936612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4294f054cd0331742b1365769a60b9fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempsText: {fileID: 221972645}
+--- !u!114 &1518936616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518936612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6941f9b3ce3ae4184fff3d1e30354a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desks:
+  - {fileID: 1098026073}
+  - {fileID: 37744181}
+  - {fileID: 229780831}
+  - {fileID: 1374738854}
+  - {fileID: 1165419664}
+  - {fileID: 1139146973}
+  - {fileID: 1234632508}
+  - {fileID: 705979835}
+  - {fileID: 158033189}
+  - {fileID: 824600173}
+  - {fileID: 650536592}
+  - {fileID: 1687725962}
+  - {fileID: 370708920}
+  - {fileID: 771688429}
+  - {fileID: 1106371516}
+  - {fileID: 1420150653}
 --- !u!1001 &1519627825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1977,7 +2990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -1986,11 +3003,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1519627825}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1519627827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098026073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!4 &1603079641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1808286200622125791, guid: b3f0179b4c146be4a87a843dd39a2004, type: 3}
   m_PrefabInstance: {fileID: 1808286202225204998}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1608412917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608412918}
+  - component: {fileID: 1608412919}
+  - component: {fileID: 1608412920}
+  - component: {fileID: 1608412921}
+  m_Layer: 0
+  m_Name: TriggerTriche
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1608412918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608412917}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0.16, z: 1.0766668}
+  m_LocalScale: {x: 3.3333323, y: 2.5, z: 3.3333323}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 652119376}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1608412919
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608412917}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7, y: 0.4, z: 1.7}
+  m_Center: {x: 0.77, y: 0, z: 0}
+--- !u!114 &1608412920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608412917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23546475ec64420409a370da1e39f0c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sC: {fileID: 1518936614}
+  isCheating: 0
+--- !u!54 &1608412921
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608412917}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1644796910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,8 +3132,44 @@ Transform:
   - {fileID: 1510120677}
   - {fileID: 635032117}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1677042278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 868971349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1677042279
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677042278}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
+--- !u!1 &1687725962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 573736803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1687725963
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687725962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!4 &1732632004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5753786389977080605, guid: cbf1539400cba7f4a8766c896aaff077, type: 3}
@@ -2041,7 +3184,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 10f22eb7041ff9745b03635738f08442, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10f22eb7041ff9745b03635738f08442, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2168,6 +3311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c31e2cfd5040fd4aad6fe2f050cf5de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sC: {fileID: 1518936614}
   allPoints:
   - {fileID: 11400000, guid: 1ec33c7898807e4459cc3319ff993132, type: 2}
   - {fileID: 11400000, guid: 3c32916755c3b0d45a0c6a5f659ffe3b, type: 2}
@@ -2186,6 +3330,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c232e3d408d650f43b1eeffa6841b47f, type: 2}
   - {fileID: 11400000, guid: 386e6f3d44ba1604c8e3b5fb609535eb, type: 2}
   - {fileID: 11400000, guid: c15a016b4140847479c30bd96a29ed5f, type: 2}
+  cheat: {fileID: 1608412920}
+--- !u!135 &1733186435
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733186429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: -0.045216296}
 --- !u!1001 &1755413827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2195,7 +3353,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a60a0dec7526a374eb7472d256d39e99, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a60a0dec7526a374eb7472d256d39e99, type: 3}
       propertyPath: m_LocalScale.x
@@ -2317,7 +3475,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -2326,6 +3488,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1840429889}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1840429891
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37744181}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!1001 &1898836924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2379,7 +3554,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -2388,11 +3567,177 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 1898836924}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1898836926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229780831}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!4 &1909220351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4373313938465783338, guid: 375fb89d466c67947bd692c84c941a36, type: 3}
   m_PrefabInstance: {fileID: 4373313938713484757}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1930453198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1930453199}
+  - component: {fileID: 1930453201}
+  - component: {fileID: 1930453200}
+  m_Layer: 5
+  m_Name: Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1930453199
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930453198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1235826989}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1000, y: 200}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1930453200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930453198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Note actuelle : 0/20'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 100
+  m_fontSizeBase: 100
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 1024
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1930453201
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930453198}
+  m_CullTransparentMesh: 1
+--- !u!1 &1963632255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+  m_PrefabInstance: {fileID: 1359254974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1963632256
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963632255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!1001 &2002003227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2446,7 +3791,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
       propertyPath: m_Name
-      value: BureauChaise
+      value: BureauChaise5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
@@ -2455,6 +3804,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 2002003227}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2002003229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366216555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!4 &2005504307 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8674652072691697253, guid: 2b3f8d7283723a94a9b673d3cb7f4e27, type: 3}
@@ -2469,7 +3831,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b92098ef7a88df14fa61ee857f67c3df, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b92098ef7a88df14fa61ee857f67c3df, type: 3}
       propertyPath: m_LocalScale.x
@@ -2589,6 +3951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bureauChaise
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
+      propertyPath: m_TagString
+      value: CanCheat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
 --- !u!4 &2122193805 stripped
@@ -2596,6 +3962,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdc9fde9fbb1432439dbf53b897a1806, type: 3}
   m_PrefabInstance: {fileID: 2122193804}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2122193806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22066253}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.705, y: 1.18, z: 1}
+  m_Center: {x: 0.35, y: 0.59, z: 0}
 --- !u!1001 &371846418084146225
 PrefabInstance:
   m_ObjectHideFlags: 0

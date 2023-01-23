@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace BananaLover
 {
-
     public class BeginSpawnGobelets : MonoBehaviour
     {
         public GameObject spawnGobelets;
