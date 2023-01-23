@@ -18,6 +18,9 @@ namespace Paul
         {
 
         }
+
+        // La voiture que tu percutes explose dans les airs trop rigolo ahahah
+
         void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.tag == "Player")

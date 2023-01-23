@@ -8,6 +8,7 @@ TagManager:
   - Ennemy
   - Mur
   - Machine
+  - TagLa
   layers:
   - Default
   - TransparentFX

@@ -26,12 +26,14 @@ namespace Paul
             Debug.Log(aleatoire);
         }
 
-        // Update is called once per frame
+        // Il bouge là. L'IA des ennemis est très poussée.
         void Update()
         {
             rb.velocity = rb.velocity.normalized;
             transform.position += transform.right * speed;
         }
+
+        // il change de direction quand il touche les murs invisibles de l'arène
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.tag == "Mur")

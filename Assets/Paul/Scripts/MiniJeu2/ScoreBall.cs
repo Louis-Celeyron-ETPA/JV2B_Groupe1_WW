@@ -24,20 +24,21 @@ namespace Paul
         // Update is called once per frame
         void Update()
         {
+            // gestion de l'UI
             timer -= Time.deltaTime;
 
             if (victory == false && defeat == false)
             {
                 text.text = timer.ToString("#");
             }
-
+            // Tu gagnes lorsque tu supprimes tout les bateaux
             if (scoreTotal == 4 && defeat == false)
             {
                 victory = true;
                 text.text = "VICTOIRE";
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
             }
-
+            // Tu perds lorsque le timer atteint zéro
             if (timer <= 0 && victory == false)
             {
                 defeat = true;

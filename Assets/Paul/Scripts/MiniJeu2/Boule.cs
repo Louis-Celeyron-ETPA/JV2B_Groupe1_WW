@@ -9,23 +9,21 @@ namespace Paul
         public Canon canon;
         public ScoreBall score;
 
-        // Start is called before the first frame update
+        // Le boulet de canon est calibré pour qu'il part dans la même direction que le canon
         void Start()
         {
 
-            Debug.Log(canon.rotationZ);
             transform.rotation = canon.transform.rotation;
-            Debug.Log(transform.rotation.z);
 
         }
 
-        // Update is called once per frame
+        // Apparition du boulet. Il va tout droit.
         void Update()
         {
             rb.velocity = rb.velocity.normalized;
             transform.position += transform.up;
         }
-
+        // Si il touche les bateaux ennemis, le boulet disparait avec le bateau
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.tag == "Ennemy")

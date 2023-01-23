@@ -18,6 +18,8 @@ namespace Paul
         // Start is called before the first frame update
         void Start()
         {
+            // Les boites sont aléatoirement rouges ou bleues
+            
             random = Random.Range(0f, 1f);
 
             if (random < 0.5f)
@@ -35,13 +37,16 @@ namespace Paul
         // Update is called once per frame
         void Update()
         {
+            // Elles avancent.
             rb.velocity = rb.velocity.normalized;
             transform.position += transform.right * 0.15f;
         }
 
         public void OnCollisionEnter(Collision collision)
+
+            // les boites sont censées disparaitre en touchant le mur du fond mais ça marche pas !!!
         {
-            if (collision.gameObject.tag == "Ennemy")
+            if (collision.gameObject.tag == "TagLa")
             {
                 Destroy(collision.gameObject);
                 Destroy(gameObject);

@@ -19,6 +19,7 @@ namespace Paul
 
         // Update is called once per frame
         void Update()
+            // Les boites spawn a chaque fois que le timer atteint le CounterMax, mais CounterMax diminu a chaque fois ce qui augmente la vitesse d'appartition des boites.
         {
             counter++;
             if (counter > counterMax)

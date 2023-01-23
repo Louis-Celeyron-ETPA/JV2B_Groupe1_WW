@@ -19,12 +19,12 @@ namespace Paul
         // Update is called once per frame
         void Update()
         {
+            // UI du timer
             timer += Time.deltaTime;
             Debug.Log(timer);
-
-
             text.text = timer.ToString("#");
 
+            // Tu perds quand le timer est fini
             if (timer >= 15f)
             {
                 score.defeat = true;

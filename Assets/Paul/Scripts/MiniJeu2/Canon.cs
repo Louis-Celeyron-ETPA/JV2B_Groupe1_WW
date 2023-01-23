@@ -30,11 +30,9 @@ namespace Paul
         // Update is called once per frame
         void Update()
         {
+            // Le canon tourne sur lui même pdt un certain temps avant de tourner, puis il envoie ses coordonées au boulet même si je crois que toutes mes variables x y z ne servent à rien mais j'ai peur de faire buger un truc si j'y touche
 
             transform.Rotate(Vector3.forward * speed * Time.deltaTime);
-
-
-
 
 
             if (transform.rotation.z >= 0.20)
@@ -63,6 +61,8 @@ namespace Paul
             }
 
         }
+
+        // fais spawn le boulet
         public void ToucheEspace()
         {
             if (counter > 100)

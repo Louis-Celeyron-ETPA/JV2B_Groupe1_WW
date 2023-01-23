@@ -30,6 +30,7 @@ namespace Paul
             OnSpace();
         }
 
+        // La machine check si la boite est dans sa zone d'effet, puis si elle est de la bonne couleur, puis si t'appuie sur le bouton d'actionS
         public void OnSpace()
         {
             if(boite != null)
@@ -48,6 +49,7 @@ namespace Paul
             }
         }
 
+        // DEtecte quand la boite rentre et sort de la zone d'effet de la machine
         private void OnTriggerEnter(Collider collider)
         {
             stopApresUn = true;

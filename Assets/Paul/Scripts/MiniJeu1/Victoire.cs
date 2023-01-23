@@ -19,7 +19,8 @@ namespace Paul
             defeat = false;
         }
 
-        // Update is called once per frame
+        // GEstion de l'UI avec le timer et l'affichage victoire ou défaite
+
         void Update()
         {
             timer -= Time.deltaTime;
@@ -29,20 +30,22 @@ namespace Paul
                 text.text = timer.ToString("#");
             }
 
+            // On perd à la fin du timer
+
             if (timer < 0f && victory == false)
-            {
-                Debug.Log("Défaite");
+            { 
                 text.text = "DEFAITE";
                 defeat = true;
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
             }
         }
+
+        // On gagne lorsqu'on touche la ligne d'arrivée avant la fin du timer
+
         public void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.tag == "Player" && defeat == false)
             {
-                Debug.Log("Victoire");
-                Debug.Log(text .gameObject);
                 text.text = "VICTOIRE";
                 victory = true;
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);

@@ -13,6 +13,9 @@ namespace Paul
         public float vitesse;
         public int[] VitesseMax;
         public int[] Acceleration;
+
+        // il y a trois niveaux de difficulté qui définissent la vitesse max de la voiture et sa vitesse d'accélération
+
         public int GetVitesseMax()
         {
             return VitesseMax[ManagerManager.DifficultyManager.GetDifficulty()];
@@ -32,7 +35,8 @@ namespace Paul
             ManagerManager.DifficultyManager.GetDifficulty();
         }
 
-        // Update is called once per frame
+        // La voiture prend de la vitesse au fur et à mesure jusqu'à atteindre le max qui est défini par la difficulté du jeu
+       
         void Update()
         {
             if(vitesse < GetVitesseMax())
@@ -44,6 +48,9 @@ namespace Paul
             
            
         }
+
+        // Tourne à gauche et droite en s'adaptant à la vitesse actuelle
+
         public void ToucheDroite()
         {
           
@@ -56,6 +63,9 @@ namespace Paul
             rb.AddForce(Vector3.left * (vitesse / 4));
 
         }
+
+        // Si tu te prends une voiture, ta vitesse redescend presque à zéro
+
         void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.tag == "MyGameObjectTag")

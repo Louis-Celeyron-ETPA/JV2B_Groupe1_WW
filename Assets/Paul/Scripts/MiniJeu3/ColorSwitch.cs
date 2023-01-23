@@ -12,23 +12,20 @@ namespace Paul
         public Material Material1;
         public Material Material2;
         public GameObject Object;
-
-        
-
-        
         public bool checkCouleur2;
 
         void Start()
+            // la machine démarre en couleur 1
         {
             Object.GetComponent<MeshRenderer>().material = Material1;
             checkCouleur2 = true;
         }
 
-        // Update is called once per frame
         void Update()
         {
 
         }
+        // Change la couleur de la machine
         public void RightInput()
         {
             Object.GetComponent<MeshRenderer>().material = Material2;

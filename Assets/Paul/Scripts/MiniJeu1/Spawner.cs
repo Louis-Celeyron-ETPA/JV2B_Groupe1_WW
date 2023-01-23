@@ -13,10 +13,10 @@ public class Spawner : MonoBehaviour
     public float spawnerX;
     public float spawnerY;
     public float spawnerZ;
-    // Start is called before the first frame update
+
     void Start()
     {
-
+        // Fais spawn les voitures aléatoirement entre les points de spawn gauche et droite  
         for (int t = 0;t < spawnerLeft.Count; t++)
         {
             random = Random.Range(0f, 1f);
