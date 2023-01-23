@@ -25,7 +25,11 @@ namespace Paul
             {
                 Instantiate(objectToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
                 counter = 0;
-                counterMax = counterMax - 3;
+                if (counterMax >= 40)
+                {
+                    counterMax = counterMax - 6;
+
+                }
             }
         }
     }

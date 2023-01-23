@@ -11,6 +11,16 @@ namespace Paul
         public float posY;
         public float posZ;
         public float vitesse;
+        public int[] VitesseMax;
+        public int[] Acceleration;
+        public int GetVitesseMax()
+        {
+            return VitesseMax[ManagerManager.DifficultyManager.GetDifficulty()];
+        }
+        public int GetAcceleration()
+        {
+            return Acceleration[ManagerManager.DifficultyManager.GetDifficulty()];
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -19,14 +29,15 @@ namespace Paul
             posY = transform.position.y;
             posZ = transform.position.z;
             vitesse = 200;
+            ManagerManager.DifficultyManager.GetDifficulty();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if(vitesse < 1300)
+            if(vitesse < GetVitesseMax())
             {
-                vitesse = vitesse + 5;
+                vitesse = vitesse + GetAcceleration();
             }
             rb.velocity = rb.velocity.normalized;
             rb.AddForce(Vector3.forward * vitesse);
