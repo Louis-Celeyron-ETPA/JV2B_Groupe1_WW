@@ -41,6 +41,7 @@ namespace Gael
             if (cubeSize <= 0)
             {
                 Destroy(gameObject);
+                
             }
 
             Debug.Log(collision.impulse);
