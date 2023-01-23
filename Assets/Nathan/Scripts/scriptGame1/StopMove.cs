@@ -31,8 +31,7 @@ namespace Pediluves
 
         public float GetVitesseMax()
         {
-            return vitesseStop[0];
-            //return vitesseStop[ManagerManager.DifficultyManager.GetDifficulty()];
+           return vitesseStop[ManagerManager.DifficultyManager.GetDifficulty()];
         }
 
         ///////////////////////////////////////////////////

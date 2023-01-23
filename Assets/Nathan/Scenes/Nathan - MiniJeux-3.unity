@@ -2628,6 +2628,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 906065555}
   speed: 80
+  vitesseTrain:
+  - 70
+  - 90
+  - 11
 --- !u!4 &906065557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dffab08c407d9b643aea4ca51ca75fb7, type: 3}
@@ -4166,6 +4170,7 @@ MonoBehaviour:
   end: 0
   isPress: 0
   randomSpawner: {fileID: 1797356179}
+  timer: 15
 --- !u!1 &1518416347
 GameObject:
   m_ObjectHideFlags: 0

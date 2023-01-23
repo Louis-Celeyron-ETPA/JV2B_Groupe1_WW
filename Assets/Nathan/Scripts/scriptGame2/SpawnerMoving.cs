@@ -19,8 +19,7 @@ namespace Pediluves
 
         public float GetVitesseMax()
         {
-            return vitesseSpawner[2];
-            //return vitesseSpawner[ManagerManager.DifficultyManager.GetDifficulty()];
+            return vitesseSpawner[ManagerManager.DifficultyManager.GetDifficulty()];
         }
 
         ///////////////////////////////////////////////////
@@ -51,11 +50,11 @@ namespace Pediluves
 
             if (coutnerChangeDirection >= coutnerChangeDirectionMax)
             {
-                if (ChangeDirection == false)
+                if (ChangeDirection == false) //lorsqu'il doit changer de direction, soit parce qu'il touche les côtés, soit parce qu'il doit le faire après un temps random, la speed est *(-1) pour inverser la position (droite  ->  gauche et inversement)
                 {
                     speed *= (-1);
                 }
-                if (ChangeDirection == true)
+                if (ChangeDirection == true) //lorsqu'il doit changer de direction, soit parce qu'il touche les côtés, soit parce qu'il doit le faire après un temps random, la speed est *(-1) pour inverser la position (droite  ->  gauche et inversement)
                 {
                     speed *= (-1);
                 }

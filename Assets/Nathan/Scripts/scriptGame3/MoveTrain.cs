@@ -11,13 +11,20 @@ namespace Pediluves
         public Rigidbody rb;
         public int speed;
 
+        public float[] vitesseTrain;
+
         ///////////////////////////////////////////////////
+
+        public float GetVitesseMax()
+        {
+            return vitesseTrain[ManagerManager.DifficultyManager.GetDifficulty()];
+        }
 
         void Update()
         {
-            // déplacement du train
+            // déplacement du train vers la gauche selon la difficulté
 
-            rb.velocity = Vector3.right * speed;
+            rb.velocity = Vector3.right * GetVitesseMax();
         }
 
     }

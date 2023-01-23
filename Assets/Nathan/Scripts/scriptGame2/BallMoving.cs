@@ -19,8 +19,7 @@ namespace Pediluves
 
         public float GetVitessBalleeMax()
         {
-            return vitesseBalle[0];
-            //return vitesseBalle[ManagerManager.DifficultyManager.GetDifficulty()];
+            return vitesseBalle[ManagerManager.DifficultyManager.GetDifficulty()];
         }
 
         ///////////////////////////////////////////////////
