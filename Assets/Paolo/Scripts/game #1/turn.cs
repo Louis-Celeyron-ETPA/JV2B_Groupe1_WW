@@ -6,16 +6,19 @@ namespace Paolo
 {
     public class turn : MonoBehaviour
     {
-        public float hpgalade = 5;
+        public int hpgalade = 5;
+        public float Timer;
         // Start is called before the first frame update
         void Start()
         {
-
+            Timer = 15f;
         }
 
         // Update is called once per frame
         void Update()
         {
+            Timer -= Time.deltaTime;
+
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 transform.eulerAngles = Vector3.zero;
@@ -35,6 +38,16 @@ namespace Paolo
             {
                 transform.eulerAngles = Vector3.up * 90;
 
+            }
+
+            if (Timer < 0 && hpgalade>0)
+            {
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+            }
+
+            if (hpgalade<=0)
+            {
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
             }
         }
 

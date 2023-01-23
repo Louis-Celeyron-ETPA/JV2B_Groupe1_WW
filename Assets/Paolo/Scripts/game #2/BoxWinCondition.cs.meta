@@ -3,7 +3,10 @@ guid: 4ed224e09d9636649a8c8c8733b6eef9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Rainbow: {fileID: 919132149155446097, guid: b8cdcc81e6246914aad44d0d528f420c, type: 3}
+  - Gold: {fileID: 919132149155446097, guid: 58ef66b631939204bab50bf20bfca502, type: 3}
+  - Star: {fileID: 919132149155446097, guid: 3385c2029b7bb6f49ab17ff8c7b7827d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
