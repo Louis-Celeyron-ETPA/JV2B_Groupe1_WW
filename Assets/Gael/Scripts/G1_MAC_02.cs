@@ -18,7 +18,7 @@ namespace Gael
         // Start is called before the first frame update
         void Start()
         {
-
+            
         }
 
         // Update is called once per frame
@@ -41,7 +41,7 @@ namespace Gael
             if (cubeSize <= 0)
             {
                 Destroy(gameObject);
-                
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
             }
 
             Debug.Log(collision.impulse);

@@ -9,13 +9,15 @@ namespace Gael
     
     public class G1_MAC_01 : MonoBehaviour
     {
-        public float counter;
+        
+        public float timer;
+        
 
         public Transform tra;
         // Start is called before the first frame update
         void Start()
         {
-
+            timer = 15f;
         }
 
         // Update is called once per frame
@@ -26,10 +28,12 @@ namespace Gael
                 tra.position += new Vector3(0f, 0.02f, 0f);
             }
 
-            counter++;
-            if (counter > 15f)
-            {
 
+            timer -= Time.deltaTime;
+
+            if(timer == 0)
+            {
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
             }
 
 
