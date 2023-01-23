@@ -32,6 +32,10 @@ public class MySceneManager : MonoBehaviour
     public void LoadRandomScene()
     {
         var nextScene =  SceneManager.GetActiveScene().name;
+        if(allScenes.Count<=0)
+        {
+            return;
+        }
         while(nextScene ==  SceneManager.GetActiveScene().name)
         {
             nextScene = allScenes[Random.Range(0, allScenes.Count)];
