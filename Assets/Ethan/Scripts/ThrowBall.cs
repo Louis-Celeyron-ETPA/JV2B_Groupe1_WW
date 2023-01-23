@@ -8,10 +8,11 @@ namespace BananaLover
     public class ThrowBall : MonoBehaviour
     {
         // Normal
-        public GameObject ballPrefab;
+        [SerializeField]
+        private GameObject ballPrefab;
         float forceForward = 4.5f;
         float forceUp = 7f;
-        float puissance = 5f;
+        float power = 5f;
         float timeUp = 0f;
         float timeDown = 0f;
         float timeAutoDecreasePower = 0.4f;
@@ -19,12 +20,13 @@ namespace BananaLover
         bool stopCountdown = false;
 
         // UI
-        public TextMeshProUGUI puissanceScore;
+        [SerializeField]
+        private TextMeshProUGUI puissanceScore;
 
         // Start is called before the first frame update
         void Start()
         {
-            puissanceScore.text = puissance.ToString();
+            puissanceScore.text = power.ToString();
         }
 
         // Update is called once per frame
@@ -45,10 +47,10 @@ namespace BananaLover
             else
             {
                 timeAutoDecreasePower = maxCoutdown*4;
-                if (puissance>0 && stopCountdown == false)
+                if (power > 0 && stopCountdown == false)
                 {
-                    puissance -= 1;
-                    puissanceScore.text = puissance.ToString();
+                    power -= 1;
+                    puissanceScore.text = power.ToString();
                 }
             }
         }
@@ -56,16 +58,16 @@ namespace BananaLover
         public void Throw()
         {
             GameObject ball = Instantiate(ballPrefab, transform.position - new Vector3(0, 1, 0), Quaternion.identity) as GameObject;
-            ball.GetComponent<Rigidbody>().velocity = new Vector3(0, forceUp * (0.95f + (puissance / 60)), forceForward * (0.95f + (puissance / 60)));       
+            ball.GetComponent<Rigidbody>().velocity = new Vector3(0, forceUp * (0.95f + (power / 60)), forceForward * (0.95f + (power / 60)));       
         }
 
         public void IncreasePower()
         {
             stopCountdown = true;
-            if (puissance<10 && timeUp <= 0)
+            if (power < 10 && timeUp <= 0)
             {
-                puissance += 1;
-                puissanceScore.text = puissance.ToString();
+                power += 1;
+                puissanceScore.text = power.ToString();
                 timeUp = maxCoutdown;                
             }            
         }
@@ -73,10 +75,10 @@ namespace BananaLover
         public void DecreasePower()
         {
             stopCountdown = true;
-            if (puissance > 0 && timeDown <= 0)
+            if (power > 0 && timeDown <= 0)
             {
-                puissance -= 1;
-                puissanceScore.text = puissance.ToString();
+                power -= 1;
+                puissanceScore.text = power.ToString();
                 timeDown = maxCoutdown;
             }
         }

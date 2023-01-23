@@ -7,9 +7,11 @@ namespace BananaLover
     public class Shoot : MonoBehaviour
     {
         // Normal
-        public GameObject ballPrefab;
+        [SerializeField]
+        private GameObject ballPrefab;
         float force = 20f;
-        public GameObject tip;
+        [SerializeField]
+        private GameObject tip;
         float speed = 0.03f;               
 
         // Start is called before the first frame update

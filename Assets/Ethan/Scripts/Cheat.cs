@@ -9,15 +9,15 @@ namespace BananaLover
     {
         public ScoreController sC;
 
-        float timer = 0.5f;
-        float maxTimer = 0.5f;
+        float timer;
+        float maxTimer = 0.1f;
 
         public bool isCheating = false;
 
         // Start is called before the first frame update
         void Start()
         {
-
+            timer = maxTimer;
         }
 
         // Update is called once per frame

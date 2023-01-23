@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 256783267}
   - component: {fileID: 256783266}
   m_Layer: 0
-  m_Name: Socle
+  m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -455,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a5143f14656ad4b499ca0933fce8981a, type: 2}
     - target: {fileID: 919132149155446097, guid: a60a0dec7526a374eb7472d256d39e99, type: 3}
       propertyPath: m_Name
-      value: Planete
+      value: Planet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a60a0dec7526a374eb7472d256d39e99, type: 3}
@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 724510255}
   - component: {fileID: 724510260}
   m_Layer: 0
-  m_Name: Detecteur
+  m_Name: Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -717,8 +717,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1074,7 +1074,7 @@ GameObject:
   - component: {fileID: 1017232129}
   - component: {fileID: 1017232128}
   m_Layer: 0
-  m_Name: Plaque
+  m_Name: Plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1514,7 +1514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4294f054cd0331742b1365769a60b9fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempsText: {fileID: 801131175}
+  timeText: {fileID: 801131175}
 --- !u!1 &1906377038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,7 +1829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 251628d5827317f439836cf8469f66a9, type: 3}
       propertyPath: m_Name
-      value: Canon
+      value: Cannon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251628d5827317f439836cf8469f66a9, type: 3}

@@ -6,7 +6,8 @@ namespace BananaLover
 {
     public class DetectBall : MonoBehaviour
     {
-        public GameController gc;
+        [SerializeField]
+        private GameController gC;
         // Start is called before the first frame update
         void Start()
         {
@@ -21,7 +22,8 @@ namespace BananaLover
 
         private void OnCollisionEnter(Collision collision)
         {
-            gc.score += 1;
+            gC.score += 1;
+            gC.scoreText.text = gC.score.ToString();
             Destroy(collision.gameObject);
         }
     }

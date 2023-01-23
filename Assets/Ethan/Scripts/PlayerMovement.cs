@@ -10,7 +10,7 @@ namespace BananaLover
         Vector3 pos2 = new Vector3(2.65f, 3.5f, -5f);
         float pourcentage = 0f;
         float speed = 0.003f;
-        bool retour = false;
+        bool comeBack = false;
 
         // Start is called before the first frame update
         void Start()
@@ -24,7 +24,7 @@ namespace BananaLover
             //Déplacement
             transform.position = Vector3.Lerp(pos1, pos2, pourcentage);
             // Vers la droite ou vers la gauche
-            if (retour)
+            if (comeBack)
             {
                 pourcentage -= speed;
             }
@@ -35,11 +35,11 @@ namespace BananaLover
             // Dans quel direction je dois aller
             if (pourcentage >= 1)
             {
-                retour = true;
+                comeBack = true;
             }
             else if (pourcentage <= 0)
             {
-                retour = false;
+                comeBack = false;
             }
         }
     }

@@ -1236,7 +1236,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 84bde70b3e6a60b48b3e882da1077cd2, type: 2}
     - target: {fileID: 919132149155446097, guid: c36b7625c0777d943acca3c5618da702, type: 3}
       propertyPath: m_Name
-      value: TableDeJeu
+      value: GameBoard
       objectReference: {fileID: 0}
     - target: {fileID: 1603246306389932429, guid: c36b7625c0777d943acca3c5618da702, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1530,7 +1530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1288903329}
   m_Layer: 0
-  m_Name: '|=== Environnement ===|'
+  m_Name: '|=== Environment ===|'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a633bd3ea375b84caff3cfe197b5369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 1687396273}
+  gC: {fileID: 1687396273}
 --- !u!1 &1337208478 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3822306268441950433, guid: c36b7625c0777d943acca3c5618da702, type: 3}
@@ -1652,7 +1652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a633bd3ea375b84caff3cfe197b5369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 1687396273}
+  gC: {fileID: 1687396273}
 --- !u!1 &1381076447 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -584413233861867849, guid: c36b7625c0777d943acca3c5618da702, type: 3}
@@ -1909,7 +1909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a633bd3ea375b84caff3cfe197b5369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 1687396273}
+  gC: {fileID: 1687396273}
 --- !u!1 &1416304792 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1014268425052216762, guid: c36b7625c0777d943acca3c5618da702, type: 3}
@@ -2074,7 +2074,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a5143f14656ad4b499ca0933fce8981a, type: 2}
     - target: {fileID: 919132149155446097, guid: a60a0dec7526a374eb7472d256d39e99, type: 3}
       propertyPath: m_Name
-      value: Planete
+      value: Planet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a60a0dec7526a374eb7472d256d39e99, type: 3}
@@ -2139,7 +2139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4294f054cd0331742b1365769a60b9fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempsText: {fileID: 1232668476}
+  timeText: {fileID: 1232668476}
 --- !u!1 &1721244909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4593130486874181694, guid: c36b7625c0777d943acca3c5618da702, type: 3}

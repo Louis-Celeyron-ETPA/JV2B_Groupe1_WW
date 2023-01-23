@@ -8,7 +8,8 @@ namespace BananaLover
     public class CollisionDetection : MonoBehaviour
     {
         // UI
-        public TextMeshProUGUI nbrGobeletRestants;
+        [SerializeField]
+        private TextMeshProUGUI nbrGobeletRestants;
 
         // Normal
         int nbrCollisions = 0;

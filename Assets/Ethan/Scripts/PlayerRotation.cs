@@ -6,11 +6,14 @@ namespace BananaLover
 {
     public class PlayerRotation : MonoBehaviour
     {
-        public Camera cam;
-        public AiMove drone;
-        public Desks allDesks;
+        [SerializeField]
+        private Camera cam;
+        [SerializeField]
+        private AiMove drone;
+        [SerializeField]
+        private Desks allDesks;
 
-        float rotateSpeed = 1.2f;
+        float rotationSpeed = 1.2f;
 
         // Start is called before the first frame update
         void Start()
@@ -30,22 +33,22 @@ namespace BananaLover
 
         public void RotateUp()
         {
-            cam.transform.eulerAngles += Vector3.right * -rotateSpeed;
+            cam.transform.eulerAngles += Vector3.right * -rotationSpeed;
         }
 
         public void RotateDown()
         {
-            cam.transform.eulerAngles += Vector3.right * rotateSpeed;
+            cam.transform.eulerAngles += Vector3.right * rotationSpeed;
         }
 
         public void RotateRight()
         {
-            cam.transform.eulerAngles += Vector3.up * rotateSpeed;
+            cam.transform.eulerAngles += Vector3.up * rotationSpeed;
         }
 
         public void RotateLeft()
         {
-            cam.transform.eulerAngles += Vector3.up * -rotateSpeed;
+            cam.transform.eulerAngles += Vector3.up * -rotationSpeed;
         }
     }
 }

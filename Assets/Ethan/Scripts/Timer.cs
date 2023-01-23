@@ -8,7 +8,8 @@ namespace BananaLover
     public class Timer : MonoBehaviour
     {
         // UI
-        public TextMeshProUGUI tempsText;
+        [SerializeField]
+        private TextMeshProUGUI timeText;
 
         float timer = 1f;
         float maxTimer = 1f;
@@ -31,7 +32,7 @@ namespace BananaLover
             {
                 showedTimer--;
                 timer = maxTimer;
-                tempsText.text = showedTimer.ToString();
+                timeText.text = showedTimer.ToString();
             }
 
             if (showedTimer == 0)

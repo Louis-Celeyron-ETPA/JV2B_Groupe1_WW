@@ -6,16 +6,18 @@ namespace BananaLover
 {
     public class AiMove : MonoBehaviour
     {
-        public ScoreController sC;
+        [SerializeField]
+        private ScoreController sC;
         public List<Point> allPoints;
-        public Cheat cheat;
+        [SerializeField]
+        private Cheat cheat;
 
         public int currentPoint;
         Vector3 oldPos;
         Vector3 targetPoint;
 
         float pourcentage = 0f;
-        float speed = 0.005f;
+        public float speed = 0.005f;
 
         // Start is called before the first frame update
         void Start()
