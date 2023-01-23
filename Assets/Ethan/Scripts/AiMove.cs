@@ -10,7 +10,7 @@ namespace BananaLover
         public List<Point> allPoints;
         public Cheat cheat;
 
-        int currentPoint = 0;
+        public int currentPoint;
         Vector3 oldPos;
         Vector3 targetPoint;
 
