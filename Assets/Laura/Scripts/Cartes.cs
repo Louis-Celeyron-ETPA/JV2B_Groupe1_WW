@@ -6,15 +6,15 @@ namespace Laury
 
     public class Cartes : MonoBehaviour
     {
-        public MeshRenderer mr;
-        public Vector3 initialPos;
+        public MeshRenderer Matiere;
+        public Vector3 InitialPos;
         private void Awake()
         {
-            initialPos = transform.position;
+            InitialPos = transform.position;
         }
         public void ChangeColor(Color color)
         {
-            mr.material.color = color;  
+            Matiere.material.color = color;  
         }
         public void ChangePosition()
         {
@@ -22,7 +22,7 @@ namespace Laury
         }
         public void ResetPosition()
         {
-            transform.position = initialPos;
+            transform.position = InitialPos;
 
         }
     }

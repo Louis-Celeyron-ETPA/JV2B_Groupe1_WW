@@ -14,146 +14,146 @@ namespace Laury
         public Light LFlecheD;
         public Light LFlecheG;
         public List<int> Simon;
-        public MeshRenderer barre;
-        public MeshRenderer p1;
-        public MeshRenderer p2;
-        public MeshRenderer p3;
-        private int choix;
-        private int limit;
-        public float timeo;
-        public float delai;
-        public int nombre = 0;
-        public float tour;
-        public bool attente;
-        public bool valide;
-        public toucheJoueur lista;
-        public int actionOnTime;
-        public int points;
+        public MeshRenderer Barre;
+        public MeshRenderer P1;
+        public MeshRenderer P2;
+        public MeshRenderer P3;
+        private int Choix;
+        private int Limite=4;
+        public float TempO;
+        public float Delai;
+        public int Nombre = 0;
+        public float Tour;
+        public bool Attente;
+        public bool Valide;
+        public toucheJoueur ListA;
+        public int ActionEnTemps;
+        public int Points;
             
         void Start()
         {
-            delai = 0.3f;
-            limit = 4;
-            tour = 2;
-            points = 0;
-            attente = false;
-            valide = true;
-            for (int i = 0; i < limit; i++)
+            Nombre = 0;
+            Delai = 0.3f;
+            Tour = 2;
+            Points = 0;
+            Attente = false;
+            Valide = true;
+            for (int i = 0; i < Limite; i++)
             {
-                choix = Random.Range(1, 5);
-                Simon.Add(choix);
+                Choix = Random.Range(1, 5);
+                Simon.Add(Choix);
             }
         }
 
         
         void Update()
         {
-            if(nombre<tour)
+            if(Nombre<Tour)
             {
                 GestionLumiere();
-                barre.materials[2].color = Color.red;
+                Barre.materials[2].color = Color.red;
             }
             else
             {
-                attente = true;
-                barre.materials[2].color = Color.green;
+                Attente = true;
+                Barre.materials[2].color = Color.green;
             }
-            if (points == 1)
+            if (Points == 1)
             {
-                p1.materials[2].color = Color.green;
+                P1.materials[2].color = Color.green;
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
             }
-            if (points == 2)
+            if (Points == 2)
             {
-                p2.materials[2].color = Color.green;
+                P2.materials[2].color = Color.green;
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
             }
-            if (points == 3)
+            if (Points == 3)
             {
-                p3.materials[2].color = Color.green;
+                P3.materials[2].color = Color.green;
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Perfect);
             }
 
         }
         public void verif()
         {
-            if (lista.valeurs.Count != tour)
+            if (ListA.Valeurs.Count != Tour)
             {
                 return;
             }
-            valide = false;
-            if (attente == true)
+            Valide = false;
+            if (Attente == true)
             {
                 var tempIsOkay = true;
-                for (int i = 0; i < tour; i++)
+                for (int i = 0; i < Tour; i++)
                 {
                     
-                    if (lista.valeurs[i] != Simon[i])
+                    if (ListA.Valeurs[i] != Simon[i])
                     {
                         tempIsOkay = false;
                     }
                 }
                 if (tempIsOkay == true)
                 {
-                    barre.materials[2].color = Color.red;
-                    valide = true;
-                    attente = false;
-                    nombre = 0;
-                    points++;
-                    lista.valeurs = new List<int>();
-                    tour++;
+                    Barre.materials[2].color = Color.red;
+                    Valide = true;
+                    Attente = false;
+                    Nombre = 0;
+                    Points++;
+                    ListA.Valeurs = new List<int>();
+                    Tour++;
                 }
                 else
                 {
-                    barre.materials[2].color = Color.red;
-                    nombre = 0;
-                    valide = true;
-                    attente = false;
-                    lista.valeurs = new List<int>();
+                    Barre.materials[2].color = Color.red;
+                    Nombre = 0;
+                    Valide = true;
+                    Attente = false;
+                    ListA.Valeurs = new List<int>();
                     GestionLumiere();
                 }
             }
         }
         private void GestionLumiere()
         {
-            timeo += Time.deltaTime;
-            if (timeo >= delai && valide == true)
+            TempO += Time.deltaTime;
+            if (TempO >= Delai && Valide == true)
             {
-                if (actionOnTime == 0)
+                if (ActionEnTemps == 0)
                 {
                     AllumerLumiere();
                 }
-                if (actionOnTime == 1)
+                if (ActionEnTemps == 1)
                 {
                     EteindreLumiere();
-                    nombre += 1;
+                    Nombre += 1;
                 }
-                if (actionOnTime == 2)
+                if (ActionEnTemps == 2)
                 {
-                    actionOnTime = -1;
+                    ActionEnTemps = -1;
                 }
-                actionOnTime += 1;
-                timeo = 0;
+                ActionEnTemps += 1;
+                TempO = 0;
             }
         }
         void AllumerLumiere()
         {
-            if (Simon[nombre] == 1)
+            if (Simon[Nombre] == 1)
             {
                 LFlecheH.enabled = true;
                 Debug.Log("1");
             }
-            if (Simon[nombre] == 2)
+            if (Simon[Nombre] == 2)
             {
                 LFlecheB.enabled = true;
                 Debug.Log("2");
             }
-            if (Simon[nombre] == 3)
+            if (Simon[Nombre] == 3)
             {
                 LFlecheD.enabled = true;
                 Debug.Log("3");
             }
-            if (Simon[nombre] == 4)
+            if (Simon[Nombre] == 4)
             {
                 LFlecheG.enabled = true;
                 Debug.Log("4");
@@ -162,22 +162,22 @@ namespace Laury
         }
         void EteindreLumiere()
         {
-            if (Simon[nombre] == 1)
+            if (Simon[Nombre] == 1)
             {
                 LFlecheH.enabled = false;
                 Debug.Log("haut");
             }
-            if (Simon[nombre] == 2)
+            if (Simon[Nombre] == 2)
             {
                 LFlecheB.enabled = false;
                 Debug.Log("bas");
             }
-            if (Simon[nombre] == 3)
+            if (Simon[Nombre] == 3)
             {
                 LFlecheD.enabled = false;
                 Debug.Log("droite");
             }
-            if (Simon[nombre] == 4)
+            if (Simon[Nombre] == 4)
             {
                 LFlecheG.enabled = false;
                 Debug.Log("gauche");

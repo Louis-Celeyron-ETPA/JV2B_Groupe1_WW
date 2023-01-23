@@ -7,52 +7,52 @@ namespace Laury
     public class toucheJoueur : MonoBehaviour
     {
         public MeshRenderer FH,FB,FD,FG;
-        public List<int> valeurs;
-        private bool inputEntered = false;
-        public simonSaid simonSaid;
+        public List<int> Valeurs;
+        private bool BoutonEntrer = false;
+        public simonSaid SimonSaid;
         
         public void FlecheH()
         {
-            if(inputEntered == false)
+            if(BoutonEntrer == false)
             {
-                inputEntered = true;
+                BoutonEntrer = true;
                 FH.materials[1].color = Color.red;
-                valeurs.Add(1);
+                Valeurs.Add(1);
                 Debug.Log("Rouge");
             }
         }
         public void FlecheD()
         {
-            if (inputEntered == false)
+            if (BoutonEntrer == false)
             {
-                inputEntered = true;
+                BoutonEntrer = true;
 
                 FD.materials[1].color = Color.green;
-                valeurs.Add(3);
+                Valeurs.Add(3);
                 Debug.Log("Vert");
 
             }
         }
         public void FlecheB()
         {
-            if (inputEntered == false)
+            if (BoutonEntrer == false)
             {
-                inputEntered = true;
+                BoutonEntrer = true;
 
                 FB.materials[1].color = Color.yellow;
-                valeurs.Add(2);
+                Valeurs.Add(2);
                 Debug.Log("Jaune");
 
             }
         }
         public void FlecheG()
         {
-            if (inputEntered == false)
+            if (BoutonEntrer == false)
             {
-                inputEntered = true;
+                BoutonEntrer = true;
 
                 FG.materials[1].color = Color.blue;
-                valeurs.Add(4);
+                Valeurs.Add(4);
                 Debug.Log("Bleu");
 
             }
@@ -60,13 +60,13 @@ namespace Laury
 
         public void ResetColor()
         {
-            inputEntered = false;
+            BoutonEntrer = false;
 
             FG.materials[1].color = Color.white;
             FD.materials[1].color = Color.white;
             FH.materials[1].color = Color.white;
             FB.materials[1].color = Color.white;
-            simonSaid.verif();
+            SimonSaid.verif();
 
         }
     }
